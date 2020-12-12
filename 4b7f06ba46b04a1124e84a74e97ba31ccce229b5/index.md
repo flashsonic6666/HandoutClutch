@@ -8,7 +8,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 | Handout       | Points Left to Completion  | Percentage of Needed Points Obtained  | Total Points in Handout|
 | :---          |:---:|:---:|:---:|
-| [https://drive.google.com/file/d/109eK7mfNeC1JrcafTQZt7nAUsNJl427A/view?usp=sharing](Exponents (A)) | 60   | 0%   |100    |
+| [Exponents (A)](https://drive.google.com/file/d/109eK7mfNeC1JrcafTQZt7nAUsNJl427A/view?usp=sharing) | 60   | 0%   |100    |
 | Nullensatz (C)| x   | x   |x    | 
 
 ### Markdown
