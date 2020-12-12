@@ -1,8 +1,6 @@
 ## Welcome to the Land of Wonder
 
-You can use the [editor on GitHub](https://github.com/flashsonic6666/HandoutClutch/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The website might look like literal poop right now but I'll try my best to clean it up!
 
 ## Current Progress
 
