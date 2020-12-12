@@ -6,7 +6,7 @@ The website might look like literal poop right now but I'll try my best to clean
 
 | Handout       | Points Left to Completion  | Percentage of Needed Points Obtained  | Total Points in Handout|
 | :---          |:---:|:---:|:---:|
-| [Exponents/Radicals (A)](https://drive.google.com/file/d/109eK7mfNeC1JrcafTQZt7nAUsNJl427A/view?usp=sharing) | 60   | 0%   |100    |
+| [Powers (A)](https://drive.google.com/file/d/109eK7mfNeC1JrcafTQZt7nAUsNJl427A/view?usp=sharing) | 60   | 0%   |100    |
 | Nullensatz (C)| x   | x   |x    | 
 
 ### Markdown
