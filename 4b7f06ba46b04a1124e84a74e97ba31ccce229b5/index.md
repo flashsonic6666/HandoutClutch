@@ -4,6 +4,12 @@ You can use the [editor on GitHub](https://github.com/flashsonic6666/HandoutClut
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+## Current Progress
+| Handout       | P1  | P2  |
+| :---          |:---:|:---:|
+| Exponents (A) | x   | x   |
+| Nullensatz (C)| x   | x   |
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
