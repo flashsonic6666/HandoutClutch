@@ -6,10 +6,10 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ## Current Progress
 
-| Handout       | P1  | P2  |P3   |P4   |P5   |P6   |P7   |P8   |P9   |P10  |P11  |P12  |P13  |P14  |P15  |P16  |P17  |P18  |P19  |P20  |P21  |P22  |P23  |P24  |P25  |P26  |
-| :---          |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Exponents (A) | x   | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |
-| Nullensatz (C)| x   | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |x    | x   |
+| Handout       | Points Left to Completion  | Percentage of Needed Points Obtained  | Total Points in Handout|
+| :---          |:---:|:---:|:---:|
+| [https://drive.google.com/file/d/109eK7mfNeC1JrcafTQZt7nAUsNJl427A/view?usp=sharing](Exponents (A)) | 60   | 0%   |100    |
+| Nullensatz (C)| x   | x   |x    | 
 
 ### Markdown
 
