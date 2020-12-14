@@ -65,6 +65,9 @@ body {
 	var index = 1;
 	var maxSize = 21;
 	
+	var answers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
+	document.getElementById("result").innerHTML = localStorage.getItem('clicks');  
+		
 	resetTable();
 		
 	function resetTable(){
@@ -105,16 +108,18 @@ body {
 	}
 		
           function result() {
-		var answer = document.getElementById("ans").value;
-		  localStorage.setItem('clicks', parseInt(localStorage.getItem('clicks'))+1);
-		  if(answer.valueOf()=="correct".valueOf()){
-			document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
+		  var answer = document.getElementById("ans").value;
+		var prob = document.getElementById("pnum").value;
+		  
+		  if(parseInt(answer)==answers[prob-1]){
+			document.getElementById("result").innerHTML = "CORRECT LOSER";
+			  var start = localStorage.getItem("ExpAnswers").substring(1, prob);
+			  var end = localStorage.getItem("ExpAnswers").substring(prob+1);
+			localStorage.setItem("ExpAnswers", start+"1"+end);
 		  }
-		  else if(answer.valueOf()=="reset"){
-			localStorage.setItem('clicks', 0);
-		 }
 		  else{
-			document.getElementById("result").innerHTML = answer + " " + localStorage.getItem('clicks');  
+			localStorage.setItem('clicks', parseInt(localStorage.getItem('clicks'))+1);
+			document.getElementById("result").innerHTML = localStorage.getItem('clicks');  
 		  }
           }
 	 function picr(){
