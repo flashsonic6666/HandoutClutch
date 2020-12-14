@@ -34,7 +34,7 @@ body {
 <body>
 	
 	<!--Displaying Image-->
-	<img id="problem" src="NyanCat.png" style="width:1000px" class="center">
+	<img id="problem" src="NyanCat.png" style="width:100px" class="center">
 	
 	<!--Table!-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -42,33 +42,25 @@ body {
 	</table>
 		
 	<script type="text/javascript">
-  
-	//create a Table Object
-	var tableBody= "";
-	//iterate over every array(row) within tableArr
-	for (let row of allStorage()) {
-	//Insert a new row element into the table element
-	  tableBody = tableBody + "<tr>";
-	  //Iterate over every index(cell) in each array(row)
-	  for (let cell of row) {
-		  tableBody = tableBody + "<th>" + cell + "</th>";
-	  }
-	  tableBody = tableBody + "</tr>";
-	}
-	
-  
-  
-	function allStorage() {
-
-    var values = [],
+  	
+	var values = [],
         keys = Object.keys(localStorage),
         i = keys.length;
 
-    while ( i-- ) {
-        values.push( localStorage.getItem(keys[i]) );
-    }
-
-    return values;
+    	while ( i-- ) {
+        	values.push( localStorage.getItem(keys[i]) );
+    	}
+		
+	//create a Table Object
+	var tableBody= "";
+	
+  	for (var a in localStorage) {
+		tableBody = tableBody + "<tr>";
+		tableBody = tableBody + "<th>" + a + "</th>" + "<th>" + localStorage[a] + "</th>";
+		tableBody = tableBody + "</tr>";
+	}
+  
+	$("#ptable").append(tableBody);
 }
           
    </script>
