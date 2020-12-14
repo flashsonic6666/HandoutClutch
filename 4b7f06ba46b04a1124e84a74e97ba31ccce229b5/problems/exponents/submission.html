@@ -77,12 +77,9 @@ div.vertical {
 	
 	<script type="text/javascript">
           function pr() {
-		let answer = document.getElementById("ans");
-		  if(answer=="correct"){
+		var answer = document.getElementById("ans");
+		  if(answer.valueOf()=="correct"){
 			document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
-		  }
-		  else if(answer==correct){
-			  document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
 		  }
 		  else{
 			document.getElementById("result").innerHTML = "no u";  
