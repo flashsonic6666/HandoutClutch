@@ -11,7 +11,7 @@
 
 body {
 
-	background-image: url('NyanCat.png');
+	background-image: url('NyanCt.png');
 	background-attachment: fixed;
 	color: #333;
 }
@@ -75,9 +75,15 @@ div.vertical {
 	  <input type="button" value="Submit" onClick="pr()">
 	</form>
 	
-	<script>
+	<script type="text/javascript">
           function pr() {
-            document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
+		var answer = document.getElementById("ans");
+		  if(answer=="correct"){
+			document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
+		  }
+		  else{
+			document.getElementById("result").innerHTML = "no u";  
+		  }
           }
         </script>
 </body>
