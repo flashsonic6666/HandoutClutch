@@ -74,34 +74,10 @@ div.vertical {
 	  <input type="submit" value="Submit">
 	</form>
 	
-	<div class="subscribe-card-container">
-	    <div class="subscribe-card">
-		<form method="post" class="main-form" action-xhr="/submit-form" target="_top">
-		    <div class="input">
-			<input type="text" name="name" id="form-name" required>
-			<label for="form-name">Name:</label>
-		    </div>
-		    <div class="input">
-			<input type="email" name="email" id="form-email" required>
-			<label for="form-email">Email:</label>
-		    </div>
-		    <input type="submit" value="Subscribe" class="btn">
-		    <div submit-success>
-			<template type="amp-mustache">
-			    <p class="form-submit-response">
-				Success! Thanks {{name}} for subscribing!
-			    </p>
-			</template>
-		    </div>
-		    <div submit-error>
-			<template type="amp-mustache">
-			    <p class="form-submit-response">
-				Oops! Sorry, there was an error.
-			    </p>
-			</template>
-		    </div>
-		</form>
-	    </div>
-	</div>
+	<script>
+          function pr() {
+            document.getElementById("pnum").innerHTML = document.getElementById('fname').value + ": " + document.getElementById('ans').value;
+          }
+        </script>
 </body>
 </html>
