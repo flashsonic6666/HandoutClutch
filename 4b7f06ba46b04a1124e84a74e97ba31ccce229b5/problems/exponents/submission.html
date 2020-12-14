@@ -78,11 +78,11 @@ div.vertical {
 	<script type="text/javascript">
           function pr() {
 		var answer = document.getElementById("ans");
-		  if(answer.valueOf()=="correct"){
+		  if(answer.valueOf()=="correct".valueOf()){
 			document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
 		  }
 		  else{
-			document.getElementById("result").innerHTML = "no u";  
+			document.getElementById("result").innerHTML = answer.valueOf();  
 		  }
           }
         </script>
