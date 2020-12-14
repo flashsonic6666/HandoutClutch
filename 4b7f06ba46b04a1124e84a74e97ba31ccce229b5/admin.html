@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<style>
+
+body {
+
+	background-image: url('NyanCt.png');
+	background-attachment: fixed;
+	color: #333;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+	
+</style>
+
+<body>
+	
+	<!--Displaying Image-->
+	<img id="problem" src="NyanCat.JPG" style="width:1000px" class="center">
+	
+	<!--Table!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<table id="ptable">
+	</table>
+		
+	<script type="text/javascript">
+  
+	//create a Table Object
+	var tableBody= "";
+	//iterate over every array(row) within tableArr
+	for (let row of values) {
+	//Insert a new row element into the table element
+	  tableBody = tableBody + "<tr>";
+	  //Iterate over every index(cell) in each array(row)
+	  for (let cell of row) {
+		  tableBody = tableBody + "<th>" + cell + "</th>";
+	  }
+	  tableBody = tableBody + "</tr>";
+	}
+	
+  
+  
+		function allStorage() {
+
+    var values = [],
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        values.push( localStorage.getItem(keys[i]) );
+    }
+
+    return values;
+}
+          
+   </script>
+</body>
+</html>
