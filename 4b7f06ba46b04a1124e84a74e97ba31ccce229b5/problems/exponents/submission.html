@@ -66,6 +66,8 @@ div.vertical {
 
 <body>
 	
+	<p id="temp"></p>
+	
 	<form action="/action_page.php">
 	  <label for="fname">Problem Number:</label>
 	  <input type="text" id="pnum" name="pnum"><br><br>
@@ -74,6 +76,14 @@ div.vertical {
 	  Number of Incorrect Tries: <span id="result"></span>
 	  <input type="button" value="Submit" onClick="pr()">
 	</form>
+	
+	
+	
+	<picture>
+	  <source media="(min-width: 650px)" srcset= temp>
+	  <source media="(min-width: 465px)" srcset="img_car.jpg">
+	  <img src="img_girl.jpg">
+	</picture>
 	
 	<script type="text/javascript">
 	if(localStorage.getItem('clicks')==null){
@@ -94,6 +104,8 @@ div.vertical {
 		  else{
 			document.getElementById("result").innerHTML = answer + " " + localStorage.getItem('clicks');  
 		  }
+		  
+		  document.getElementById("result").innerHTML="ExpProblem" + document.getElementById('pnum').value + ".jpg";
 		  
           }
         </script>
