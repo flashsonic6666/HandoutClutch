@@ -46,26 +46,27 @@ body {
 	</table>
 		
 	<script type="text/javascript">
-  	
-	var values = [],
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    	while ( i-- ) {
-        	values.push( localStorage.getItem(keys[i]) );
-    	}
 		
-	//create a Table Object
-	var tableBody= "";
-	
-  	for (var a in localStorage) {
-		tableBody = tableBody + "<tr>";
-		tableBody = tableBody + "<th>" + a + "</th>" + "<th>" + localStorage[a] + "</th>";
-		tableBody = tableBody + "</tr>";
+  	var tableBody= "";
+		
+	// iterate localStorage
+	for (var i = 0; i < localStorage.length; i++) {
+
+	  // set iteration key name
+	  var key = localStorage.key(i);
+
+	  // use key name to retrieve the corresponding value
+	  var value = localStorage.getItem(key);
+
+	  // console.log the iteration key and value
+	  tableBody = tableBody + "<tr>";
+	  tableBody = tableBody + "<th>" + key + "</th>" + "<th>" + value + "</th>";
+	  tableBody = tableBody + "</tr>";  
+
 	}
   
 	$("#ptable").append(tableBody);
-}
+	}
           
    </script>
 </body>
