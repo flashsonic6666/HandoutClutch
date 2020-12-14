@@ -85,37 +85,13 @@ div.vertical {
 	 <script type="text/javascript" src="https://gist.github.com/juliojr77/ad73b407722018ee676a.js"></script>
 	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
 
-	<script type="text/python">
-	"use strict";
-
-
-	numbers_sum = 0
-	numbers_av = 0
-	numbers_count = 0
-	while True:
-	    user_input = input('Enter a number: ') #user entry
-	    if bool(user_input): # if user_input entry is not empty
-		try:
-		     numbers_sum = numbers_sum + float(user_input)
-		     numbers_count = numbers_count + 1
-		     numbers_av = numbers_sum / numbers_count
-		except TypeError:
-		    input("Invalid input. Press enter to continue!... " )
-		    continue
-		except ValueError:
-			input("Invalid input. Press enter to continue!... " )
-			continue
-	    else: #if user_input entry is empty
-		break
-	print(">>")
-	print('>>')
-	print("---> Count of numbers input: %s" % numbers_count)
-	print("---> Sum of all the numbers %s" % numbers_sum)
-	print("---> Average of all the numbers %s" % numbers_av)
-	print(".")
-	print('.')
-
-	</script>
+	<form action="/action_page.php">
+	  <label for="fname">First name:</label>
+	  <input type="text" id="fname" name="fname"><br><br>
+	  <label for="lname">Last name:</label>
+	  <input type="text" id="lname" name="lname"><br><br>
+	  <input type="submit" value="Submit">
+	</form>
 
 </body>
 </html>
