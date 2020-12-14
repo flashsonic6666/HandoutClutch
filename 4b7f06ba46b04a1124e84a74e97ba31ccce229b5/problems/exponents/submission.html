@@ -71,23 +71,26 @@ div.vertical {
 	  <input type="text" id="pnum" name="pnum"><br><br>
 	  <label for="lname">Answer:        </label>
 	  <input type="text" id="ans" name="ans"><br><br>
-	  Name: <span id="result"></span>
+	  Number of Incorrect Tries: <span id="result"></span>
 	  <input type="button" value="Submit" onClick="pr()">
 	</form>
 	
 	<script type="text/javascript">
 	if(localStorage.getItem('clicks')==null){
-		localStorage.setItem('clicks', 1);
+		localStorage.setItem('clicks', 0);
 	}
 	</script>
 		
 	<script type="text/javascript">
           function pr() {
 		var answer = document.getElementById("ans").value;
-		  localStorage.setItem('clicks', localStorage.getItem('clicks')+1);
+		  localStorage.setItem('clicks', parseInt(localStorage.getItem('clicks'))+1);
 		  if(answer.valueOf()=="correct".valueOf()){
 			document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
 		  }
+		  else if(answer.valueOf()=="reset"){
+			localStorage.setItem('clicks', 0);
+		 }
 		  else{
 			document.getElementById("result").innerHTML = answer + " " + localStorage.getItem('clicks');  
 		  }
