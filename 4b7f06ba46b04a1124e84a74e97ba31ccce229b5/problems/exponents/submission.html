@@ -82,7 +82,7 @@ div.vertical {
 	<script type="text/javascript">
           function pr() {
 		var answer = document.getElementById("ans").value;
-		  localStorage.getItem('clicks')++;
+		  localStorage.setItem('clicks', localStorage.getItem('clicks')+1);
 		  if(answer.valueOf()=="correct".valueOf()){
 			document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
 		  }
