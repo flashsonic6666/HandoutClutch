@@ -40,7 +40,7 @@ body {
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<table id="ptable">
 		<tr>
-		    <th>Ky</th>
+		    <th>Key</th>
 		    <th>Value</th> 
 		</tr>
 	</table>
@@ -64,7 +64,10 @@ body {
 	  tableBody = tableBody + "</tr>";  
 
 	}
-  
+		
+	tableBody = tableBody + "<tr>";
+	  tableBody = tableBody + "<th>" + localStorage.length + "</th>" + "<th>" + localStorage.length + "</th>";
+	  tableBody = tableBody + "</tr>";  
 	$("#ptable").append(tableBody);
 	}
           
