@@ -71,12 +71,13 @@ div.vertical {
 	  <input type="text" id="pnum" name="pnum"><br><br>
 	  <label for="lname">Answer:        </label>
 	  <input type="text" id="ans" name="ans"><br><br>
+	  Name: <span id="result"></span>
 	  <input type="button" value="Submit" onClick="pr()">
 	</form>
 	
 	<script>
           function pr() {
-            document.getElementById("pnum").innerHTML = document.getElementById('fname').value + ": " + document.getElementById('ans').value;
+            document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
           }
         </script>
 </body>
