@@ -81,13 +81,14 @@ body {
 	  tableBody = tableBody + "<tr>";
 	  //Iterate over every index(cell) in each array(row)
 	  for (let cell of row) {
-		  tableBody = tableBody + ("<th>" + cell + "</th>");
+		  tableBody = tableBody + "<th>" + cell + "</th>";
 	  }
 	  tableBody = tableBody + "</tr>";
 	}
 	//append the compiled table to the DOM
 	$("#ptable").append(tableBody);	
 	
+	$("#ptable").append("<tr><th>hi</th><th>hi</th></tr>");	
 		
           function result() {
 		var answer = document.getElementById("ans").value;
