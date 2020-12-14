@@ -21,6 +21,13 @@ body {
   margin-right: auto;
   width: 50%;
 }
+#ptable{
+    position:absolute;
+  top:0;
+  right:0; 
+	border: 1px solid black;
+	width=50%;
+}
 	
 </style>
 
@@ -39,7 +46,7 @@ body {
 	//create a Table Object
 	var tableBody= "";
 	//iterate over every array(row) within tableArr
-	for (let row of values) {
+	for (let row of allStorage()) {
 	//Insert a new row element into the table element
 	  tableBody = tableBody + "<tr>";
 	  //Iterate over every index(cell) in each array(row)
@@ -51,7 +58,7 @@ body {
 	
   
   
-		function allStorage() {
+	function allStorage() {
 
     var values = [],
         keys = Object.keys(localStorage),
