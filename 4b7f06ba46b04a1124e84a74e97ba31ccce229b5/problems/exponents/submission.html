@@ -65,7 +65,7 @@ div.vertical {
 </style>
 
 <body>
-
+	
 	<form action="/action_page.php">
 	  <label for="fname">Problem Number:</label>
 	  <input type="text" id="pnum" name="pnum"><br><br>
@@ -76,14 +76,20 @@ div.vertical {
 	</form>
 	
 	<script type="text/javascript">
+	localStorage.setItem('clicks', 1);
+	</script>
+		
+	<script type="text/javascript">
           function pr() {
 		var answer = document.getElementById("ans").value;
+		  localStorage.getItem('clicks')++;
 		  if(answer.valueOf()=="correct".valueOf()){
 			document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
 		  }
 		  else{
-			document.getElementById("result").innerHTML = answer;  
+			document.getElementById("result").innerHTML = answer + " " + localStorage.getItem('myCat');  
 		  }
+		  
           }
         </script>
 </body>
