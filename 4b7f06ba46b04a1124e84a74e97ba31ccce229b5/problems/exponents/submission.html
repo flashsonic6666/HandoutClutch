@@ -64,35 +64,45 @@ body {
 	<script type="text/javascript">
 	var index = 1;
 	var maxSize = 21;
+	
+	resetTable();
 		
-		
-	//setup our table array
-	var tableArr = [
-	  ["Problem", "Answer"],
-	  ["Q1", "x"],
-	  ["Q2", "x"],
-	  ["Q3", "x"],
-	  ["Q4", "x"],
-	  ["Q5", "x"],
-	  ["Q6", "x"],
-	  ["Q7", "x"],
-	  ["Q8", "x"],
-	  ["Q9", "x"]
-	]
-	//create a Table Object
-	var tableBody= "";
-	//iterate over every array(row) within tableArr
-	for (let row of tableArr) {
-	//Insert a new row element into the table element
-	  tableBody = tableBody + "<tr>";
-	  //Iterate over every index(cell) in each array(row)
-	  for (let cell of row) {
-		  tableBody = tableBody + "<th>" + cell + "</th>";
-	  }
-	  tableBody = tableBody + "</tr>";
+	function resetTable(){
+		var tableBody= "";
+
+		tableBody = tableBody + "<tr>";
+		 tableBody = tableBody + "<th>" + "Problem" + "</th>" + "<th>" + "Answer" + "</th>";
+		 tableBody = tableBody + "</tr>";  
+
+
+		// iterate localStorage
+		for (var i = 1; i <= maxSize; i++) {
+
+		  // set iteration key name
+		  var key = localStorage.key(i);
+
+		  // use key name to retrieve the corresponding value
+		var res = localStorage.getItem("ExpAnswers").charAt(i);
+		  
+		var value="?";
+			
+		if(parseInt(res)==0){
+			value= "X";
+		}
+		else{
+			value="O";
+		}
+				
+		  // console.log the iteration key and value
+		  tableBody = tableBody + "<tr>";
+		  tableBody = tableBody + "<th>Q" + i + "</th>" + "<th>" + value + "</th>";
+		  tableBody = tableBody + "</tr>";  
+
+		}
+
+		 
+		$("#ptable").append(tableBody);
 	}
-	//append the compiled table to the DOM
-	$("#ptable").append(tableBody);	
 		
           function result() {
 		var answer = document.getElementById("ans").value;
