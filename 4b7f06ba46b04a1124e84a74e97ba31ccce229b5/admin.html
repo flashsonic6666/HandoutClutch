@@ -58,45 +58,52 @@ body {
 	<!--Table!-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<table id="ptable">
-		<tr>
-		    <th>Keyy</th>
-		    <th>Value</th> 
-		</tr>
 	</table>
 		
 	<script type="text/javascript">
+	resetTable();
 		
-  	var tableBody= "";
-		
-	// iterate localStorage
-	for (var i = 0; i < localStorage.length; i++) {
+	function resetTable()	
+		var tableBody= "";
 
-	  // set iteration key name
-	  var key = localStorage.key(i);
+		tableBody = tableBody + "<tr>";
+		 tableBody = tableBody + "<th>" + "key" + "</th>" + "<th>" + "value" + "</th>";
+		 tableBody = tableBody + "</tr>";  
 
-	  // use key name to retrieve the corresponding value
-	  var value = localStorage.getItem(key);
 
-	  // console.log the iteration key and value
-	  tableBody = tableBody + "<tr>";
-	  tableBody = tableBody + "<th>" + key + "</th>" + "<th>" + value + "</th>";
-	  tableBody = tableBody + "</tr>";  
+		// iterate localStorage
+		for (var i = 0; i < localStorage.length; i++) {
 
+		  // set iteration key name
+		  var key = localStorage.key(i);
+
+		  // use key name to retrieve the corresponding value
+		  var value = localStorage.getItem(key);
+
+		  // console.log the iteration key and value
+		  tableBody = tableBody + "<tr>";
+		  tableBody = tableBody + "<th>" + key + "</th>" + "<th>" + value + "</th>";
+		  tableBody = tableBody + "</tr>";  
+
+		}
+
+		tableBody = tableBody + "<tr>";
+		  tableBody = tableBody + "<th>" + localStorage.length + "</th>" + "<th>" + localStorage.length + "</th>";
+		  tableBody = tableBody + "</tr>";  
+		$("#ptable").append(tableBody);
 	}
-		
-	tableBody = tableBody + "<tr>";
-	  tableBody = tableBody + "<th>" + localStorage.length + "</th>" + "<th>" + localStorage.length + "</th>";
-	  tableBody = tableBody + "</tr>";  
-	$("#ptable").append(tableBody);
-     
 	function add() {
 		var key = document.getElementById("keyA").value;
 		var answer = document.getElementById("a").value;
 		localStorage.setItem(key, answer);
+		$("#ptable tr").remove(); 
+		resetTable();
           }
 	function remove() {
 		var key = document.getElementById("keyR").value;
 		localStorage.removeItem(key);
+		$("#ptable tr").remove(); 
+		resetTable();
           }
    </script>
 </body>
