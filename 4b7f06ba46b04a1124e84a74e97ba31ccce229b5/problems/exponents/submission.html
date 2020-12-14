@@ -77,7 +77,7 @@ div.vertical {
 	
 	<script type="text/javascript">
           function pr() {
-		var answer = document.getElementById("ans");
+		var answer = document.getElementById("ans").innerHTML;
 		  if(answer.valueOf()=="correct".valueOf()){
 			document.getElementById("result").innerHTML = document.getElementById('pnum').value + ": " + document.getElementById('ans').value;
 		  }
