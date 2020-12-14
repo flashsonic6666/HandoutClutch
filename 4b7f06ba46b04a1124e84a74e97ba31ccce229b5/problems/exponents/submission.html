@@ -71,6 +71,8 @@ body {
 	resetTable();
 		
 	function resetTable(){
+		$("#ptable tr").remove(); 
+		
 		var tableBody= "";
 
 		tableBody = tableBody + "<tr>";
@@ -113,7 +115,7 @@ body {
 		  
 		  if(parseInt(answer)==answers[prob-1]){
 			document.getElementById("result").innerHTML = "CORRECT LOSER";
-			  var start = localStorage.getItem("ExpAnswers").substring(1, prob-1);
+			  var start = localStorage.getItem("ExpAnswers").substring(0, prob-1);
 			  var end = localStorage.getItem("ExpAnswers").substring(prob);
 			localStorage.setItem("ExpAnswers", start+"1"+end);
 		  }
