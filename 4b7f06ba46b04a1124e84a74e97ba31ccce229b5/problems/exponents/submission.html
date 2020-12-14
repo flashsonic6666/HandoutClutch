@@ -74,9 +74,12 @@ div.vertical {
 	  <label for="lname">Answer:        </label>
 	  <input type="text" id="ans" name="ans"><br><br>
 	  Number of Incorrect Tries: <span id="result"></span>
-	  <input type="button" value="Submit" onClick="result();pic();">
+	  <input type="button" value="Submit" onClick="result();">
 	</form>
-
+	
+	<input type="button" value=">" onClick="picr();">
+	<input type="button" value="<" onClick="picl();">
+	
 	<img id="problem" src="ExpProblem1.JPG" style="width:1000px" class="center">
 	
 	<script type="text/javascript">
@@ -103,10 +106,18 @@ div.vertical {
 		  
 		  document.getElementById("temp").innerHTML="ExpProblem" + document.getElementById('pnum').value + ".JPG";  
           }
-	 function pic(){
+	 function picr(){
 		  index = index + 1;
 		  if (index == maxSize+1) {
 		     index = 1;
+		  }
+		  var image1 = document.getElementById("problem");
+		  image1.src = "ExpProblem" +index+".JPG";	 
+	 }
+	function picl(){
+		  index = index - 1;
+		  if (index == 0) {
+		     index = maxSize;
 		  }
 		  var image1 = document.getElementById("problem");
 		  image1.src = "ExpProblem" +index+".JPG";	 
