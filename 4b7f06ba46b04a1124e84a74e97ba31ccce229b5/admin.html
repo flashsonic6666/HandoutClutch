@@ -33,6 +33,25 @@ body {
 
 <body>
 	
+	<!--Add Local-->
+	Form to Add a Key
+	<form action="/action_page.php">
+	  <label for="keyA">Key:</label>
+	  <input type="text" id="keyA" name="keyA"><br><br>
+	  <label for="a">Add:        </label>
+	  <input type="text" id="a" name="a"><br><br>
+	  Confirm: <span id="result"></span>
+	  <input type="button" value="Submit" onClick="add();">
+	</form>
+	
+	Form to Remove a Key
+	<form action="/action_page.php">
+	  <label for="keyR">Key:</label>
+	  <input type="text" id="keyR" name="keyR"><br><br>
+	  Confirm: <span id="result"></span>
+	  <input type="button" value="Submit" onClick="remove();">
+	</form>
+	
 	<!--Displaying Image-->
 	<img id="problem" src="NyanCat.png" style="width:100px" class="center">
 	
@@ -70,6 +89,15 @@ body {
 	  tableBody = tableBody + "</tr>";  
 	$("#ptable").append(tableBody);
      
+	function add() {
+		var key = document.getElementById("keyA").value;
+		var answer = document.getElementById("a").value;
+		localStorage.setItem(k, a);
+          }
+	function remove() {
+		var key = document.getElementById("keyR").value;
+		localStorage.removeItem(key);
+          }
    </script>
 </body>
 </html>
