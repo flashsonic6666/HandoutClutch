@@ -76,7 +76,9 @@ div.vertical {
 	</form>
 	
 	<script type="text/javascript">
-	localStorage.setItem('clicks', 1);
+	if(localStorage.getItem('clicks')==null){
+		localStorage.setItem('clicks', 1);
+	}
 	</script>
 		
 	<script type="text/javascript">
