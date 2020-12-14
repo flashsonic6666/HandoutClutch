@@ -25,9 +25,7 @@ body {
 </style>
 
 <body>
-	
-	<p id="temp"></p>
-	
+	//Submission Form
 	<form action="/action_page.php">
 	  <label for="fname">Problem Number:</label>
 	  <input type="text" id="pnum" name="pnum"><br><br>
@@ -37,16 +35,37 @@ body {
 	  <input type="button" value="Submit" onClick="result();">
 	</form>
 	
+	//Next Problem/Go back a problem
 	<input type="button" value="<" onClick="picl();">
 	<input type="button" value=">" onClick="picr();">
 	
-	
+	//Displaying Image
 	<img id="problem" src="ExpProblem1.JPG" style="width:1000px" class="center">
 	
+	//Clickable Table showing if answers are right
+	<table style="width:100%">
+	  <tr>
+	    <th>Firstname</th>
+	    <th>Lastname</th>
+	    <th>Age</th>
+	  </tr>
+	  <tr>
+	    <td>Jill</td>
+	    <td>Smith</td>
+	    <td>50</td>
+	  </tr>
+	  <tr>
+	    <td>Eve</td>
+	    <td>Jackson</td>
+	    <td>94</td>
+	  </tr>
+	</table>
+	
+	//"Clicks"
 	<script type="text/javascript">
 	if(localStorage.getItem('clicks')==null){
 		localStorage.setItem('clicks', 0);
-	}
+	}	
 	</script>
 		
 	<script type="text/javascript">
@@ -64,8 +83,6 @@ body {
 		  else{
 			document.getElementById("result").innerHTML = answer + " " + localStorage.getItem('clicks');  
 		  }
-		  
-		  document.getElementById("temp").innerHTML="ExpProblem" + document.getElementById('pnum').value + ".JPG";  
           }
 	 function picr(){
 		  index = index + 1;
