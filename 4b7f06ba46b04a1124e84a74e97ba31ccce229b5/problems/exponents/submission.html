@@ -74,15 +74,10 @@ div.vertical {
 	  <label for="lname">Answer:        </label>
 	  <input type="text" id="ans" name="ans"><br><br>
 	  Number of Incorrect Tries: <span id="result"></span>
-	  <input type="button" value="Submit" onClick="pr()">
+	  <input type="button" value="Submit" onClick="result();pic();">
 	</form>
-	
-	
-	
-	<picture>
-	  <source media="(min-width: 0px)" srcset= temp>
-	  <img src="ExpProblem2.JPG">
-	</picture>
+
+	<img id="problem" src="4b7f06ba46b04a1124e84a74e97ba31ccce229b5/problems/exponents/ExpProblem1.JPG" style="width:100px">
 	
 	<script type="text/javascript">
 	if(localStorage.getItem('clicks')==null){
@@ -91,7 +86,9 @@ div.vertical {
 	</script>
 		
 	<script type="text/javascript">
-          function pr() {
+	var index = 1;
+	var maxSize = 21;
+          function result() {
 		var answer = document.getElementById("ans").value;
 		  localStorage.setItem('clicks', parseInt(localStorage.getItem('clicks'))+1);
 		  if(answer.valueOf()=="correct".valueOf()){
@@ -104,9 +101,16 @@ div.vertical {
 			document.getElementById("result").innerHTML = answer + " " + localStorage.getItem('clicks');  
 		  }
 		  
-		  document.getElementById("temp").innerHTML="ExpProblem" + document.getElementById('pnum').value + ".JPG";
-		  
+		  document.getElementById("temp").innerHTML="ExpProblem" + document.getElementById('pnum').value + ".JPG";  
           }
+	 function pic(){
+		  index = index + 1;
+		  if (index == maxSize) {
+		     index = 1;
+		  }
+		  var image1 = document.getElementById("problem");
+		  image1.src = "4b7f06ba46b04a1124e84a74e97ba31ccce229b5/problems/exponents/ExpProblem" +index+".JPG";	 
+	 }
         </script>
 </body>
 </html>
