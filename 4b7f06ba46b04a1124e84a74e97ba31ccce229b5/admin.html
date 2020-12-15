@@ -72,6 +72,7 @@ body {
 	resetTable();
 		
 	function resetTable(){
+		$("#ptable tr").remove(); 
 		var tableBody= "";
 
 		tableBody = tableBody + "<tr>";
@@ -104,13 +105,11 @@ body {
 		var key = document.getElementById("keyA").value;
 		var answer = document.getElementById("a").value;
 		localStorage.setItem(key, answer);
-		$("#ptable tr").remove(); 
 		resetTable();
           }
 	function remove() {
 		var key = document.getElementById("keyR").value;
 		localStorage.removeItem(key);
-		$("#ptable tr").remove(); 
 		resetTable();
           }
 	function addArray(){
@@ -118,6 +117,7 @@ body {
 		var names = [];
 		names[0] = [0,0];
 		localStorage.setItem(key, JSON.stringify(names));
+		resetTable();
 	}
    </script>
 </body>
