@@ -1,6 +1,3 @@
----
-title: Document Center
----
 
 ## EXPONENTS
 
@@ -10,7 +7,7 @@ title: Document Center
 
 [View Full Handout](https://drive.google.com/file/d/109eK7mfNeC1JrcafTQZt7nAUsNJl427A/view?usp=sharing)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for being cool like Rich!
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for being cool like Rich! Yahoo!
 
 ```markdown
 Syntax highlighted code block
