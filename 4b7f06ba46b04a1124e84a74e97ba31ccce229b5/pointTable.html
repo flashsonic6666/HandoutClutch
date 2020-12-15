@@ -40,7 +40,7 @@ body {
 	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
 	
 	<!--Displaying Image-->
-	<img id="problem" src="NyanCat.png" style="width:100px" class="center">
+	<img id="problem" src="NyaanCat.png" style="width:100px" class="center">
 	
 	<script type="text/javascript">
 		
@@ -53,12 +53,15 @@ body {
 
 		tableBody = tableBody + "<tr>";
 		 tableBody = tableBody + "<th>" + "Handout" + "</th>" + "<th>" + "Points Left To Completion" + "</th>" + "<th>" + "Percentage Obtained" + 
-     "</th>" + "<th>" + "Total Possible Points" + "</th>";
+    		 "</th>" + "<th>" + "Total Possible Points" + "</th>";
 		 tableBody = tableBody + "</tr>";  
 
 
-  var correctness=JSON.parse(localStorage.getItem("correctness"));
+ 		 var correctness=JSON.parse(localStorage.getItem("correctness"));
+		
 
+		 
+		$("#ptable").append(tableBody);
 		
 	}
 	
