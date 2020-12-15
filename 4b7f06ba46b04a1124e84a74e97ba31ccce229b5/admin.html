@@ -62,12 +62,22 @@ body {
 	
 	Add elements to an array
 	<form action="/action_page.php">
+	  <label for="arrayName0">Array Name</label>
+	  <input type="text" id="arrayName0" name="arrayName0"><br><br>
+	 <label for="elements0">Element</label>
+	  <input type="text" id="elements0" name="elements0"><br><br>
+	  Confirm: <span id="result"></span>
+	  <input type="button" value="Submit" onClick="addToArray();">
+	</form>
+	
+	Add elements to an array of arrays
+	<form action="/action_page.php">
 	  <label for="arrayName1">Array Name</label>
 	  <input type="text" id="arrayName1" name="arrayName1"><br><br>
 	 <label for="elements">Elements with | no spaces</label>
 	  <input type="text" id="elements" name="elements"><br><br>
 	  Confirm: <span id="result"></span>
-	  <input type="button" value="Submit" onClick="addToArray();">
+	  <input type="button" value="Submit" onClick="addArrayToArray();">
 	</form>
 	
 	Remove elements from an array
@@ -149,6 +159,19 @@ body {
 		resetTable();
 	}
 	function addToArray(){
+		var key = document.getElementById("arrayName0").value;
+		var eles = document.getElementById("elements0").value;
+		
+		var x=JSON.parse(localStorage.getItem(key));
+		
+		for(var i=0; i<eles.length; i++){
+
+		x.push(eles);
+		
+		localStorage.setItem(key, JSON.stringify(x));
+		resetTable();
+	}
+	function addArrayToArray(){
 		var key = document.getElementById("arrayName1").value;
 		var eles = document.getElementById("elements").value;
 		
