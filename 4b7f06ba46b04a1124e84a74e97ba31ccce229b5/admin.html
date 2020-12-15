@@ -134,25 +134,11 @@ body {
 		
 		var temp="";
 		
+		
+		
+		
+		
 		var x=JSON.parse(localStorage.getItem(key));
-		
-		var yes=x.size();
-		
-		for(var i=0; i<eles.length; i++){
-			if(eles.charAt(i)==','){
-			   x[yes].push(temp);
-			   temp="";
-			}
-			else{
-			   temp+=eles.charAt(i);
-			}
-			
-			if(i==eles.length-1){
-			   x[yes].push(temp);
-			   temp="";
-			}
-		}
-		
 		
 		localStorage.setItem(key, x);
 		resetTable();
