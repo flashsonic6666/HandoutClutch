@@ -67,11 +67,11 @@ body {
 	 <label for="elements">Elements with commas no spaces</label>
 	  <input type="text" id="elements" name="elements"><br><br>
 	  Confirm: <span id="result"></span>
-	  <input type="button" value="Submit" onClick="addtoArray();">
+	  <input type="button" value="Submit" onClick="addToArray();">
 	</form>
 	
 	<!--Displaying Image-->
-	<img id="problem" src="NyanCat.png" style="width:100px" class="center">
+	<img id="problem" src="NynCat.png" style="width:100px" class="center">
 	
 	<!--Table!-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -128,12 +128,12 @@ body {
 		localStorage.setItem(key, JSON.stringify(names));
 		resetTable();
 	}
-	function addtoArray(){
+	function addToArray(){
 		var key = document.getElementById("arrayName1").value;
 		var eles = document.getElementById("elements").value;
 		var names = eles.split(",");
 		
-		var temp=localStorage.getItem(key);
+		var temp=JSON.parse(localStorage.getItem(key));
 		temp.push(names);
 		
 		localStorage.setItem(key, temp);
