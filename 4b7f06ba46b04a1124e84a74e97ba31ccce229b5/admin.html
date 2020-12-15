@@ -150,10 +150,10 @@ body {
 			}
 		}
 		
-		var temp=JSON.parse(localStorage.getItem(key));
-		temp.push(names);
+		var x=JSON.parse(localStorage.getItem(key));
+		x.push(names);
 		
-		localStorage.setItem(key, temp);
+		localStorage.setItem(key, x);
 		resetTable();
 	}
    </script>
