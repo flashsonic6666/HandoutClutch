@@ -65,7 +65,6 @@ body {
 	var index = 1;
 	var maxSize = 21;
 	
-	var answers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
 	document.getElementById("result").innerHTML = localStorage.getItem('clicks');  
 		
 	resetTable();
@@ -113,7 +112,9 @@ body {
 		  var answer = document.getElementById("ans").value;
 		var prob = document.getElementById("pnum").value;
 		  
-		  if(parseInt(answer)==answers[prob-1]){
+		  var answers=JSON.parse(localStorage.getItem("answers"));
+		  
+		  if(parseInt(answer)==answers[0][prob-1]){
 			document.getElementById("result").innerHTML = "CORRECT LOSER";
 			  var start = localStorage.getItem("ExpAnswers").substring(0, prob-1);
 			  var end = localStorage.getItem("ExpAnswers").substring(prob);
