@@ -46,6 +46,12 @@ body {
 	<input type="button" value="<" onClick="picl();">
 	<input type="button" value=">" onClick="picr();">
 	
+	<form action="/action_page.php">
+	  <label for="prob">Go To Problem:</label>
+	  <input type="text" id="prob" name="prob"><br><br>
+	  <input type="button" value="Submit" onClick="goPic();">
+	</form>
+	
 	<!--Displaying Image-->
 	<img id="problem" src="ExpProblem1.JPG" style="width:1000px" class="center">
 	
@@ -142,6 +148,13 @@ body {
 		  var image1 = document.getElementById("problem");
 		  image1.src = "ExpProblem" +index+".JPG";	 
 	 }
+	function goPic(){
+		var prob = document.getElementById("prob").value;
+		  index = prob;
+		  var image1 = document.getElementById("problem");
+		  image1.src = "ExpProblem" +index+".JPG";	 
+	 }
+		
         </script>
 </body>
 </html>
