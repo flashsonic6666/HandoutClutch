@@ -64,14 +64,14 @@ body {
 	<form action="/action_page.php">
 	  <label for="arrayName1">Array Name</label>
 	  <input type="text" id="arrayName1" name="arrayName1"><br><br>
-	 <label for="elements">Elements with commas no spaces</label>
+	 <label for="elements">Elements with | no spaces</label>
 	  <input type="text" id="elements" name="elements"><br><br>
 	  Confirm: <span id="result"></span>
 	  <input type="button" value="Submit" onClick="addToArray();">
 	</form>
 	
 	<!--Displaying Image-->
-	<img id="problem" src="NyanCat.png" style="width:100px" class="center">
+	<img id="problem" src="NyanCt.png" style="width:100px" class="center">
 	
 	<!--Table!-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -124,7 +124,7 @@ body {
           }
 	function addArray(){
 		var key = document.getElementById("arrayName").value;
-		var names = [["1","1"],["1","1"]];
+		var names = [];
 		localStorage.setItem(key, JSON.stringify(names));
 		resetTable();
 	}
@@ -132,15 +132,28 @@ body {
 		var key = document.getElementById("arrayName1").value;
 		var eles = document.getElementById("elements").value;
 		
+		var names = [];
 		var temp="";
-		
-		
-		
-		
-		
 		var x=JSON.parse(localStorage.getItem(key));
 		
-		localStorage.setItem(key, x);
+		for(var i=0; i<eles.length; i++){
+			if(eles.charAt(i)=='|'){
+				names.push(temp);
+				temp="";
+			}
+			else{
+				temp+=eles.charAt(i);
+			}
+			
+			if(i==eles.length-1){
+			   names.push(temp);
+			   temp="";
+			}
+		}
+		
+		x.push(names);
+		
+		localStorage.setItem(key, JSON.stringify(x));
 		resetTable();
 	}
    </script>
