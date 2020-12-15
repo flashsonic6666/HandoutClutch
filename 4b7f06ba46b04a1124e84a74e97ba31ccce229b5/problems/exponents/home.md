@@ -7,7 +7,7 @@
 
 [View Full Handout](https://drive.google.com/file/d/109eK7mfNeC1JrcafTQZt7nAUsNJl427A/view?usp=sharing)
 
-[Back to Main Page](--prefix--prefix index.md)
+[Back to Main Page](https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/)
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for being cool like Rich! Yahoo!
 
