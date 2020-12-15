@@ -46,14 +46,14 @@ body {
 	<input type="button" value="<" onClick="picl();">
 	<input type="button" value=">" onClick="picr();">
 	
+	<!--Displaying Image-->
+	<img id="problem" src="ExpProblem1.JPG" style="width:1000px" class="center">
+	
 	<form action="/action_page.php">
 	  <label for="prob">Go To Problem:</label>
 	  <input type="text" id="prob" name="prob"><br><br>
 	  <input type="button" value="Submit" onClick="goPic();">
 	</form>
-	
-	<!--Displaying Image-->
-	<img id="problem" src="ExpProblem1.JPG" style="width:1000px" class="center">
 	
 	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
 	
@@ -150,7 +150,7 @@ body {
 	 }
 	function goPic(){
 		var prob = document.getElementById("prob").value;
-		  index = prob;
+		  index = parseInt(prob);
 		  var image1 = document.getElementById("problem");
 		  image1.src = "ExpProblem" +index+".JPG";	 
 	 }
