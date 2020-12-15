@@ -131,7 +131,7 @@ body {
 	function addtoArray(){
 		var key = document.getElementById("arrayName1").value;
 		var eles = document.getElementById("elements").value;
-		var names = eles.split(" ");
+		var names = eles.split(",");
 		
 		var temp=localStorage.getItem(key);
 		temp.push(names);
