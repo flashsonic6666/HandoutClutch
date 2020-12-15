@@ -60,19 +60,13 @@ th {
 				
 		  // console.log the iteration key and value
 		  tableBody = tableBody + "<tr>";
-		  tableBody = tableBody + "<td>"
-			  + putt[0] + "</td>" + "<td>" + putt[1] + "</td>" + "<td>" + putt[2] + "</td>" + "<td>" + putt[3] + "</td>"+ "<td>" + putt[4] + "</td>";
+		  tableBody = tableBody + "<td><a href=\"http://example.com\">"
+			  + putt[0] + "</a></td>" + "<td>" + putt[1] + "</td>" + "<td>" + putt[2] + "</td>" + "<td>" + putt[3] + "</td>"+ "<td>" + putt[4] + "</td>";
 		  tableBody = tableBody + "</tr>";  
 
 		}
 		 
 		$("#ptable").append(tableBody);
-		
-		    var elLink = document.createElement('a');
-		    var href='/directoryname/filename.html';
-		    elLink.href = href;
-		    elLink.innerHTML = 'link';
-		    $("#ptable").rows[1].cells[2].appendChild(elLink);
 	}
 	
    function getPoints(p1){
