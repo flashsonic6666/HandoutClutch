@@ -51,6 +51,7 @@ th {
 
 
  		 var correctness=JSON.parse(localStorage.getItem("correctness"));
+		var handoutCode=JSON.parse(localStorage.getItem("handoutCode"));
 		
 		// iterate localStorage
 		for (var i = 0; i < correctness.length; i++) {
@@ -59,7 +60,7 @@ th {
 				
 		  // console.log the iteration key and value
 		  tableBody = tableBody + "<tr>";
-		  tableBody = tableBody + "<td>" + putt[0] + "</td>" + "<td>" + putt[1] + "</td>" + "<td>" + putt[2] + "</td>" + "<td>" + putt[3] + "</td>"
+		  tableBody = tableBody + "<td><a href= handoutCode[i] + ".pdf">" + putt[0] + "</td>" + "<td>" + putt[1] + "</td>" + "<td>" + putt[2] + "</td>" + "<td>" + putt[3] + "</td>"
 			+ "<td>" + putt[4] + "</td>";
 		  tableBody = tableBody + "</tr>";  
 
