@@ -9,6 +9,8 @@ The website might look like literal poop right now but I'll try my best to clean
 | [Powers (A)](problems/exponents/home.md) | 49   | 18%   |100    |
 | Nullensatz (C)| x   | x   |x    | 
 
+{% include pointTable.html %}
+
 ### Markdown
 
 
