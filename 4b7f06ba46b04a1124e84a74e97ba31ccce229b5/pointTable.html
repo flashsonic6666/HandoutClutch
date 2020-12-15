@@ -52,8 +52,8 @@ body {
 		var tableBody= "";
 
 		tableBody = tableBody + "<tr>";
-		 tableBody = tableBody + "<th>" + "Handout" + "</th>" + "<th>" + "Points Left To Completion" + "</th>" + "<th>" + "Percentage Obtained" + 
-    		 "</th>" + "<th>" + "Total Possible Points" + "</th>";
+		 tableBody = tableBody + "<th>" + "   Handout   " + "</th>" + "<th>" + "   Points Obtained   " + "</th>" "<th>" + "   Total Points Needed   " + "</th>" 
+			 + "<th>" + "   Percentage Obtained   " + "</th>" + "<th>" + "   Total Possible Points   " + "</th>";
 		 tableBody = tableBody + "</tr>";  
 
 
@@ -66,7 +66,8 @@ body {
 				
 		  // console.log the iteration key and value
 		  tableBody = tableBody + "<tr>";
-		  tableBody = tableBody + "<th>" + putt[0] + "</th>" + "<th>" + putt[1] + "</th>" + "<th>" + putt[2] + "</th>" + "<th>" + putt[3] + "</th>";
+		  tableBody = tableBody + "<th>" + putt[0] + "</th>" + "<th>" + putt[1] + "</th>" + "<th>" + putt[2] + "</th>" + "<th>" + putt[3] + "</th>"
+			+ "<th>" + putt[4] + "</th>";
 		  tableBody = tableBody + "</tr>";  
 
 		}
@@ -86,12 +87,14 @@ body {
       var points=JSON.parse(localStorage.getItem("points"));
       var correctness=JSON.parse(localStorage.getItem("correctness"));
       var pointsNeeded=JSON.parse(localStorage.getItem("pointsNeeded"));
+	var handoutName=JSON.parse(localStorage.getItem("handoutName"));
       
       for(var i=0; i<points[parseInt(p1)].length; i++){
         score+=parseInt(points[parseInt(p1)][i])*parseInt(correctness[parseInt(p1)].charAt(i));
         total+=parseInt(points[parseInt(p1)][i]);
       }
       
+      ans.push(handoutName[parseInt(p1)])   
       ans.push(score);
       ans.push(pointsNeeded[parseInt(p1)])
       ans.push((100*parseInt(score)/parseInt(pointsNeeded[parseInt(p1)])) + "%");
