@@ -7,7 +7,7 @@
 
 [View Full Handout](https://drive.google.com/file/d/109eK7mfNeC1JrcafTQZt7nAUsNJl427A/view?usp=sharing)
 
-[Back to Main Page](index.md)
+[Back to Main Page](--prefix--prefix index.md)
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for being cool like Rich! Yahoo!
 
