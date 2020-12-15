@@ -114,7 +114,7 @@ body {
 		  
 		  var answers=JSON.parse(localStorage.getItem("answers"));
 		  
-		  if(parseInt(answer)==answers[0][prob-1]){
+		  if(answer==answers[0][prob-1]){
 			document.getElementById("result").innerHTML = "CORRECT LOSER";
 			  var start = localStorage.getItem("ExpAnswers").substring(0, prob-1);
 			  var end = localStorage.getItem("ExpAnswers").substring(prob);
