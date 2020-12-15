@@ -105,7 +105,7 @@ body {
 	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
 	
 	<!--Displaying Image-->
-	<img id="problem" src="NyanCt.png" style="width:100px" class="center">
+	<img id="problem" src="NyanCat.png" style="width:100px" class="center">
 	
 	<!--Table!-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -173,7 +173,7 @@ body {
 			x.push(eles);
 		}
 		else{
-			x.insertBefore(eles,x[parseInt(pos)]);
+			x.insertBefore(eles,x.children[parseInt(pos)]);
 		}
 		
 		localStorage.setItem(key, JSON.stringify(x));
@@ -207,7 +207,7 @@ body {
 			x.push(names);
 		}
 		else{
-			x.insertBefore(names,x[parseInt(pos)]);
+			x.insertBefore(names,x.children[parseInt(pos)]);
 		}
 		
 		
