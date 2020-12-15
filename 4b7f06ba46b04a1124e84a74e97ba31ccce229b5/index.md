@@ -6,12 +6,11 @@ The website might look like literal poop right now but I'll try my best to clean
 
 | Handout       | Points Left to Completion  | Percentage of Needed Points Obtained  | Total Points in Handout|
 | :---          |:---:|:---:|:---:|
-| [Powers (A)](https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/problems/exponents/home.md) | 49   | 18%   |100    |
+| [Powers (A)](https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/problems/exponents/index.md) | 49   | 18%   |100    |
 | Nullensatz (C)| x   | x   |x    | 
 
 ### Markdown
 
-<html xmlns="http://www.w3.org/1999/xhtml">
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
