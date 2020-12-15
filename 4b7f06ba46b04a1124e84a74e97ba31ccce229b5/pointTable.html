@@ -40,7 +40,7 @@ body {
 	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
 	
 	<!--Displaying Image-->
-	<img id="problem" src="NyaanCat.png" style="width:100px" class="center">
+	<img id="problem" src="NyanCat.png" style="width:100px" class="center">
 	
 	<script type="text/javascript">
 		
@@ -59,7 +59,17 @@ body {
 
  		 var correctness=JSON.parse(localStorage.getItem("correctness"));
 		
+		// iterate localStorage
+		for (var i = 0; i < correctness.length; i++) {
+		  
+		var putt=getPoints(i);
+				
+		  // console.log the iteration key and value
+		  tableBody = tableBody + "<tr>";
+		  tableBody = tableBody + "<th>" + putt[0] + "</th>" + "<th>" + putt[1] + "</th>" + "<th>" + putt[2] + "</th>" + "<th>" + putt[3] + "</th>";
+		  tableBody = tableBody + "</tr>";  
 
+		}
 		 
 		$("#ptable").append(tableBody);
 		
@@ -77,7 +87,7 @@ body {
       var correctness=JSON.parse(localStorage.getItem("correctness"));
       var pointsNeeded=JSON.parse(localStorage.getItem("pointsNeeded"));
       
-      for(var i=0; i<points[parseInt(p1)].size(); i++){
+      for(var i=0; i<points[parseInt(p1)].length; i++){
         score+=parseInt(points[parseInt(p1)][i])*parseInt(correctness[parseInt(p1)].charAt(i));
         total+=parseInt(points[parseInt(p1)][i]);
       }
