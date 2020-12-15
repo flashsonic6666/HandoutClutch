@@ -88,7 +88,8 @@ body {
 		  var key = localStorage.key(i);
 
 		  // use key name to retrieve the corresponding value
-		var res = localStorage.getItem("ExpAnswers").charAt(i-1);
+		var x=JSON.parse(localStorage.getItem("correctness"));
+		var res = x[parseInt(localStorage.getItem("exp"))];
 		  
 		var value="?";
 			
@@ -118,9 +119,12 @@ body {
 		  
 		  if(answer==answers[0][prob-1]){
 			document.getElementById("result").innerHTML = "CORRECT LOSER";
-			  var start = localStorage.getItem("ExpAnswers").substring(0, prob-1);
-			  var end = localStorage.getItem("ExpAnswers").substring(prob);
-			localStorage.setItem("ExpAnswers", start+"1"+end);
+			  var x=JSON.parse(localStorage.getItem("correctness"));
+			  var res = x[parseInt(localStorage.getItem("exp"))];
+			  var start = res.substring(0, prob-1);
+			  var end = res.substring(prob);
+			  x[parseInt(localStorage.getItem("exp"))]=start+"1"+end;
+			localStorage.setItem("correctness", JSON.stringify(x));
 		  }
 		  else{
 			localStorage.setItem('clicks', parseInt(localStorage.getItem('clicks'))+1);
