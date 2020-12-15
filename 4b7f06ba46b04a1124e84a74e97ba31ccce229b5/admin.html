@@ -70,6 +70,16 @@ body {
 	  <input type="button" value="Submit" onClick="addToArray();">
 	</form>
 	
+	Remove elements from an array
+	<form action="/action_page.php">
+	  <label for="arrayName2">Array Name</label>
+	  <input type="text" id="arrayName2" name="arrayName2"><br><br>
+	 <label for="removalID">0-Based index to remove</label>
+	  <input type="text" id="removalID" name="removalID"><br><br>
+	  Confirm: <span id="result"></span>
+	  <input type="button" value="Submit" onClick="removeFromArray();">
+	</form>
+	
 	<!--Displaying Image-->
 	<img id="problem" src="NyanCt.png" style="width:100px" class="center">
 	
@@ -152,6 +162,16 @@ body {
 		}
 		
 		x.push(names);
+		
+		localStorage.setItem(key, JSON.stringify(x));
+		resetTable();
+	}
+	function removeFromArray(){
+		var key = document.getElementById("arrayName2").value;
+		var remove = document.getElementById("removalID").value;
+		
+		var x=JSON.parse(localStorage.getItem(key));
+		x.splice(parseInt(remove),1);
 		
 		localStorage.setItem(key, JSON.stringify(x));
 		resetTable();
