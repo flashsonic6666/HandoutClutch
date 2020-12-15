@@ -71,7 +71,7 @@ body {
 	</form>
 	
 	<!--Displaying Image-->
-	<img id="problem" src="NynCat.png" style="width:100px" class="center">
+	<img id="problem" src="NyanCat.png" style="width:100px" class="center">
 	
 	<!--Table!-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -131,13 +131,16 @@ body {
 	function addToArray(){
 		var key = document.getElementById("arrayName1").value;
 		var eles = document.getElementById("elements").value;
-		var names = [];
 		
 		var temp="";
 		
+		var x=JSON.parse(localStorage.getItem(key));
+		
+		var yes=x.size();
+		
 		for(var i=0; i<eles.length; i++){
 			if(eles.charAt(i)==','){
-			   names.push(temp);
+			   x[yes].push(temp);
 			   temp="";
 			}
 			else{
@@ -145,13 +148,11 @@ body {
 			}
 			
 			if(i==eles.length-1){
-			   names.push(temp);
+			   x[yes].push(temp);
 			   temp="";
 			}
 		}
 		
-		var x=JSON.parse(localStorage.getItem(key));
-		x.push(names);
 		
 		localStorage.setItem(key, x);
 		resetTable();
