@@ -1,3 +1,7 @@
+---
+title: Document Center
+---
+
 ## EXPONENTS
 
 ### Markdown
@@ -5,8 +9,6 @@
 [To Submission](https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/problems/exponents/submission.html)
 
 [View Full Handout](https://drive.google.com/file/d/109eK7mfNeC1JrcafTQZt7nAUsNJl427A/view?usp=sharing)
-
-<html xmlns="http://www.w3.org/1999/xhtml">
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for being cool like Rich!
 
