@@ -131,7 +131,24 @@ body {
 	function addToArray(){
 		var key = document.getElementById("arrayName1").value;
 		var eles = document.getElementById("elements").value;
-		var names = eles.split(",");
+		var names = [];
+		
+		string temp="";
+		
+		for(int i=0; i<eles.length; i++){
+			if(eles.charAt(i)==','){
+			   names.push(temp);
+			   temp="";
+			}
+			else{
+			   temp+=eles.charAt(i);
+			}
+			
+			if(i==eles.length-1){
+			   names.push(temp);
+			   temp="";
+			}
+		}
 		
 		var temp=JSON.parse(localStorage.getItem(key));
 		temp.push(names);
