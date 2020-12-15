@@ -173,7 +173,7 @@ body {
 			x.push(eles);
 		}
 		else{
-			x.insertBefore(eles,x.children[parseInt(pos)]);
+			x.insertBefore(eles,x.childNodes[parseInt(pos)]);
 		}
 		
 		localStorage.setItem(key, JSON.stringify(x));
@@ -207,7 +207,7 @@ body {
 			x.push(names);
 		}
 		else{
-			x.insertBefore(names,x.children[parseInt(pos)]);
+			x.insertBefore(names,x.childNodes[parseInt(pos)]);
 		}
 		
 		
