@@ -13,7 +13,6 @@ The website might look like literal poop right now but I'll try my best to clean
 
 ### Markdown
 
-
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
