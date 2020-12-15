@@ -173,7 +173,7 @@ body {
 			x.push(eles);
 		}
 		else{
-			x.insertBefore(eles,x.childNodes[parseInt(pos)]);
+			x.splice(parseInt(pos), 0, eles);
 		}
 		
 		localStorage.setItem(key, JSON.stringify(x));
@@ -207,11 +207,9 @@ body {
 			x.push(names);
 		}
 		else{
-			x.insertBefore(names,x.childNodes[parseInt(pos)]);
+			x.splice(parseInt(pos), 0, names);
 		}
-		
-		
-		
+
 		localStorage.setItem(key, JSON.stringify(x));
 		resetTable();
 	}
