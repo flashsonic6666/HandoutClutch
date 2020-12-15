@@ -80,6 +80,14 @@ body {
 	  <input type="button" value="Submit" onClick="removeFromArray();">
 	</form>
 	
+	Update answers
+	<form action="/action_page.php">
+	  <label for="arrayName3">Topic Name</label>
+	  <input type="text" id="arrayName3" name="arrayName3"><br><br>
+	  Confirm: <span id="result"></span>
+	  <input type="button" value="Submit" onClick="updateAns();">
+	</form>
+	
 	<!--Displaying Image-->
 	<img id="problem" src="NyanCt.png" style="width:100px" class="center">
 	
@@ -169,6 +177,27 @@ body {
 	function removeFromArray(){
 		var key = document.getElementById("arrayName2").value;
 		var remove = document.getElementById("removalID").value;
+		
+		var x=JSON.parse(localStorage.getItem(key));
+		x.splice(parseInt(remove),1);
+		
+		localStorage.setItem(key, JSON.stringify(x));
+		resetTable();
+	}
+	function updateAns(){
+		var key = document.getElementById("arrayName3").value;
+		
+		document.getElementById('inputfile') 
+		    .addEventListener('change', function() { 
+
+		    var fr=new FileReader(); 
+		    fr.onload=function(){ 
+			document.getElementById('output') 
+				.textContent=fr.result; 
+		    } 
+
+		    fr.readAsText(this.files[0]); 
+		}) 
 		
 		var x=JSON.parse(localStorage.getItem(key));
 		x.splice(parseInt(remove),1);
