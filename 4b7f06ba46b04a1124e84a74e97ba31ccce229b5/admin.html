@@ -124,7 +124,7 @@ body {
           }
 	function addArray(){
 		var key = document.getElementById("arrayName").value;
-		var names = [];
+		var names = [["1","1"]];
 		localStorage.setItem(key, JSON.stringify(names));
 		resetTable();
 	}
