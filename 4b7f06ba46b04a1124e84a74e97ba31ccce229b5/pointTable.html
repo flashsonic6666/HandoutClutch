@@ -75,24 +75,23 @@ body {
    function getPoints(p1){
       
       //Holds points, required points, percentage, total points in handout
-         
-      var points=0;
-      var total=0;
-      
       var ans=[];
+	   
+      var score=0;
+      var total=0;
       
       var points=JSON.parse(localStorage.getItem("points"));
       var correctness=JSON.parse(localStorage.getItem("correctness"));
       var pointsNeeded=JSON.parse(localStorage.getItem("pointsNeeded"));
       
       for(var i=0; i<points[parseInt(p1)].length; i++){
-        points+=parseInt(points[parseInt(p1)][i])*parseInt(correctness[parseInt(p1)].charAt(i));
+        score+=parseInt(points[parseInt(p1)][i])*parseInt(correctness[parseInt(p1)].charAt(i));
         total+=parseInt(points[parseInt(p1)][i]);
       }
       
-      ans.push(points);
+      ans.push(score);
       ans.push(pointsNeeded[parseInt(p1)])
-      ans.push((100*parseInt(points)/parseInt(pointsNeeded[parseInt(p1)])) + "%");
+      ans.push((100*parseInt(score)/parseInt(pointsNeeded[parseInt(p1)])) + "%");
       ans.push(total);
       
       return ans;
