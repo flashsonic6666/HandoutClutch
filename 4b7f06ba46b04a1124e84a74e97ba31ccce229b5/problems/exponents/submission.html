@@ -61,7 +61,8 @@ body {
 	var index = 1;
 	var maxSize = 21;
 	
-	document.getElementById("result").innerHTML = localStorage.getItem('clicks');  
+	var haha=JSON.parse(localStorage.getItem("clicks"));
+	document.getElementById("result").innerHTML = haha[parseInt(localStorage.getItem("exp"))][0];  
 		
 	resetTable();
 		
@@ -77,9 +78,6 @@ body {
 
 		// iterate localStorage
 		for (var i = 1; i <= maxSize; i++) {
-
-		  // set iteration key name
-		  var key = localStorage.key(i);
 
 		  // use key name to retrieve the corresponding value
 		var x=JSON.parse(localStorage.getItem("correctness"));
@@ -122,8 +120,8 @@ body {
 		  }
 		  else{
 			var x=JSON.parse(localStorage.getItem("clicks"));
-			x[parseInt(localStorage.getItem("exp"))][parseInt(prob-1)])++;
-			document.getElementById("result").innerHTML = x[parseInt(localStorage.getItem("exp"))][parseInt(prob-1)]);  
+			x[parseInt(localStorage.getItem("exp"))][parseInt(prob-1)]++;
+			document.getElementById("result").innerHTML = x[parseInt(localStorage.getItem("exp"))][parseInt(prob-1)];  
 			localStorage.setItem("clicks", JSON.stringify(x)); 
 		  }
 		  resetTable();
