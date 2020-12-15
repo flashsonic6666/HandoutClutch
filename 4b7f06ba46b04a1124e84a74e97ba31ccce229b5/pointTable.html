@@ -84,7 +84,7 @@ body {
       var correctness=JSON.parse(localStorage.getItem("correctness"));
       var pointsNeeded=JSON.parse(localStorage.getItem("pointsNeeded"));
       
-      for(var i=0; i<points[parseInt(p1)].length; i++){
+      for(var i=0; i<points[parseInt(p1)].size(); i++){
         score+=parseInt(points[parseInt(p1)][i])*parseInt(correctness[parseInt(p1)].charAt(i));
         total+=parseInt(points[parseInt(p1)][i]);
       }
