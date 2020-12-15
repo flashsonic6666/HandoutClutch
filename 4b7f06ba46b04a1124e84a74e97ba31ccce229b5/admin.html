@@ -60,6 +60,16 @@ body {
 	  <input type="button" value="Submit" onClick="addArray();">
 	</form>
 	
+	Add elements to an array
+	<form action="/action_page.php">
+	  <label for="arrayName1">Array Name</label>
+	  <input type="text" id="arrayName1" name="arrayName1"><br><br>
+	 <label for="elements">Elements with commas no spaces</label>
+	  <input type="text" id="elements" name="elements"><br><br>
+	  Confirm: <span id="result"></span>
+	  <input type="button" value="Submit" onClick="addtoArray();">
+	</form>
+	
 	<!--Displaying Image-->
 	<img id="problem" src="NyanCat.png" style="width:100px" class="center">
 	
@@ -115,8 +125,18 @@ body {
 	function addArray(){
 		var key = document.getElementById("arrayName").value;
 		var names = [];
-		names[0] = [0,0];
 		localStorage.setItem(key, JSON.stringify(names));
+		resetTable();
+	}
+	function addtoArray(){
+		var key = document.getElementById("arrayName1").value;
+		var eles = document.getElementById("elements").value;
+		var names = eles.split(" ");
+		
+		var temp=localStorage.getItem(key);
+		temp.push(names);
+		
+		localStorage.setItem(key, temp);
 		resetTable();
 	}
    </script>
