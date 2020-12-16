@@ -4,11 +4,6 @@ The website might look like literal poop right now but I'll try my best to clean
 
 ## Current Progress
 
-| Handout       | Points Left to Completion  | Percentage of Needed Points Obtained  | Total Points in Handout|
-| :---          |:---:|:---:|:---:|
-| [Powers (A)](problems/exponents/home.md) | 49   | 18%   |100    |
-| Nullensatz (C)| x   | x   |x    | 
-
 {% include pointTable.html %}
 
 ### Markdown
