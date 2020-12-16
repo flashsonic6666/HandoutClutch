@@ -119,11 +119,12 @@ th {
 		
 		//Updates
 		var answers=localStorage.getItem("answers");
+		var handoutName=localStorage.getItem("handoutName");
 		
 		var clicks=localStorage.getItem("clicks");
 		var correctness=localStorage.getItem("correctness");
 		
-		while(clicks.length<answers.length){
+		while(clicks.length<handoutName.length){
 			var temp=[];
 			for(var i=0; i<answers[clicks.length].length; i++){
 				temp.push(0);
@@ -133,7 +134,7 @@ th {
 		
 		localStorage.setItem("clicks", JSON.stringify(clicks));
 		
-		while(correctness.length<answers.length){
+		while(correctness.length<handoutName.length){
 			var temp="";
 			for(var i=0; i<answers[correctness.length].length; i++){
 				temp+="0";
