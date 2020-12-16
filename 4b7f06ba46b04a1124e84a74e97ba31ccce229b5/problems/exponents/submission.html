@@ -66,9 +66,12 @@ body {
 	<script type="text/javascript">
 	var index = 1;
 	var maxSize = 21;
-	
+		
+	// CHANGE THIS DEPENDING ON WHICH HANDOUT WE ARE ON
+	var code="exp";
+		
 	var haha=JSON.parse(localStorage.getItem("clicks"));
-	document.getElementById("result").innerHTML = haha[parseInt(localStorage.getItem("exp"))][0];  
+	document.getElementById("result").innerHTML = haha[parseInt(localStorage.getItem(code))][0];  
 		
 	resetTable();
 		
@@ -87,7 +90,7 @@ body {
 
 		  // use key name to retrieve the corresponding value
 		var x=JSON.parse(localStorage.getItem("correctness"));
-		var res = x[parseInt(localStorage.getItem("exp"))];
+		var res = x[parseInt(localStorage.getItem(code))];
 		  
 		var value="?";
 			
@@ -118,15 +121,15 @@ body {
 		  if(answer==answers[0][prob-1]){
 			document.getElementById("result").innerHTML = "CORRECT LOSER";
 			  var x=JSON.parse(localStorage.getItem("correctness"));
-			  var res = x[parseInt(localStorage.getItem("exp"))];
+			  var res = x[parseInt(localStorage.getItem(code))];
 			  var start = res.substring(0, prob-1);
 			  var end = res.substring(prob);
-			  x[parseInt(localStorage.getItem("exp"))]=start+"1"+end;
+			  x[parseInt(localStorage.getItem(code))]=start+"1"+end;
 			localStorage.setItem("correctness", JSON.stringify(x));
 		  }
 		  else{
 			var x=JSON.parse(localStorage.getItem("clicks"));
-			x[parseInt(localStorage.getItem("exp"))][parseInt(prob-1)]++;
+			x[parseInt(localStorage.getItem(code))][parseInt(prob-1)]++;
 			document.getElementById("result").innerHTML = x[parseInt(localStorage.getItem("exp"))][parseInt(prob-1)];  
 			localStorage.setItem("clicks", JSON.stringify(x)); 
 		  }
