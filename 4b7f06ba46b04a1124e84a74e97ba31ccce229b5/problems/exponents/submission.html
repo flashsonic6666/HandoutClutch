@@ -34,17 +34,17 @@ div.a {
 form { 
 	margin: 0 auto; 
 	width:250px;
+	text-align: center;
 }
 
 </style>
 
 <body>
-	<!--Submission Form-->
+	<!--Go To Problem-->
 	<form action="/action_page.php">
-	  <label for="lname">Answer:        </label>
-	  <input type="text" id="ans" name="ans"><br><br>
-	  Number of Incorrect Tries: <span id="result"></span>
-	  <input type="button" value="Submit" onClick="result();">
+	  <label for="prob">Go To Problem:</label>
+	  <input type="text" id="prob" name="prob"><br><br>
+	  <input type="button" value="Submit" onClick="goPic();">
 	</form>
 	
 	<!--Next Problem/Go back a problem-->
@@ -54,11 +54,15 @@ form {
 	<!--Displaying Image CHANGE THIS FOR EACH-->
 	<img id="problem" src="ExpProblem1.JPG" style="width:1000px" class="center">
 	
+	<!--Submission Form-->
 	<form action="/action_page.php">
-	  <label for="prob">Go To Problem:</label>
-	  <input type="text" id="prob" name="prob"><br><br>
-	  <input type="button" value="Submit" onClick="goPic();">
+	  <label for="lname">Answer:        </label>
+	  <input type="text" id="ans" name="ans"><br><br>
+	  Result: <span id="result"></span>
+	  <input type="button" value="Submit" onClick="result();">
 	</form>
+	
+	
 	
 	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
 	
@@ -76,7 +80,7 @@ form {
 	var code="exp";
 		
 	var haha=JSON.parse(localStorage.getItem("clicks"));
-	document.getElementById("result").innerHTML = haha[parseInt(localStorage.getItem(code))][0];  
+	document.getElementById("result").innerHTML = "Got it wrong for the " + haha[parseInt(localStorage.getItem(code))][0] + " (th) time smh";  
 		
 	resetTable();
 		
@@ -123,7 +127,7 @@ form {
 		  var answers=JSON.parse(localStorage.getItem("answers"));
 		  
 		  if(answer==answers[0][index-1]){
-			document.getElementById("result").innerHTML = "CORRECT ANSWER TO QUESTION " + index + " LOSER";
+			document.getElementById("result").innerHTML = "Question " + index + " completed!;
 			  var x=JSON.parse(localStorage.getItem("correctness"));
 			  var res = x[parseInt(localStorage.getItem(code))];
 			  var start = res.substring(0, prob-1);
@@ -134,7 +138,8 @@ form {
 		  else{
 			var x=JSON.parse(localStorage.getItem("clicks"));
 			x[parseInt(localStorage.getItem(code))][parseInt(index-1)]++;
-			document.getElementById("result").innerHTML = x[parseInt(localStorage.getItem("exp"))][parseInt(index-1)];  
+			document.getElementById("result").innerHTML = "Got it wrong for the " + x[parseInt(localStorage.getItem("exp"))][parseInt(index-1)]
+			   + " (th) time smh"; ;  
 			localStorage.setItem("clicks", JSON.stringify(x)); 
 		  }
 		  resetTable();
