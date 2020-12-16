@@ -15,6 +15,9 @@ body {
 	background-attachment: fixed;
 	color: #333;
 }
+div.a {
+  font-size: 20px;
+}
 .center {
   display: block;
   margin-left: auto;
@@ -28,14 +31,16 @@ body {
 	border: 1px solid black;
 	width=50%;
 }
-	
+form { 
+	margin: 0 auto; 
+	width:250px;
+}
+
 </style>
 
 <body>
 	<!--Submission Form-->
 	<form action="/action_page.php">
-	  <label for="fname">Problem Number:</label>
-	  <input type="text" id="pnum" name="pnum"><br><br>
 	  <label for="lname">Answer:        </label>
 	  <input type="text" id="ans" name="ans"><br><br>
 	  Number of Incorrect Tries: <span id="result"></span>
@@ -46,7 +51,7 @@ body {
 	<input type="button" value="<" onClick="picl();">
 	<input type="button" value=">" onClick="picr();">
 	
-	<!--Displaying Image-->
+	<!--Displaying Image CHANGE THIS FOR EACH-->
 	<img id="problem" src="ExpProblem1.JPG" style="width:1000px" class="center">
 	
 	<form action="/action_page.php">
@@ -114,12 +119,11 @@ body {
 		
           function result() {
 		  var answer = document.getElementById("ans").value;
-		var prob = document.getElementById("pnum").value;
 		  
 		  var answers=JSON.parse(localStorage.getItem("answers"));
 		  
-		  if(answer==answers[0][prob-1]){
-			document.getElementById("result").innerHTML = "CORRECT LOSER";
+		  if(answer==answers[0][index-1]){
+			document.getElementById("result").innerHTML = "CORRECT ANSWER TO QUESTION " + index + " LOSER";
 			  var x=JSON.parse(localStorage.getItem("correctness"));
 			  var res = x[parseInt(localStorage.getItem(code))];
 			  var start = res.substring(0, prob-1);
@@ -129,8 +133,8 @@ body {
 		  }
 		  else{
 			var x=JSON.parse(localStorage.getItem("clicks"));
-			x[parseInt(localStorage.getItem(code))][parseInt(prob-1)]++;
-			document.getElementById("result").innerHTML = x[parseInt(localStorage.getItem("exp"))][parseInt(prob-1)];  
+			x[parseInt(localStorage.getItem(code))][parseInt(index-1)]++;
+			document.getElementById("result").innerHTML = x[parseInt(localStorage.getItem("exp"))][parseInt(index-1)];  
 			localStorage.setItem("clicks", JSON.stringify(x)); 
 		  }
 		  resetTable();
