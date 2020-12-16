@@ -98,39 +98,39 @@ th {
    }
 	function create(){
 		if(localStorage.getItem("pointsNeeded")===null){
-			localStorage.setItem(pointsNeeded, JSON.stringify([60]));
+			localStorage.setItem("pointsNeeded", JSON.stringify([60]));
 		}
 		
 		if(localStorage.getItem("handoutCode")===null){
-			localStorage.setItem(handoutCode, JSON.stringify(["exp"]));
+			localStorage.setItem("handoutCode", JSON.stringify(["exp"]));
 		}
 		
 		if(localStorage.getItem("answers")===null){
-			localStorage.setItem(answers, JSON.stringify([["-2,3","5/3","5","-2","7/4","2,3","757","20","broken","-10","bsqrt2","TODO","broken","1","3","broken","1","5/4","2","1997","sqrt2"]]));
+			localStorage.setItem("answers", JSON.stringify([["-2,3","5/3","5","-2","7/4","2,3","757","20","broken","-10","bsqrt2","TODO","broken","1","3","broken","1","5/4","2","1997","sqrt2"]]));
 		}
 		
 		if(localStorage.getItem("clicks")===null){
-			localStorage.setItem(clicks, JSON.stringify([["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"]]));
+			localStorage.setItem("clicks", JSON.stringify([["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"]]));
 		}
 		
 		if(localStorage.getItem("correctness")===null){
-			localStorage.setItem(correctness, JSON.stringify(["000000000000000000000"]));
+			localStorage.setItem("correctness", JSON.stringify(["000000000000000000000"]));
 		}
 		
 		if(localStorage.getItem("handoutName")===null){
-			localStorage.setItem(handoutName, JSON.stringify(["Exponents (A)"]));
+			localStorage.setItem("handoutName", JSON.stringify(["Exponents (A)"]));
 		}
 		
 		if(localStorage.getItem("exp")===null){
-			localStorage.setItem(exp, 0);
+			localStorage.setItem("exp", 0);
 		}
 		
 		if(localStorage.getItem("folderName")===null){
-			localStorage.setItem(folderName, JSON.stringify(["exponents"]));
+			localStorage.setItem("folderName", JSON.stringify(["exponents"]));
 		}
 		
 		if(localStorage.getItem("points")===null){
-			localStorage.setItem(points, JSON.stringify([["2","2","3","5","3","3","7","7","5","3","5","5","2","3","3","5","5","7","7","7","11"]]));
+			localStorage.setItem("points", JSON.stringify([["2","2","3","5","3","3","7","7","5","3","5","5","2","3","3","5","5","7","7","7","11"]]));
 		}
 	}
         </script>
