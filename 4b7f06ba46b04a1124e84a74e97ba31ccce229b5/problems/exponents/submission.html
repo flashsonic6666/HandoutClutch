@@ -58,8 +58,8 @@ form {
 	<form action="/action_page.php">
 	  <label for="lname">Answer:        </label>
 	  <input type="text" id="ans" name="ans"><br><br>
-	  Result: <span id="result"></span>
-	  <input type="button" value="Submit" onClick="result();">
+	 <input type="button" value="Submit" onClick="result();">
+	  Result: <span id="result"></span>	  
 	</form>
 	
 	
@@ -127,7 +127,7 @@ form {
 		  var answers=JSON.parse(localStorage.getItem("answers"));
 		  
 		  if(answer==answers[0][index-1]){
-			document.getElementById("result").innerHTML = "Question " + index + " completed!;
+			document.getElementById("result").innerHTML = "Question " + index + " completed!";
 			  var x=JSON.parse(localStorage.getItem("correctness"));
 			  var res = x[parseInt(localStorage.getItem(code))];
 			  var start = res.substring(0, prob-1);
