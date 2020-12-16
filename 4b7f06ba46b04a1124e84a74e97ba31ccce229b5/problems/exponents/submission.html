@@ -130,8 +130,8 @@ form {
 			document.getElementById("result").innerHTML = "Question " + index + " completed!";
 			  var x=JSON.parse(localStorage.getItem("correctness"));
 			  var res = x[parseInt(localStorage.getItem(code))];
-			  var start = res.substring(0, prob-1);
-			  var end = res.substring(prob);
+			  var start = res.substring(0, index-1);
+			  var end = res.substring(index);
 			  x[parseInt(localStorage.getItem(code))]=start+"1"+end;
 			localStorage.setItem("correctness", JSON.stringify(x));
 		  }
