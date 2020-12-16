@@ -118,16 +118,11 @@ th {
 		}
 		
 		//Updates
-		var answers=localStorage.getItem("answers");
-		var handoutName=localStorage.getItem("handoutName");
+		var answers=JSON.parse(localStorage.getItem("answers"));
+		var handoutName=JSON.parse(localStorage.getItem("handoutName"));
 		
-		var clicks=localStorage.getItem("clicks");
-		var correctness=localStorage.getItem("correctness");
-		
-		localStorage.setItem("test", answers.length));
-		localStorage.setItem("test1", answers[0].length));
-		localStorage.setItem("test2", handoutName.length));
-		localStorage.setItem("test3", clicks.length));
+		var clicks=JSON.parse(localStorage.getItem("clicks"));
+		var correctness=JSON.parse(localStorage.getItem("correctness"));
 		
 		while(clicks.length<handoutName.length){
 			var temp=[];
