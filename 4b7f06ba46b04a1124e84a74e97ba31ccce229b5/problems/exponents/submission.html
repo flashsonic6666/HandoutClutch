@@ -126,7 +126,7 @@ form {
 		  
 		  var answers=JSON.parse(localStorage.getItem("answers"));
 		  
-		  if(answer==answers[0][index-1]){
+		  if(answer==answers[parseInt(localStorage.getItem(code))][index-1]){
 			document.getElementById("result").innerHTML = "Question " + index + " completed!";
 			  var x=JSON.parse(localStorage.getItem("correctness"));
 			  var res = x[parseInt(localStorage.getItem(code))];
