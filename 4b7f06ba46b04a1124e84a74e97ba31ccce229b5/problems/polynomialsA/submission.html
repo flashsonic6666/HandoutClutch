@@ -80,7 +80,8 @@ form {
 	var code="pol";
 		
 	var haha=JSON.parse(localStorage.getItem("clicks"));
-	document.getElementById("result").innerHTML = "Got it wrong for the " + haha[parseInt(localStorage.getItem(code))][0] + " (th) time smh";  
+	document.getElementById("result").innerHTML = "You have a total of " + haha[parseInt(localStorage.getItem(code))][0]
+			   + " incorrect tries on this problem smh my head";
 		
 	resetTable();
 		
@@ -139,7 +140,7 @@ form {
 			var x=JSON.parse(localStorage.getItem("clicks"));
 			x[parseInt(localStorage.getItem(code))][parseInt(index-1)]++;
 			document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
-			   + " incorrect tries on this problme smh";
+			   + " incorrect tries on this problem smh my head";
 			localStorage.setItem("clicks", JSON.stringify(x)); 
 		  }
 		  resetTable();
@@ -155,7 +156,7 @@ form {
 		  image1.src = code+"Problem" +index+".JPG";	
 		 
 		 document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
-			   + " incorrect tries on this problme smh";
+			   + " incorrect tries on this problem smh my head";
 	 }
 	function picl(){
 		var x=JSON.parse(localStorage.getItem("clicks"));
@@ -167,7 +168,7 @@ form {
 		  var image1 = document.getElementById("problem");
 		  image1.src = code+"Problem" +index+".JPG";	 
 		document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
-			   + " incorrect tries on this problme smh";
+			   + " incorrect tries on this problem smh my head";
 	 }
 	function goPic(){
 		var x=JSON.parse(localStorage.getItem("clicks"));
@@ -178,7 +179,7 @@ form {
 		  image1.src = code+"Problem" +index+".JPG";	 
 		
 		document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
-			   + " incorrect tries on this problme smh";
+			   + " incorrect tries on this problem smh my head";
 	 }
 		
         </script>
