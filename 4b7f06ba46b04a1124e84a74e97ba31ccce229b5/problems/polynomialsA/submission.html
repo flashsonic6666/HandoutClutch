@@ -138,33 +138,47 @@ form {
 		  else{
 			var x=JSON.parse(localStorage.getItem("clicks"));
 			x[parseInt(localStorage.getItem(code))][parseInt(index-1)]++;
-			document.getElementById("result").innerHTML = "Got it wrong for the " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
-			   + " (th) time smh"; ;  
+			document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
+			   + " incorrect tries on this problme smh";
 			localStorage.setItem("clicks", JSON.stringify(x)); 
 		  }
 		  resetTable();
           }
 	 function picr(){
+		 var x=JSON.parse(localStorage.getItem("clicks"));
+		 
 		  index = index + 1;
 		  if (index == maxSize+1) {
 		     index = 1;
 		  }
 		  var image1 = document.getElementById("problem");
-		  image1.src = code+"Problem" +index+".JPG";	 
+		  image1.src = code+"Problem" +index+".JPG";	
+		 
+		 document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
+			   + " incorrect tries on this problme smh";
 	 }
 	function picl(){
+		var x=JSON.parse(localStorage.getItem("clicks"));
+		
 		  index = index - 1;
 		  if (index == 0) {
 		     index = maxSize;
 		  }
 		  var image1 = document.getElementById("problem");
 		  image1.src = code+"Problem" +index+".JPG";	 
+		document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
+			   + " incorrect tries on this problme smh";
 	 }
 	function goPic(){
+		var x=JSON.parse(localStorage.getItem("clicks"));
+		
 		var prob = document.getElementById("prob").value;
 		  index = parseInt(prob);
 		  var image1 = document.getElementById("problem");
 		  image1.src = code+"Problem" +index+".JPG";	 
+		
+		document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
+			   + " incorrect tries on this problme smh";
 	 }
 		
         </script>
