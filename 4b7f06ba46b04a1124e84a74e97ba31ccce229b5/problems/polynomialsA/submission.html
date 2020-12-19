@@ -79,7 +79,7 @@ form {
 	var haha=JSON.parse(localStorage.getItem("clicks"));	
 		
 	var index = 1;
-	var maxSize = haha[parseInt(localStorage.getItem(code))].size();
+	var maxSize = haha[parseInt(localStorage.getItem(code))].length;
 		
 	
 	document.getElementById("result").innerHTML = "You have a total of " + haha[parseInt(localStorage.getItem(code))][0]
