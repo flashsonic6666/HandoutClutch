@@ -73,13 +73,14 @@ form {
 	
 	<!--"Clicks"-->		
 	<script type="text/javascript">
-	var index = 1;
-	var maxSize = 21;
-		
 	// CHANGE THIS DEPENDING ON WHICH HANDOUT WE ARE ON
-	var code="exp";
+	var code="exp";	
+	
+	var haha=JSON.parse(localStorage.getItem("clicks"));	
 		
-	var haha=JSON.parse(localStorage.getItem("clicks"));
+	var index = 1;
+	var maxSize = haha[parseInt(localStorage.getItem(code))].size();
+		
 	document.getElementById("result").innerHTML = "You have a total of " + haha[parseInt(localStorage.getItem(code))][0]
 			   + " incorrect tries on this problem smh my head";
 		
