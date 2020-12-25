@@ -77,9 +77,9 @@ form {
 	<script type="text/javascript">
 	var handoutCode=JSON.parse(localStorage.getItem("handoutCode"));
 	var folderName=JSON.parse(localStorage.getItem("folderName"));
-	var code=handoutCode[parseInt(localStorage.getItem("currentUnit"))];	
+	var code=parseInt(handoutCode[parseInt(localStorage.getItem("currentUnit"))]);	
 	var tempImage = document.getElementById("problem");
-	tempImage.src = code+"Problem1.JPG";
+	tempImage.src = folderName[code] + "/" + code+"Problem1.JPG";
 		
 	var haha=JSON.parse(localStorage.getItem("clicks"));	
 		
