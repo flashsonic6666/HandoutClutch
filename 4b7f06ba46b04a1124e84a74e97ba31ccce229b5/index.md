@@ -1,9 +1,14 @@
-
+---
+title: "Title"
+author: "Author"
+output: html_document
+---
 ```{r, echo=FALSE}
 htmltools::img(src = knitr::image_uri(file.path(R.home("doc"), "html", "logo.jpg")), 
                alt = 'logo', 
                style = 'position:absolute; top:0; right:0; padding:10px;')
 ```
+---
 ## Welcome to the Land of Wonder
 
 The website might look like literal poop right now but I'll try my best to clean it up!
