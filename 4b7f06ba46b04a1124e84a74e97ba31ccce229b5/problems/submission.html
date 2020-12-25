@@ -124,7 +124,8 @@ form {
 		
 		  tableBody = tableBody + "<tr>";
 		if(k<requiredProblems[localStorage.getItem(code)].length && i==requiredProblems[localStorage.getItem(code)][k]){
-		  tableBody = tableBody + "<th style=\"color:#8B008B\">Q" + i + "</th>" + "<th>" + value + "</th>";
+		  tableBody = tableBody + "<th style=\"color:#FF00FF\">Q" + i + "</th>" + "<th>" + value + "</th>";
+		  k++;
 		}
 		else{
 		  tableBody = tableBody + "<th>Q" + i + "</th>" + "<th>" + value + "</th>";
