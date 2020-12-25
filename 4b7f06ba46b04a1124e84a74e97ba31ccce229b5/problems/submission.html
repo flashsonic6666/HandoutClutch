@@ -100,7 +100,8 @@ form {
 		 tableBody = tableBody + "<th>" + "Problem" + "</th>" + "<th>" + "Answer" + "</th>";
 		 tableBody = tableBody + "</tr>";  
 
-
+		var k=0;
+		
 		// iterate localStorage
 		for (var i = 1; i <= maxSize; i++) {
 
@@ -120,7 +121,6 @@ form {
 		  // console.log the iteration key and value
 		
 		var requiredProblems=JSON.parse(localStorage.getItem("requiredProblems"));
-		var k=0;
 		
 		  tableBody = tableBody + "<tr>";
 		if(k<requiredProblems[localStorage.getItem(code)].length && i==requiredProblems[localStorage.getItem(code)][k]){
