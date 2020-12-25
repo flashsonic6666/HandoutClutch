@@ -41,7 +41,7 @@ form {
 
 <body>
 	<!--Go To Problem-->
-	<form action="">
+	<form action="" onSubmit="return false;">
 	  <label for="prob">Go To Problem:</label>
 	  <input type="text" id="prob" name="prob"><br><br>
 	  <input type="button" value="Submit" onClick="goPic();">
@@ -56,7 +56,7 @@ form {
 	<img id="problem" src="expProblem1.JPG" style="width:1000px" class="center">
 	
 	<!--Submission Form-->
-	<form action="">
+	<form action="" onSubmit="return false;">
 	  <label for="lname">Answer:        </label>
 	  <input type="text" id="ans" name="ans"><br><br>
 	  <input type="button" value="Submit" onClick="result();">
