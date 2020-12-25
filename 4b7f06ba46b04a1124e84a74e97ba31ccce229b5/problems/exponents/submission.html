@@ -147,6 +147,7 @@ form {
 			localStorage.setItem("clicks", JSON.stringify(x)); 
 		  }
 		  resetTable();
+		  document.getElementById("ans").value="";
           }
 	 function picr(){
 		 var x=JSON.parse(localStorage.getItem("clicks"));
@@ -184,6 +185,8 @@ form {
 		
 		document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
 			   + " incorrect tries on this problem smh my head";
+		
+		document.getElementById("prob").value="";
 	 }
 		
         </script>
