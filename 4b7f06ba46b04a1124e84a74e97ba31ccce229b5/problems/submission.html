@@ -75,7 +75,7 @@ form {
 	
 	<!--"Clicks"-->		
 	<script type="text/javascript">
-	var yesArray=localStorage.getItem("handoutCode")
+	var yesArray=JSON.parse(localStorage.getItem("handoutCode"));
 	var code=yesArray[parseInt(localStorage.getItem("currentUnit"))];	
 	var tempImage = document.getElementById("problem");
 	tempImage.src = code+"Problem1.JPG";
