@@ -52,7 +52,7 @@ form {
 	<input type="button" value="<" onClick="picl();">
 	<input type="button" value=">" onClick="picr();">
 	
-	<!--Displaying Image CHANGE THIS FOR EACH-->
+	<!--Displaying Image-->
 	<img id="problem" src="expProblem1.JPG" style="width:1000px" class="center">
 	
 	<!--Submission Form-->
@@ -75,9 +75,9 @@ form {
 	
 	<!--"Clicks"-->		
 	<script type="text/javascript">
-	// CHANGE THIS DEPENDING ON WHICH HANDOUT WE ARE ON
-	var code="exp";	
-	
+	var code=parseInt(localStorage.getItem("currentUnit"));	
+	image1.src = code+"Problem1.JPG";
+		
 	var haha=JSON.parse(localStorage.getItem("clicks"));	
 		
 	var index = 1;
