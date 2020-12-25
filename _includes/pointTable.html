@@ -57,13 +57,13 @@ th {
 		// iterate localStorage
 		for (var i = 0; i < correctness.length; i++) {
 		  
-		var putt=getPoints(i);
-				
-		  // console.log the iteration key and value
-		  tableBody = tableBody + "<tr>";
-		  tableBody = tableBody + "<td><a href=\"problems/" + folderName[i] +  "/home\">"
-			  + putt[0] + "</a></td>" + "<td>" + putt[1] + "</td>" + "<td>" + putt[2] + "</td>" + "<td>" + putt[3] + "</td>"+ "<td>" + putt[4] + "</td>";
-		  tableBody = tableBody + "</tr>";  
+			var putt=getPoints(i);
+
+			  // console.log the iteration key and value
+			  tableBody = tableBody + "<tr>";
+			  tableBody = tableBody + "<td><a href=\"problems/" + folderName[i] +  "/home\" onclick=\"updateFocus(" + i + ");\">"
+				  + putt[0] + "</a></td>" + "<td>" + putt[1] + "</td>" + "<td>" + putt[2] + "</td>" + "<td>" + putt[3] + "</td>"+ "<td>" + putt[4] + "</td>";
+			  tableBody = tableBody + "</tr>";  
 
 		}
 		 
@@ -111,7 +111,6 @@ th {
 		localStorage.setItem("seq", 2);
 		localStorage.setItem("tel", 3);
 		localStorage.setItem("cir", 4);
-		localStorage.setItem("currentUnit",0);
 		localStorage.setItem("folderName", JSON.stringify(["exponents","polynomialsA", "sequences","telescoping","circles"]));
 		localStorage.setItem("points", JSON.stringify([[2,2,3,5,3,3,7,7,5,3,5,5,2,3,3,5,5,7,7,7,11],
 							      [2,2,3,5,5,3,5,7,5,5,3,5,7,5,7,5,7,11,11,11],
@@ -126,7 +125,10 @@ th {
 		if(localStorage.getItem("correctness")===null){
 			localStorage.setItem("correctness", JSON.stringify(["000000000000000000000"]));
 		}
-		
+		if(localStorage.getItem("currentUnit")===null){
+			localStorage.setItem("currentUnit",0);
+		}
+
 		//Updates
 		var answers=JSON.parse(localStorage.getItem("answers"));
 		var handoutName=JSON.parse(localStorage.getItem("handoutName"));
@@ -153,6 +155,9 @@ th {
 		}
 		
 		localStorage.setItem("correctness", JSON.stringify(correctness));
+	}
+	function updateFocus(x){
+		localStorage.setItem("currentUnit",x);
 	}
         </script>
 </body>
