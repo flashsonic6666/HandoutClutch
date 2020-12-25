@@ -145,10 +145,14 @@ form {
 		total+=parseInt(points[parseInt(localStorage.getItem(code))][i]);
 	      }
 		
-		tableBody = tableBody + "<tr>" + "</tr>";
+		tableBody = tableBody + "<tr>";
+		tableBody = tableBody +"<th>" + " " + "</th>" + "<th>" + " " + "</th>";
+		tableBody = tableBody + "</tr>";
+		
 		tableBody = tableBody + "<tr>";
 		 tableBody = tableBody + "<th>" + "Points Obtained" + "</th>" + "<th>" + "Total Needed" + "</th>";
 		 tableBody = tableBody + "</tr>";  
+		
 		tableBody = tableBody + "<tr>";
 		tableBody = tableBody + "<th>" + score + "</th>" + "<th>" + total + "</th>";
 		tableBody = tableBody + "</tr>"; 
