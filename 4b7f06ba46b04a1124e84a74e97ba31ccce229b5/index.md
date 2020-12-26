@@ -1,7 +1,3 @@
----
-layout: post
-title: Home Page
----
 
 ## Welcome to the Land of Wonder
 
