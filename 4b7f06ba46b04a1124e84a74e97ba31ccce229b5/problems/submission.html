@@ -145,6 +145,8 @@ form {
 		total+=parseInt(points[parseInt(localStorage.getItem(code))][i]);
 	      }
 		
+		total=Math.floor(6*total/10);
+		
 		tableBody = tableBody + "<tr>";
 		tableBody = tableBody +"<th>" + " " + "</th>" + "<th>" + " " + "</th>";
 		tableBody = tableBody + "</tr>";
