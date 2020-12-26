@@ -9,32 +9,14 @@
 
 [Back to Main Page](https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for being cool like Rich! Yahoo!
+## Limerick About Rich
 
-```markdown
-Syntax highlighted code block
+There once was a fellow named Rich.
 
-# Header 1
-## Header 2
-### Header 3
+Who once had schools to switch.
 
-- Bulleted
-- List
+But he was so rad,
 
-1. Numbered
-2. List
+Even Jod thought he was a great lad,
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/flashsonic6666/HandoutClutch/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+That he didn't even think to twitch.
