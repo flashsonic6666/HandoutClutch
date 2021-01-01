@@ -8,7 +8,7 @@
 
 <style>
 
-#ttable{
+#ptable{
 	width=100%;
 }
 
@@ -40,7 +40,7 @@ th {
 	resetTable();
 		
 	function resetTable(){
-		$("#ttable tr").remove(); 
+		$("#ptable tr").remove(); 
 		
 		var tableBody= "";
 
@@ -49,7 +49,7 @@ th {
 		 tableBody = tableBody + "</tr>";  
 
 
- 		 var testCorrectness=JSON.parse(localStorage.getItem("correctness"));
+ 		 var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
 		var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
 		
 		// iterate localStorage
