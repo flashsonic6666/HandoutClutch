@@ -63,7 +63,7 @@ th {
 			  // console.log the iteration key and value
 			  tableBody = tableBody + "<tr>";
 			  tableBody = tableBody + "<td><a onclick=\"updateFocus(" + i + ");\" href=\"practiceAMC12/" + testFolderName[i] +  "/home\" >"
-				  + putt[0] + "</a></td>" + "<td>" + putt[1] + "</td>" + "<td>" + putt[2] + "</td>";
+				  + putt[0] + "</a></td>" + "<td>" + putt[1] + "</td>" + "<td>" + putt[2] + "</td>" + "<td>" + putt[3] + "</td>" + "<td>" + putt[4] + "</td>";
 			  tableBody = tableBody + "</tr>";  
 
 		}
@@ -129,7 +129,7 @@ th {
 		}
 		
 		if(localStorage.getItem("testStatus")===null){
-			localStorage.setItem("testCorrectness", JSON.stringify([0]));
+			localStorage.setItem("testStatus", JSON.stringify([0]));
 		}
 		
 		//Updates
