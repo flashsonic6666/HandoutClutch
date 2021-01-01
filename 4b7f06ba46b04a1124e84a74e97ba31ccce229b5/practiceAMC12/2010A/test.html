@@ -16,7 +16,7 @@
 
 body {
 
-	background-image: url('starBackgroundBlackVeryVeryTransparent.png');
+	background-image: url('../starBackgroundBlackVeryVeryTransparent.png');
 	background-attachment: fixed;
 	color: #333;
 }
@@ -177,12 +177,7 @@ form {
 	<label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 560 \qquad \textbf{(B)}\ 564 \qquad \textbf{(C)}\ 568 \qquad \textbf{(D)}\ 1498 \qquad \textbf{(E)}\ 2255\) </p> </label>
 	<hr> 
 
-
-
-		
-	  <input type="button" value="Submit" onClick="">
-	  <input type="submit" style="display: none" onClick="" >
-	  Result: <span id="result"></span>	  
+	  <input type="button" value="Submit" onClick="submit()">
 	</form>
 
 
@@ -192,6 +187,37 @@ form {
 	<!--"Clicks"-->		
 	<script type="text/javascript">
 	
+	var ct=JSON.parse(localStorage.getItem("currentTest"));
+	var ts=JSON.parse(localStorage.getItem("testStatus"));
+	if(parseInt(ts[parseInt(ct)])==0){
+	   ts[parseInt(ct)]=1;
+	   localStorage.setItem("testStatus", JSON.stringify(testStatus));
+	}
+	
+	function submit() {
+		
+		var currentTest=JSON.parse(localStorage.getItem("currentTest"));
+		
+		var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
+		var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
+		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+		
+		for(var i=0; i< testCorrectness[parseInt(currentTest)].length; i++){
+			var answer = document.getElementById("ans" + (i+1)).value;
+			if(testAnswers[parseInt(currentTest)][i]==answer.toUpperCase()){
+			  var res = testCorrectness[parseInt(currentTest)];
+			  var start = res.substring(0, i);
+			  var end = res.substring(i+1);
+			  testAnswers[parseInt(currentTest)]=start+"1"+end;
+			}
+		}
+		
+		testStatus[currentTest]="2";
+		
+		localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
+		localStorage.setItem("testStatus", JSON.stringify(testStatus));
+		
+          }
 		
         </script>
 </body>
