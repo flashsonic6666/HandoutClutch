@@ -100,10 +100,10 @@ th {
       ans.push(correct);
       ans.push(total);
       
-	if(testStatus[parseInt(p1)]==0){
+	if(parseInt(testStatus[parseInt(p1)])==0){
 	   	ans.push("Not Started");
 	}
-	else if(testStatus[parseInt(p1)]==1){
+	else if(parseInt(testStatus[parseInt(p1)])==1){
 		ans.push("In Progress");
 	}
 	else{
@@ -129,7 +129,7 @@ th {
 		}
 		
 		if(localStorage.getItem("testStatus")===null){
-			localStorage.setItem("testStatus", JSON.stringify([0]));
+			localStorage.setItem("testStatus", JSON.stringify(["0"]));
 		}
 		
 		//Updates
@@ -145,7 +145,7 @@ th {
 				temp+="0";
 			}
 			testCorrectness.push(temp);
-			testStatus.push(0);
+			testStatus.push("0");
 		}
 		
 		localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
