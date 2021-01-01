@@ -86,10 +86,10 @@ th {
       var testName=JSON.parse(localStorage.getItem("testName"));
       
       for(var i=0; i<testCorrectness[parseInt(p1)].length; i++){
-        if(correctness[parseInt(p1)].charAt(i)=='1'){
+        if(testCorrectness[parseInt(p1)].charAt(i)=='1'){
            score+=1.5;
          }
-        else if(correctness[parseInt(p1)].charAt(i)=='2'){
+        else if(testCorrectness[parseInt(p1)].charAt(i)=='2'){
              score+=6;   
         }
         
