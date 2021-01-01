@@ -54,8 +54,6 @@ th {
  		 var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
 		var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
 		
-		localStorage.setItem("y1", 1);
-		
 		// iterate localStorage
 		for (var i = 0; i < testCorrectness.length; i++) {
 		  
@@ -68,8 +66,6 @@ th {
 			  tableBody = tableBody + "</tr>";  
 
 		}
-		 
-		localStorage.setItem("y2", 1);
 		
 		$("#ttable").append(tableBody);
 	}
@@ -98,8 +94,6 @@ th {
       ans.push(testName[parseInt(p1)]);   
       ans.push(score);
       ans.push(total);
-      
-     localStorage.setItem("y3", 1);
 	   
       return ans;
    }
