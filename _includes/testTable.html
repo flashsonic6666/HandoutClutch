@@ -1,1 +1,129 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<style>
+
+#ptable{
+	width=100%;
+}
+
+td {
+  height: 30px;
+  width: 160px;
+  text-align: center;
+  vertical-align: middle;
+}
+	
+th {
+  height: 30px;
+  width: 160px;
+  text-align: center;
+  vertical-align: middle;
+}	
+
+</style>
+
+<body>
+	<!--Table!-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<table id="ptable">
+	</table>
+	
+	<script type="text/javascript">
+	
+	create();
+	resetTable();
+		
+	function resetTable(){
+		$("#ptable tr").remove(); 
+		
+		var tableBody= "";
+
+		tableBody = tableBody + "<tr>";
+		 tableBody = tableBody + "<th>" + "   Test   " + "</th>" + "<th>" + "   Points Obtained   " + "</th>" + "<th>" + "   Total Possible Points   " + "</th>";
+		 tableBody = tableBody + "</tr>";  
+
+
+ 		 var testCorrectness=JSON.parse(localStorage.getItem("correctness"));
+		var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
+		
+		// iterate localStorage
+		for (var i = 0; i < testCorrectness.length; i++) {
+		  
+			var putt=getPoints(i);
+
+			  // console.log the iteration key and value
+			  tableBody = tableBody + "<tr>";
+			  tableBody = tableBody + "<td><a onclick=\"updateFocus(" + i + ");\" href=\"practiceAMC12/" + testFolderName[i] +  "/home\" >"
+				  + putt[0] + "</a></td>" + "<td>" + putt[1] + "</td>" + "<td>" + putt[2] + "</td>";
+			  tableBody = tableBody + "</tr>";  
+
+		}
+		 
+		$("#ptable").append(tableBody);
+	}
+	
+   function getPoints(p1){
+      
+      //Holds points, required points, percentage, total points in handout
+      var ans=[];
+	   
+      var score=0;
+      var total=150;
+      
+      var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
+      var testName=JSON.parse(localStorage.getItem("testName"));
+      
+      for(var i=0; i<testCorrectness[parseInt(p1)].length; i++){
+        if(correctness[parseInt(p1)].charAt(i)=='1'){
+           score+=1.5;
+         }
+        else if(correctness[parseInt(p1)].charAt(i)=='2'){
+             score+=6;   
+        }
+        
+      }
+	   
+      ans.push(testName[parseInt(p1)]);   
+      ans.push(score);
+      ans.push(total);
+      
+      return ans;
+   }
+	function create(){
+		//Absolute new
+		localStorage.setItem("testCode", JSON.stringify(["10a"]));
+		localStorage.setItem("testAnswers", JSON.stringify([["C","A","E","D","C","E","C","C","A","A","C","D","C","B","D","B","E","D","A","C","A","A","A","B","C"]]));
+		localStorage.setItem("testName", JSON.stringify(["2010 AMC12A"]));
+		localStorage.setItem("10a", 0);
+		localStorage.setItem("testFolderName", JSON.stringify(["2010A"]));
+		
+		if(localStorage.getItem("testCorrectness")===null){
+			localStorage.setItem("testCorrectness", JSON.stringify(["000000000000000000000"]));
+		}
+
+		//Updates
+		var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
+		var testName=JSON.parse(localStorage.getItem("testName"));
+		
+		var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
+		
+		while(testCorrectness.length<testName.length){
+			var temp="";
+			for(var i=0; i<testAnswers[testCorrectness.length].length; i++){
+				temp+="0";
+			}
+			testCorrectness.push(temp);
+		}
+		
+		localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
+	}
+
+        </script>
+</body>
+</html>
