@@ -8,6 +8,10 @@ The website might look like literal poop right now but I'll try my best to clean
 
 {% include pointTable.html %}
 
+## Practice Tests
+
+{% include testTable.html %}
+
 ## Zen Mode
 
 Coming Soon! (So probably give or take a year)
