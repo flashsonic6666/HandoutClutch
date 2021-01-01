@@ -6,7 +6,7 @@
 
 <style>
 
-#ptable{
+#ttable{
 	width=100%;
 }
 
@@ -33,7 +33,7 @@ th {
 <body>
 	<!--Table!-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<table id="ptable">
+	<table id="ttable">
 	</table>
 	
 	<script type="text/javascript">
@@ -42,7 +42,7 @@ th {
 	resetTable();
 		
 	function resetTable(){
-		$("#ptable tr").remove(); 
+		$("#ttable tr").remove(); 
 		
 		var tableBody= "";
 
@@ -71,7 +71,7 @@ th {
 		 
 		localStorage.setItem("y2", 1);
 		
-		$("#ptable").append(tableBody);
+		$("#ttable").append(tableBody);
 	}
 	
    function getPoints(p1){
