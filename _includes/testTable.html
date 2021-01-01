@@ -106,7 +106,11 @@ th {
 		if(localStorage.getItem("testCorrectness")===null){
 			localStorage.setItem("testCorrectness", JSON.stringify(["000000000000000000000"]));
 		}
-
+		
+		if(localStorage.getItem("currentTest")===null){
+			localStorage.setItem("currentTest",0);
+		}
+		
 		//Updates
 		var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
 		var testName=JSON.parse(localStorage.getItem("testName"));
@@ -123,7 +127,9 @@ th {
 		
 		localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
 	}
-
+	function updateFocus(x){
+		localStorage.setItem("currentTest",x);
+	}
         </script>
 </body>
 </html>
