@@ -7,8 +7,7 @@
 <style>
 
 #ttable{
-	margin-left: auto;
-  	margin-right: auto;
+	width=100%;
 }
 
 td {
@@ -48,7 +47,8 @@ th {
 		var tableBody= "";
 
 		tableBody = tableBody + "<tr>";
-		 tableBody = tableBody + "<th>" + "   Test   " + "</th>" + "<th>" + "   Points Obtained   " + "</th>" + "<th>" + "   Total Possible Points   " + "</th>";
+		 tableBody = tableBody + "<th>" + "   Test   " + "</th>" + "<th>" + "   Score   " + "</th>" + "<th>" + " #  Questions Correct   " + "</th>" +
+			 "<th>" + "   Total Possible Score   " + "</th>" + "<th>" + "   Test Status   " + "</th>";
 		 tableBody = tableBody + "</tr>";  
 
 
@@ -77,16 +77,19 @@ th {
       var ans=[];
 	   
       var score=0;
+      var correct=0;
       var total=150;
       
       var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
       var testName=JSON.parse(localStorage.getItem("testName"));
-      
+      var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+	
       for(var i=0; i<testCorrectness[parseInt(p1)].length; i++){
         if(testCorrectness[parseInt(p1)].charAt(i)=='1'){
            score+=1.5;
          }
         else if(testCorrectness[parseInt(p1)].charAt(i)=='2'){
+	     correct++;
              score+=6;   
         }
         
@@ -94,8 +97,19 @@ th {
 	   
       ans.push(testName[parseInt(p1)]);   
       ans.push(score);
+      ans.push(correct);
       ans.push(total);
-	   
+      
+	if(testStatus[parseInt(p1)]==0){
+	   	ans.push("Not Started");
+	}
+	else if(testStatus[parseInt(p1)]==1){
+		ans.push("In Progress");
+	}
+	else{
+		ans.push("Completed");
+	}
+      
       return ans;
    }
 	function create(){
@@ -114,11 +128,16 @@ th {
 			localStorage.setItem("currentTest",0);
 		}
 		
+		if(localStorage.getItem("testStatus")===null){
+			localStorage.setItem("testCorrectness", JSON.stringify([0]));
+		}
+		
 		//Updates
 		var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
 		var testName=JSON.parse(localStorage.getItem("testName"));
 		
 		var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
+		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
 		
 		while(testCorrectness.length<testName.length){
 			var temp="";
@@ -126,9 +145,11 @@ th {
 				temp+="0";
 			}
 			testCorrectness.push(temp);
+			testStatus.push(0);
 		}
 		
 		localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
+		localStorage.setItem("testStatus", JSON.stringify(testStatus));
 	}
 	function updateFocus(x){
 		localStorage.setItem("currentTest",x);
