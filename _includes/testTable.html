@@ -54,6 +54,8 @@ th {
  		 var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
 		var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
 		
+		localStorage.setItem("y1", 1);
+		
 		// iterate localStorage
 		for (var i = 0; i < testCorrectness.length; i++) {
 		  
@@ -67,6 +69,8 @@ th {
 
 		}
 		 
+		localStorage.setItem("y2", 1);
+		
 		$("#ptable").append(tableBody);
 	}
 	
