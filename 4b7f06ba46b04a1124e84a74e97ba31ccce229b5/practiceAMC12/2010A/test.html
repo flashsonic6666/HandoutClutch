@@ -213,6 +213,12 @@ form {
 				  var res = testCorrectness[parseInt(currentTest)];
 				  var start = res.substring(0, i);
 				  var end = res.substring(i+1);
+				  testCorrectness[parseInt(currentTest)]=start+"2"+end;
+				}
+				else if(answer.length==0){
+				  var res = testCorrectness[parseInt(currentTest)];
+				  var start = res.substring(0, i);
+				  var end = res.substring(i+1);
 				  testCorrectness[parseInt(currentTest)]=start+"1"+end;
 				}
 			}
