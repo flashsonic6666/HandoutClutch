@@ -301,6 +301,11 @@ form {
 		}
 	}
 	function resetTable(){
+		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+		if(parseInt(testStatus[parseInt(currentTest)])!=2){
+		   return;
+		}
+		
 		$("#stable tr").remove(); 
 		
 		var tableBody= "";
