@@ -289,7 +289,7 @@ form {
 			}
 			
 			for(var i=0; i<25; i++){
-				if(testUserAnswers[parseInt(currentTest)][i].toUpperCase==testAnswers[parseInt(currentTest)][i]){
+				if(testUserAnswers[parseInt(currentTest)][i].toUpperCase()==testAnswers[parseInt(currentTest)][i]){
 					document.getElementById("check" + (i+1)).value = "O";
 					document.getElementById("check" + (i+1)).setAttribute('style', 'color: green');
 				}
