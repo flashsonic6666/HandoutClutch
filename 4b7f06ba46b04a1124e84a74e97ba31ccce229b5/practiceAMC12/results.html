@@ -26,13 +26,6 @@ div.a {
 .left {
   display: block;
 }
-#ptable{
-    position:absolute;
-  top:0;
-  right:0; 
-	border: 1px solid black;
-	width=50%;
-}
 form { 
 	margin: 0 auto; 
 	width=50%;
@@ -45,21 +38,38 @@ form {
 	
 	<p style="text-align:center; font-family:Arial; color:blue; font-size:30px;" id=results></p>
 	
+	<p id="notdone"></p>
+	
+	<form id="answerform">
+	</form>
+	
 	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
 	
 	<!--"Clicks"-->		
 	<script type="text/javascript">
 	
+	var currentTest=localStorage.getItem("currentTest");
+		
 	getName();
-	
+	makeForm();
+		
 	function getName(){
-		var currentTest=localStorage.getItem("currentTest");
+		
 		var testName=JSON.parse(localStorage.getItem("testName"));
 		
-		document.getElementById("results").innerHTML = currentTest[parseInt(testName)]+" results!";
+		document.getElementById("results").innerHTML = testName[parseInt(currentTest)]+" results!";
 	}
 	
-					    
+	function makeForm(){
+		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+		
+		if(parseInt(testStatus[parseInt(currentTest)])!=2){
+			 document.getElementById("notdone").innerHTML = "Test not yet completed!";
+		}
+		else{
+			
+		}
+	}
 	
 		
         </script>
