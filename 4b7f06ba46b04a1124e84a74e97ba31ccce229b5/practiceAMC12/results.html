@@ -30,6 +30,7 @@ form {
 	margin: 0 auto; 
 	width=50%;
 	text-align: left;
+	visibility: hidden;
 }
 
 </style>
@@ -40,7 +41,7 @@ form {
 	
 	<p style="text-align:center; font-family:Arial; font-size:30px;" id="notdone"></p>
 	
-	<form id="2010AForm">
+	<form id="2010A">
 	<hr> 
 	<label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 1.  </label> 
 	<input type = "text" id = "ans1" name = "ans1" readOnly> <br><br> 
@@ -194,12 +195,13 @@ form {
 	
 	function makeForm(){
 		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+		var folderName=JSON.parse(localStorage.getItem("folderName"));
 		
 		if(parseInt(testStatus[parseInt(currentTest)])!=2){
 			 document.getElementById("notdone").innerHTML = "Test not yet completed!";
 		}
 		else{
-			
+			 document.getElementById(folderName[parseInt(currentTest)]).style.visibility='visible';	
 		}
 	}
 	
