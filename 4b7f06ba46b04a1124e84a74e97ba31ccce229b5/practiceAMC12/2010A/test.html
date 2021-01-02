@@ -190,18 +190,19 @@ form {
 	
 	var ct=localStorage.getItem("currentTest");
 	var ts=JSON.parse(localStorage.getItem("testStatus"));
+	var tt=JSON.parse(localStorage.getItem("testTime"));
 		
 	if(parseInt(ts[parseInt(ct)])==0){
 	   ts[parseInt(ct)]=1;
 	   localStorage.setItem("testStatus", JSON.stringify(ts));
 	}
 	
-	//Time
-	var distance = 75*60*1000;
-		
+	//Timer	
 	// Update the count down every 1 second		
 	var x = setInterval(function() {
-
+	
+	var distance = tt[parseInt(ct)];
+		
 	  // Get today's date and time
 	  var now = new Date().getTime();
 
@@ -225,7 +226,8 @@ form {
 	    submit1();
 	  }
 		
-	  distance-=1000;
+	  tt[parseInt(ct)]-=1000;
+	  localStorage.setItem("testTime", JSON.stringify(tt));
 	}, 1000);
 					    
 	function submit1() {
@@ -260,6 +262,12 @@ form {
 			localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
 			localStorage.setItem("testStatus", JSON.stringify(testStatus));
 		}
+		
+		var testTime=JSON.parse(localStorage.getItem("testTime"));
+		testTime[parseInt(currentTest)]=75*60*1000;
+		
+		localStorage.setItem("testTime", JSON.stringify(testTime));
+		
 		window.location.href = "https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/practiceAMC12/testSubmitted";
           }
 		
