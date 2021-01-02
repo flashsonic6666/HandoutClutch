@@ -132,12 +132,17 @@ th {
 			localStorage.setItem("testStatus", JSON.stringify(["0"]));
 		}
 		
+		if(localStorage.getItem("testTime")===null){
+			localStorage.setItem("testTime", JSON.stringify([75*60*1000]));
+		}
+		
 		//Updates
 		var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
 		var testName=JSON.parse(localStorage.getItem("testName"));
 		
 		var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
 		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+		var testTime=JSON.parse(localStorage.getItem("testTime"));
 		
 		while(testCorrectness.length<testName.length){
 			var temp="";
@@ -146,10 +151,12 @@ th {
 			}
 			testCorrectness.push(temp);
 			testStatus.push("0");
+			testTime.push(75*60*1000);
 		}
 		
 		localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
 		localStorage.setItem("testStatus", JSON.stringify(testStatus));
+		localStorage.setItem("testTime", JSON.stringify(testTime));
 	}
 	function updateFocus(x){
 		localStorage.setItem("currentTest",x);
