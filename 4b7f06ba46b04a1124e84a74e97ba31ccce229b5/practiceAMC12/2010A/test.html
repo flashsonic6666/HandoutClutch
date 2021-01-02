@@ -197,8 +197,6 @@ form {
 	
 	function submit1() {
 		
-		localStorage.setItem("y1", 1);
-		
 		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
 		
 		if(parseInt(testStatus)!=2){
@@ -229,7 +227,6 @@ form {
 			localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
 			localStorage.setItem("testStatus", JSON.stringify(testStatus));
 		}
-		localStorage.setItem("y2", 1);
 		
           }
 		
