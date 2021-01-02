@@ -240,6 +240,7 @@ form {
 			var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
 			var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
 			
+			var testUserAnswers=JSON.parse(localStorage.getItem("testUserAnswers"));
 
 			for(var i=0; i< testCorrectness[parseInt(currentTest)].length; i++){
 				var answer = document.getElementById("ans" + (i+1)).value;
@@ -255,12 +256,14 @@ form {
 				  var end = res.substring(i+1);
 				  testCorrectness[parseInt(currentTest)]=start+"1"+end;
 				}
+				testUserAnswers[parseInt(currentTest)].push(answer);
 			}
 
 			testStatus[parseInt(currentTest)]="2";
 
 			localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
 			localStorage.setItem("testStatus", JSON.stringify(testStatus));
+			localStorage.setItem("testUserAnswers", JSON.stringify(testUserAnswers));
 		}
 		
 		window.location.href = "https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/practiceAMC12/testSubmitted";
