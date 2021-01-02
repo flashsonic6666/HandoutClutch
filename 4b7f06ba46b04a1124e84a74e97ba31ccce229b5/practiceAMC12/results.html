@@ -38,10 +38,21 @@ form {
 .spoiler:hover { 
   background-color:white; 
   }
-
+#stable{
+    position:absolute;
+  top:0;
+  right:0; 
+	border: 1px solid black;
+	width=50%;
+}
+	
 </style>
 
 <body>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<table id="stable">
+	</table>
 	
 	<p style="text-align:center; font-family:Arial; color:blue; font-size:30px;" id=results></p>
 	
@@ -240,6 +251,7 @@ form {
 		
 	getName();
 	makeForm();
+	resetTable();
 		
 	function getName(){
 		
@@ -287,6 +299,43 @@ form {
 			
 			
 		}
+	}
+	function resetTable(){
+		$("#stable tr").remove(); 
+		
+		var tableBody= "";
+
+		tableBody = tableBody + "<tr>";
+		 tableBody = tableBody + "<th>" + "Score" + "</th>" + "<th>" + "AIME Cutoff" + "</th>" + "<th>" + "Corr/Inco/Skip" + "</th>";
+		 tableBody = tableBody + "</tr>";  
+
+		var k=0;
+
+		  // use key name to retrieve the corresponding value
+		var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
+		var aimeCutoff=JSON.parse(localStorage.getItem("aimeCutoff"));
+		
+		var score=0;
+		var correct=0;
+		var skipped=0;
+		
+		for(var i=0; i<testCorrectness[parseInt(currentTest)].length; i++){
+			if(testCorrectness[parseInt(currentTest)].charAt(i)=='1'){
+			   score+=1.5;
+			   skipped++;
+			 }
+			else if(testCorrectness[parseInt(currentTest)].charAt(i)=='2'){
+			     correct++;
+			     score+=6;   
+		}
+		
+		tableBody = tableBody + "<tr>";
+		tableBody = tableBody +"<th>" + score + "</th>" + "<th>" + aimeCutoff[parseInt(currentTest)] + "</th>" + "<th>" + correct + "/" + (25-correct-skipped) + "/" + skipped + "</th>";
+		tableBody = tableBody + "</tr>";
+		
+		
+		
+		$("#stable").append(tableBody);
 	}
 	
 		
