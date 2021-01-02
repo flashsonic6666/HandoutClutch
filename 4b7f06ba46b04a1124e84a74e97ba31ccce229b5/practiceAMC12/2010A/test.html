@@ -189,9 +189,10 @@ form {
 	
 	var ct=JSON.parse(localStorage.getItem("currentTest"));
 	var ts=JSON.parse(localStorage.getItem("testStatus"));
+		
 	if(parseInt(ts[parseInt(ct)])==0){
 	   ts[parseInt(ct)]=1;
-	   localStorage.setItem("testStatus", JSON.stringify(testStatus));
+	   localStorage.setItem("testStatus", JSON.stringify(ts));
 	}
 	
 	function submit1() {
