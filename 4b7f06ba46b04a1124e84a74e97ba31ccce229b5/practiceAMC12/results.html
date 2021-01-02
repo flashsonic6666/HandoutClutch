@@ -290,11 +290,11 @@ form {
 			
 			for(var i=0; i<25; i++){
 				if(testUserAnswers[parseInt(currentTest)][i].toUpperCase()==testAnswers[parseInt(currentTest)][i]){
-					document.getElementById("check" + (i+1)).value = "O";
+					document.getElementById("check" + (i+1)).innerHTML = "O";
 					document.getElementById("check" + (i+1)).setAttribute('style', 'color: green');
 				}
 				else{
-					document.getElementById("check" + (i+1)).value = "X";
+					document.getElementById("check" + (i+1)).innerHTML = "X";
 					document.getElementById("check" + (i+1)).setAttribute('style', 'color: red');
 				}
 				
@@ -302,7 +302,7 @@ form {
 				document.getElementById("ans" + (i+1)).value = testUserAnswers[parseInt(currentTest)][i];
 				document.getElementById("ans" + (i+1)).readOnly = true;
 				
-				document.getElementById("cans" + (i+1)).value = testAnswers[parseInt(currentTest)][i];
+				document.getElementById("cans" + (i+1)).innerHTML = testAnswers[parseInt(currentTest)][i];
 			}
 			
 			
