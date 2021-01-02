@@ -282,7 +282,7 @@ form {
 				document.getElementById("ans" + (i+1)).value = testUserAnswers[parseInt(currentTest)][i];
 				document.getElementById("ans" + (i+1)).readOnly = true;
 				
-				document.getElementById("cans" + (i+1)).innerHTML = "Correct answer: " + <span class="spoiler"> testAnswers[parseInt(currentTest)][i] </span>;
+				document.getElementById("cans" + (i+1)).innerHTML = "Correct answer: " + "<span class=\"spoiler\">" + testAnswers[parseInt(currentTest)][i] + "</span>";
 			}
 			
 			
