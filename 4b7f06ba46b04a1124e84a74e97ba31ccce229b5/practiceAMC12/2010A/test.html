@@ -197,14 +197,16 @@ form {
 	}
 	
 	//Time
-	// Update the count down every 1 second
+	var distance = 75*60*1000;
+		
+	// Update the count down every 1 second		
 	var x = setInterval(function() {
 
 	  // Get today's date and time
 	  var now = new Date().getTime();
 
 	  // Find the distance between now and the count down date
-	  var distance = 75*60*1000;
+	  
 
 	  // Time calculations for days, hours, minutes and seconds
 	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
