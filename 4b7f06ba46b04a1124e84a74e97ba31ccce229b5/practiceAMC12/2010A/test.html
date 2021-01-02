@@ -196,6 +196,12 @@ form {
 	   ts[parseInt(ct)]=1;
 	   localStorage.setItem("testStatus", JSON.stringify(ts));
 	}
+	else if(parseInt(ts[parseInt(ct)])==2){
+		tt[parseInt(ct)]="Time Remaining: EXPIRED";
+		localStorage.setItem("testTime", JSON.stringify(tt));
+		window.location.href = "https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/practiceAMC12/testSubmitted";
+	}
+		
 	
 	//Timer	
 	// Update the count down every 1 second		
