@@ -9,15 +9,15 @@
 
 ## Important Stuff
 
-Once you start the test, DO NOT CLOSE OUT OF THE PAGE.
+Although it is definitely not encouraged, the amount of time you have will save upon closing out of the window, in case you really need to go do something else.
 
-Please only put in answers of "A","B","C","D","E","a","b","c","d","e" or "" (don't put the quotes, obviously) in the answer blank. Any other answer will not be accepted.
+Please only put in the letter of your answer choice, and nothing numerical. For example, putting in "A" or "b" would be a valid way to answer a question. 
+
+If you wish to leave a question blank, do not put anything in the answer blank.
 
 Do not include spaces in any part of your answer, or it will be counted wrong.
 
-As mentioned above, upper/lower case does not matter.
-
-There is no time warning, and the timer is a tiny thing at the top of the screen. I'll pretend like this is to help you time manage on tests and not because I'm lazy 8)
+You can find the timer is a tiny thing at the top of the screen. Note that there is no "short on time" warning. I'll pretend like this is to help you time manage on tests and not because I'm lazy 8)
 
 The test will auto-submit even if you don't hit the submit button, just like it will on AoPS, so no need to worry about that.
 
