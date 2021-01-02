@@ -199,9 +199,17 @@ form {
 		
 		if(parseInt(testStatus[parseInt(currentTest)])!=2){
 			 document.getElementById("notdone").innerHTML = "Test not yet completed!";
+			
+			for(var i=0; i<testStatus[parseInt(currentTest)].length; i++){
+				 document.getElementById(folderName[parseInt(currentTest)]).remove();	
+			}
 		}
 		else{
-			 document.getElementById(folderName[parseInt(currentTest)]).style.visibility='visible';	
+			for(var i=0; i<testStatus[parseInt(currentTest)].length; i++){
+				if(i!=parseInt(currentTest)){
+				   document.getElementById(folderName[parseInt(currentTest)]).remove();	
+				}
+			}
 		}
 	}
 	
