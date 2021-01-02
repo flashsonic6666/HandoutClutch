@@ -187,7 +187,7 @@ form {
 	<!--"Clicks"-->		
 	<script type="text/javascript">
 	
-	var ct=JSON.parse(localStorage.getItem("currentTest"));
+	var ct=localStorage.getItem("currentTest");
 	var ts=JSON.parse(localStorage.getItem("testStatus"));
 		
 	if(parseInt(ts[parseInt(ct)])==0){
@@ -200,7 +200,7 @@ form {
 		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
 		
 		if(parseInt(testStatus)!=2){
-			var currentTest=JSON.parse(localStorage.getItem("currentTest"));
+			var currentTest=localStorage.getItem("currentTest");
 
 			var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
 			var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
