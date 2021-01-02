@@ -195,20 +195,20 @@ form {
 	
 	function makeForm(){
 		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
-		var folderName=JSON.parse(localStorage.getItem("folderName"));
+		var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
 		var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
 		
 		if(parseInt(testStatus[parseInt(currentTest)])!=2){
 			 document.getElementById("notdone").innerHTML = "Test not yet completed!";
 			
 			for(var i=0; i<testStatus[parseInt(currentTest)].length; i++){
-				 document.getElementById(folderName[parseInt(currentTest)]).remove();	
+				 document.getElementById(testFolderName[parseInt(currentTest)]).remove();	
 			}
 		}
 		else{
 			for(var i=0; i<testStatus[parseInt(currentTest)].length; i++){
 				if(i!=parseInt(currentTest)){
-				   document.getElementById(folderName[parseInt(currentTest)]).remove();	
+				   document.getElementById(testFolderName[parseInt(currentTest)]).remove();	
 				}
 			}
 			
