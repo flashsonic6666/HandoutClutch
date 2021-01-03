@@ -480,6 +480,10 @@ form {
 					document.getElementById("check" + (i+1)).innerHTML = "Correct";
 					document.getElementById("check" + (i+1)).setAttribute('style', 'color: green');
 				}
+				else if(testUserAnswers[parseInt(currentTest)][i].length==0){
+					document.getElementById("check" + (i+1)).innerHTML = "Skipped";
+					document.getElementById("check" + (i+1)).setAttribute('style', 'color: grey');
+				}
 				else{
 					document.getElementById("check" + (i+1)).innerHTML = "Incorrect";
 					document.getElementById("check" + (i+1)).setAttribute('style', 'color: red');
