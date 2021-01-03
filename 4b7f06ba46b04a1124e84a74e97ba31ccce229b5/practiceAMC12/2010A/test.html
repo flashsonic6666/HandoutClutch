@@ -243,9 +243,9 @@ form {
 	function submit1() {
 		
 		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+		var currentTest=localStorage.getItem("currentTest");
 		
-		if(parseInt(testStatus)!=2){
-			var currentTest=localStorage.getItem("currentTest");
+		if(testStatus[parseInt(currentTest)]!=2){
 
 			var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
 			var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
