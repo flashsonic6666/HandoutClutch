@@ -465,13 +465,13 @@ form {
 			 document.getElementById("notdone").innerHTML = "Test not yet completed!";
 			
 			for(var i=0; i<testStatus.length; i++){
-				 document.getElementById(testFolderName[parseInt(currentTest)]).remove();	
+				 document.getElementById(testFolderName[i]).remove();	
 			}
 		}
 		else{
 			for(var i=0; i<testStatus[parseInt(currentTest)].length; i++){
 				if(i!=parseInt(currentTest)){
-				   document.getElementById(testFolderName[parseInt(currentTest)]).remove();	
+				   document.getElementById(testFolderName[i]).remove();	
 				}
 			}
 			
