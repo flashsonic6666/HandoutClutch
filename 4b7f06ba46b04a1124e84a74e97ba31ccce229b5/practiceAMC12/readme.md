@@ -3,7 +3,7 @@ Just so that you don't forget how to do this.
 
 ## Folder Creation
 First, Create a new folder (e.g. "2012B") in the practiceAMC12 folder. In this folder, add three things: "home.md","answers", and "test.html".
-In home.md, just create a sort of homepage that directs people to the results/test. You can copy the home.md of a previous test and just change the title.
+In home.md, just create a sort of homepage that directs people to the results/test. You can copy the home.md of a previous test and just change the title AND the link to the test.
 In answers, put in the answers to the test.
 In test.html, put in the testing interface. Feel free to copy the test.html from a previous test, but make sure you change the questions in the form (plug the source code from AoPS into your C++ compiler at NovicePacket2020/GetAMCProblems). Don't forget to add in the images with <img> tags.
 
