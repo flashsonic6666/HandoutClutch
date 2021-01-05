@@ -114,16 +114,18 @@ th {
    }
 	function create(){
 		//Absolute new
-		localStorage.setItem("testCode", JSON.stringify(["10a","10b","11a"]));
+		localStorage.setItem("testCode", JSON.stringify(["10a","10b","11a","11b"]));
 		localStorage.setItem("testAnswers", JSON.stringify([["C","A","E","D","C","E","C","C","A","A","C","D","C","B","D","B","E","D","A","C","A","A","A","B","C"],
 								   ["C","A","E","B","D","D","C","B","E","B","E","D","C","B","D","E","D","C","E","E","B","D","A","C","D"],
-								   ["D","E","E","C","C","A","B","C","B","B","C","D","B","E","A","C","D","D","C","C","A","C","C","C","D"]]));
-		localStorage.setItem("testName", JSON.stringify(["2010 AMC12A","2010 AMC12B","2011 AMC12A"]));
+								   ["D","E","E","C","C","A","B","C","B","B","C","D","B","E","A","C","D","D","C","C","A","C","C","C","D"],
+								   ["C","E","C","E","A","C","B","A","D","E","B","A","B","D","D","C","B","A","B","C","D","D","C","B","D"]]));
+		localStorage.setItem("testName", JSON.stringify(["2010 AMC12A","2010 AMC12B","2011 AMC12A","2011 AMC12B"]));
 		localStorage.setItem("10a", 0);
 		localStorage.setItem("10b", 1);
 		localStorage.setItem("11a", 2);
-		localStorage.setItem("testFolderName", JSON.stringify(["2010A","2010B","2011A"]));
-		localStorage.setItem("aimeCutoff", JSON.stringify(["88.5","88.5","93"]));
+		localStorage.setItem("11b", 3);
+		localStorage.setItem("testFolderName", JSON.stringify(["2010A","2010B","2011A","2011B"]));
+		localStorage.setItem("aimeCutoff", JSON.stringify(["88.5","88.5","93","97.5"]));
 		
 		if(localStorage.getItem("testCorrectness")===null){
 			localStorage.setItem("testCorrectness", JSON.stringify(["0000000000000000000000000"]));
