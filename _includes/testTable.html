@@ -114,7 +114,7 @@ th {
    }
 	function create(){
 		//Absolute new
-		localStorage.setItem("testCode", JSON.stringify(["10a","10b","11a","11b","12a","12b","13a","13b","14a"]));
+		localStorage.setItem("testCode", JSON.stringify(["10a","10b","11a","11b","12a","12b","13a","13b","14a","14b"]));
 		localStorage.setItem("testAnswers", JSON.stringify([["C","A","E","D","C","E","C","C","A","A","C","D","C","B","D","B","E","D","A","C","A","A","A","B","C"],
 								   ["C","A","E","B","D","D","C","B","E","B","E","D","C","B","D","E","D","C","E","E","B","D","A","C","D"],
 								   ["D","E","E","C","C","A","B","C","B","B","C","D","B","E","A","C","D","D","C","C","A","C","C","C","D"],
@@ -123,9 +123,10 @@ th {
 								   ["C","E","D","B","A","A","E","A","B","B","C","E","D","A","C","B","C","B","A","D","A","E","B","D","B"],
 								   ["E","C","E","C","B","B","C","D","C","D","C","A","B","B","D","E","D","B","D","B","A","E","C","E","A"],
 								   ["C","A","D","B","C","B","E","B","C","E","A","D","D","C","B","A","D","B","B","A","C","A","E","A","B"],
-								   ["C","B","B","A","C","D","A","C","B","B","C","D","B","C","B","D","A","C","E","D","A","B","B","C","B"]]));
+								   ["C","B","B","A","C","D","A","C","B","B","C","D","B","C","B","D","A","C","E","D","A","B","B","C","B"],
+								   ["C","C","E","B","A","D","D","C","B","D","E","B","C","D","C","E","E","B","E","B","C","C","C","D","D"]]));
 		localStorage.setItem("testName", JSON.stringify(["2010 AMC12A","2010 AMC12B","2011 AMC12A","2011 AMC12B","2012 AMC12A","2012 AMC12B","2013 AMC12A",
-								"2013 AMC12B","2014 AMC12A"]));
+								"2013 AMC12B","2014 AMC12A","2014 AMC12B"]));
 		localStorage.setItem("10a", 0);
 		localStorage.setItem("10b", 1);
 		localStorage.setItem("11a", 2);
@@ -135,8 +136,9 @@ th {
 		localStorage.setItem("13a", 6);
 		localStorage.setItem("13b", 7);
 		localStorage.setItem("14a", 8);
-		localStorage.setItem("testFolderName", JSON.stringify(["2010A","2010B","2011A","2011B","2012A","2012B","2013A","2013B","2014A"]));
-		localStorage.setItem("aimeCutoff", JSON.stringify(["88.5","88.5","93","97.5","94.5","99","88.5","93","93"]));
+		localStorage.setItem("14b", 9);
+		localStorage.setItem("testFolderName", JSON.stringify(["2010A","2010B","2011A","2011B","2012A","2012B","2013A","2013B","2014A","2014B"]));
+		localStorage.setItem("aimeCutoff", JSON.stringify(["88.5","88.5","93","97.5","94.5","99","88.5","93","93","100.5"]));
 		
 		if(localStorage.getItem("testCorrectness")===null){
 			localStorage.setItem("testCorrectness", JSON.stringify(["0000000000000000000000000"]));
