@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+</head>
+
+<style>
+
+body {
+
+	background-image: url('../starBackgroundBlackVeryVeryTransparent.png');
+	background-attachment: fixed;
+	color: #333;
+}
+div.a {
+  font-size: 20px;
+}
+.left {
+  display: block;
+}
+form { 
+	margin: 0 auto; 
+	width=50%;
+	text-align: left;
+}
+#demo{
+	position: sticky;
+	top: 0px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+	
+</style>
+
+<body>
+	<p style="text-align:right" id="demo"></p>
+	
+	<!--Submission Form-->
+	<form action="" onSubmit="return false;">
+    
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 1.  </label> 
+    <input type = "text" id = "ans1" name = "ans1"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Leah has \( 13 \) coins, all of which are pennies and nickels. If she had one more nickel than she has now, then she would have the same number of pennies and nickels. In cents, how much are Leah's coins worth? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 33\qquad\textbf{(B)}\ 35\qquad\textbf{(C)}\ 37\qquad\textbf{(D)}\ 39\qquad\textbf{(E)}\ 41 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 2.  </label> 
+    <input type = "text" id = "ans2" name = "ans2"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Orvin went to the store with just enough money to buy \( 30 \) balloons. When he arrived he discovered that the store had a special sale on balloons: buy \( 1 \) balloon at the regular price and get a second at \( \frac{1}{3} \) off the regular price. What is the greatest number of balloons Orvin could buy? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 33\qquad\textbf{(B)}\ 34\qquad\textbf{(C)}\ 36\qquad\textbf{(D)}\ 38\qquad\textbf{(E)}\ 39 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 3.  </label> 
+    <input type = "text" id = "ans3" name = "ans3"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Randy drove the first third of his trip on a gravel road, the next \( 20 \) miles on pavement, and the remaining one-fifth on a dirt road. In miles, how long was Randy's trip? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 30\qquad\textbf{(B)}\ \frac{400}{11}\qquad\textbf{(C)}\ \frac{75}{2}\qquad\textbf{(D)}\ 40\qquad\textbf{(E)}\ \frac{300}{7} \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 4.  </label> 
+    <input type = "text" id = "ans4" name = "ans4"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Susie pays for \( 4 \) muffins and \( 3 \) bananas. Calvin spends twice as much paying for \( 2 \) muffins and \( 16 \) bananas. A muffin is how many times as expensive as a banana? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ \frac{3}{2}\qquad\textbf{(B)}\ \frac{5}{3}\qquad\textbf{(C)}\ \frac{7}{4}\qquad\textbf{(D)}\ 2\qquad\textbf{(E)}\ \frac{13}{4} \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 5.  </label> 
+    <input type = "text" id = "ans5" name = "ans5"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Doug constructs a square window using \( 8 \) equal-size panes of glass, as shown. The ratio of the height to width for each pane is \( 5 : 2 \), and the borders around and between the panes are \( 2 \) inches wide. In inches, what is the side length of the square window? </p> </label>
+    <img src="2014BP5.png" alt="Problem 5 Diagram" class="center" style="width: 250px;">
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 26\qquad\textbf{(B)}\ 28\qquad\textbf{(C)}\ 30\qquad\textbf{(D)}\ 32\qquad\textbf{(E)}\ 34 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 6.  </label> 
+    <input type = "text" id = "ans6" name = "ans6"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Ed and Ann both have lemonade with their lunch. Ed orders the regular size. Ann gets the large lemonade, which is 50% more than the regular. After both consume \(\frac{3}{4}\) of their drinks, Ann gives Ed a third of what she has left, and 2 additional ounces. When they finish their lemonades they realize that they both drank the same amount. How many ounces of lemonade did they drink together? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 30\qquad\textbf{(B)}\ 32\qquad\textbf{(C)}\ 36\qquad\textbf{(D)}\ 40\qquad\textbf{(E)}\ 50 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 7.  </label> 
+    <input type = "text" id = "ans7" name = "ans7"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">For how many positive integers \(n\) is \(\frac{n}{30-n}\) also a positive integer? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 4\qquad\textbf{(B)}\ 5\qquad\textbf{(C)}\ 6\qquad\textbf{(D)}\ 7\qquad\textbf{(E)}\ 8 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 8.  </label> 
+    <input type = "text" id = "ans8" name = "ans8"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">In the addition shown below \( A \), \( B \), \( C \), and \( D \) are distinct digits. How many different values are possible for \( D \)? </p> </label>
+    <label for="center"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \begin{tabular}{cccccc}&A&B&B&C&B\\ +&B&C&A&D&A\\ \hline &D&B&D&D&D\end{tabular} \) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 2\qquad\textbf{(B)}\ 4\qquad\textbf{(C)}\ 7\qquad\textbf{(D)}\ 8\qquad\textbf{(E)}\ 9 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 9.  </label> 
+    <input type = "text" id = "ans9" name = "ans9"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Convex quadrilateral \( ABCD \) has \( AB=3 \), \( BC=4 \), \( CD=13 \), \( AD=12 \), and \( \angle ABC=90^{\circ} \), as shown. What is the area of the quadrilateral? </p> </label>
+    <img src="2014BP9.png" alt="Problem 9 Diagram" class="center" style="width: 250px;">
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 30\qquad\textbf{(B)}\ 36\qquad\textbf{(C)}\ 40\qquad\textbf{(D)}\ 48\qquad\textbf{(E)}\ 58.5 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 10.  </label> 
+    <input type = "text" id = "ans10" name = "ans10"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Danica drove her new car on a trip for a whole number of hours, averaging 55 miles per hour. At the beginning of the trip, \(abc\) miles was displayed on the odometer, where \(abc\) is a 3-digit number with \(a \geq{1}\) and \(a+b+c \leq{7}\). At the end of the trip, the odometer showed \(cba\) miles. What is \(a^2+b^2+c^2?\). </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 26\qquad\textbf{(B)}\ 27\qquad\textbf{(C)}\ 36\qquad\textbf{(D)}\ 37\qquad\textbf{(E)}\ 41 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 11.  </label> 
+    <input type = "text" id = "ans11" name = "ans11"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">A list of 11 positive integers has a mean of 10, a median of 9, and a unique mode of 8. What is the largest possible value of an integer in the list? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 24\qquad\textbf{(B)}\ 30\qquad\textbf{(C)}\ 31\qquad\textbf{(D)}\ 33\qquad\textbf{(E)}\ 35 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 12.  </label> 
+    <input type = "text" id = "ans12" name = "ans12"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">A set \(S\) consists of triangles whose sides have integer lengths less than 5, and no two elements of \(S\) are congruent or similar. What is the largest number of elements that \(S\) can have? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 8\qquad\textbf{(B)}\ 9\qquad\textbf{(C)}\ 10\qquad\textbf{(D)}\ 11\qquad\textbf{(E)}\ 12 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 13.  </label> 
+    <input type = "text" id = "ans13" name = "ans13"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Real numbers \(a\) and \(b\) are chosen with \(1&lta&ltb\) such that no triangles with positive area has side lengths \(1, a,\) and \(b\) or \(\tfrac{1}{b}, \tfrac{1}{a},\) and \(1\). What is the smallest possible value of \(b\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ \frac{3+\sqrt{3}}{2}\qquad\textbf{(B)}\ \frac{5}{2}\qquad\textbf{(C)}\ \frac{3+\sqrt{5}}{2}\qquad\textbf{(D)}\ \frac{3+\sqrt{6}}{2}\qquad\textbf{(E)}\ 3 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 14.  </label> 
+    <input type = "text" id = "ans14" name = "ans14"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">A rectangular box has a total surface area of 94 square inches. The sum of the lengths of all its edges is 48 inches. What is the sum of the lengths in inches of all of its interior diagonals? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 8\sqrt{3}\qquad\textbf{(B)}\ 10\sqrt{2}\qquad\textbf{(C)}\ 16\sqrt{3}\qquad\textbf{(D)}\ 20\sqrt{2}\qquad\textbf{(E)}\ 40\sqrt{2} \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 15.  </label> 
+    <input type = "text" id = "ans15" name = "ans15"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">When \(p = \sum\limits_{k=1}^{6} k \ln{k}\), the number \(e^p\) is an integer.  What is the largest power of 2 that is a factor of \(e^p\) ? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 2^{12}\qquad\textbf{(B)}\ 2^{14}\qquad\textbf{(C)}\ 2^{16}\qquad\textbf{(D)}\ 2^{18}\qquad\textbf{(E)}\ 2^{20} \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 16.  </label> 
+    <input type = "text" id = "ans16" name = "ans16"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Let \(P\) be a cubic polynomial with \(P(0) = k\), \(P(1) = 2k\), and \(P(-1) = 3k\).  What is \(P(2) + P(-2)\) ? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 0\qquad\textbf{(B)}\ k\qquad\textbf{(C)}\ 6k\qquad\textbf{(D)}\ 7k\qquad\textbf{(E)}\ 14k \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 17.  </label> 
+    <input type = "text" id = "ans17" name = "ans17"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Let \(P\) be the parabola with equation \(y=x^2\) and let \(Q = (20, 14)\). There are real numbers \(r\) and \(s\) such that the line through \(Q\) with slope \(m\) does not intersect \(P\) if and only if \(r &lt m &lt s\). What is \(r + s\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ 1\qquad\textbf{(B)}\ 26\qquad\textbf{(C)}\ 40\qquad\textbf{(D)}\ 52\qquad\textbf{(E)}\ 80 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 18.  </label> 
+    <input type = "text" id = "ans18" name = "ans18"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">The numbers \(1\), \(2\), \(3\), \(4\), \(5\), are to be arranged in a circle.  An arrangement is \(\textit{bad}\) if it is not true that for every \(n\) from \(1\) to \(15\) one can find a subset of the numbers that appear consecutively on the circle that sum to \(n\).  Arrangements that differ only by a rotation or a reflection are considered the same.  How many different bad arrangements are there? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A) }1\qquad\textbf{(B) }2\qquad\textbf{(C) }3\qquad\textbf{(D) }4\qquad\textbf{(E) }5 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 19.  </label> 
+    <input type = "text" id = "ans19" name = "ans19"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">A sphere is inscribed in a truncated right circular cone as shown. The volume of the truncated cone is twice that of the sphere. What is the ratio of the radius of the bottom base of the truncated cone to the radius of the top base of the truncated cone? </p> </label>
+    <img src="2014BP19.png" alt="Problem 19 Diagram" class="center" style="width: 250px;">
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\text{(A) } \dfrac32 \quad \text{(B) } \dfrac{1+\sqrt5}2 \quad \text{(C) } \sqrt3 \quad \text{(D) } 2 \quad \text{(E) } \dfrac{3+\sqrt5}2\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 20.  </label> 
+    <input type = "text" id = "ans20" name = "ans20"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">For how many positive integers \(x\) is \(\log_{10}(x-40) + \log_{10}(60-x) &lt 2\) ? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) }10\qquad\textbf{(B) }18\qquad\textbf{(C) }19\qquad\textbf{(D) }20\qquad\textbf{(E) }\text{infinitely many}\qquad\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 21.  </label> 
+    <input type = "text" id = "ans21" name = "ans21"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">In the figure, \( ABCD \) is a square of side length \( 1 \). The rectangles \( JKHG \) and \( EBCF \) are congruent. What is \( BE \)? </p> </label>
+    <img src="2014BP21.png" alt="Problem 21 Diagram" class="center" style="width: 250px;">
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A) }\frac{1}{2}(\sqrt{6}-2)\qquad\textbf{(B) }\frac{1}{4}\qquad\textbf{(C) }2-\sqrt{3}\qquad\textbf{(D) }\frac{\sqrt{3}}{6}\qquad\textbf{(E) } 1-\frac{\sqrt{2}}{2}\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 22.  </label> 
+    <input type = "text" id = "ans22" name = "ans22"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">In a small pond there are eleven lily pads in a row labeled 0 through 10.  A frog is sitting on pad 1.  When the frog is on pad \(N\), \(0&ltN&lt10\), it will jump to pad \(N-1\) with probability \(\frac{N}{10}\) and to pad \(N+1\) with probability \(1-\frac{N}{10}\).  Each jump is independent of the previous jumps.  If the frog reaches pad 0 it will be eaten by a patiently waiting snake.  If the frog reaches pad 10 it will exit the pond, never to return.  What is the probability that the frog will escape without being eaten by the snake? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) }\frac{32}{79}\qquad\textbf{(B) }\frac{161}{384}\qquad\textbf{(C) }\frac{63}{146}\qquad\textbf{(D) }\frac{7}{16}\qquad\textbf{(E) }\frac{1}{2}\qquad\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 23.  </label> 
+    <input type = "text" id = "ans23" name = "ans23"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">The number 2017 is prime.  Let \(S = \sum \limits_{k=0}^{62} \dbinom{2014}{k}\).  What is the remainder when \(S\) is divided by 2017? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) }32\qquad\textbf{(B) }684\qquad\textbf{(C) }1024\qquad\textbf{(D) }1576\qquad\textbf{(E) }2016\qquad\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 24.  </label> 
+    <input type = "text" id = "ans24" name = "ans24"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Let \(ABCDE\) be a pentagon inscribed in a circle such that \(AB = CD = 3\), \(BC = DE = 10\), and \(AE= 14\).  The sum of the lengths of all diagonals of \(ABCDE\) is equal to \(\frac{m}{n}\), where \(m\) and \(n\) are relatively prime positive integers.  What is \(m+n\) ? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) }129\qquad\textbf{(B) }247\qquad\textbf{(C) }353\qquad\textbf{(D) }391\qquad\textbf{(E) }421\qquad\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 25.  </label> 
+    <input type = "text" id = "ans25" name = "ans25"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Find the sum of all the positive solutions of  </p> </label>
+    <label for="center"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(2\text{cos }2x \left(\text{cos }2x - \text{cos }{\left( \frac{2014\pi^2}{x} \right) } \right) = \text{cos }4x - 1\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A)}\ \pi \qquad\textbf{(B)}\ 810\pi  \qquad\textbf{(C)}\ 1008\pi \qquad\textbf{(D)}\ 1080 \pi \qquad\textbf{(E)}\ 1800\pi \) </p> </label>
+    <hr> 
+
+
+	  <input type="button" value="Submit" onClick="submit1();">
+	</form>
+
+
+	
+	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
+	
+	<!--"Clicks"-->		
+	<script type="text/javascript">
+	
+	var ct=localStorage.getItem("currentTest");
+	var ts=JSON.parse(localStorage.getItem("testStatus"));
+	var tt=JSON.parse(localStorage.getItem("testTime"));
+		
+	if(parseInt(ts[parseInt(ct)])==0){
+	   ts[parseInt(ct)]=1;
+	   localStorage.setItem("testStatus", JSON.stringify(ts));
+	}
+	else if(parseInt(ts[parseInt(ct)])==2){
+		tt[parseInt(ct)]="Time Remaining: EXPIRED";
+		localStorage.setItem("testTime", JSON.stringify(tt));
+		window.location.href = "https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/practiceAMC12/testSubmitted";
+	}
+		
+	
+	//Timer	
+	// Update the count down every 1 second		
+	var x = setInterval(function() {
+	
+	var distance = tt[parseInt(ct)];
+		
+	  // Get today's date and time
+	  var now = new Date().getTime();
+
+	  // Find the distance between now and the count down date
+	  
+
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	  // Display the result in the element with id="demo"
+	  document.getElementById("demo").innerHTML = "Time Remaining: " + hours + "h "
+	  + minutes + "m " + seconds + "s ";
+
+	  // If the count down is finished, write some text
+	  if (distance < 0) {
+	    clearInterval(x);
+	    document.getElementById("demo").innerHTML = "Time Remaining: EXPIRED";
+	    submit1();
+	  }
+		
+	  tt[parseInt(ct)]-=1000;
+	  localStorage.setItem("testTime", JSON.stringify(tt));
+	}, 1000);
+					    
+	function submit1() {
+		
+		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+		var currentTest=localStorage.getItem("currentTest");
+		
+		if(testStatus[parseInt(currentTest)]!=2){
+
+			var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
+			var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
+			
+			var testUserAnswers=JSON.parse(localStorage.getItem("testUserAnswers"));
+
+			for(var i=0; i< testCorrectness[parseInt(currentTest)].length; i++){
+				var answer = document.getElementById("ans" + (i+1)).value;
+				if(testAnswers[parseInt(currentTest)][i]==answer.toUpperCase()){
+				  var res = testCorrectness[parseInt(currentTest)];
+				  var start = res.substring(0, i);
+				  var end = res.substring(i+1);
+				  testCorrectness[parseInt(currentTest)]=start+"2"+end;
+				}
+				else if(answer.length==0){
+				  var res = testCorrectness[parseInt(currentTest)];
+				  var start = res.substring(0, i);
+				  var end = res.substring(i+1);
+				  testCorrectness[parseInt(currentTest)]=start+"1"+end;
+				}
+				testUserAnswers[parseInt(currentTest)].push(answer);
+			}
+
+			testStatus[parseInt(currentTest)]="2";
+
+			localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
+			localStorage.setItem("testStatus", JSON.stringify(testStatus));
+			localStorage.setItem("testUserAnswers", JSON.stringify(testUserAnswers));
+		}
+		
+		window.location.href = "https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/practiceAMC12/testSubmitted";
+          }
+		
+        </script>
+</body>
+</html>
