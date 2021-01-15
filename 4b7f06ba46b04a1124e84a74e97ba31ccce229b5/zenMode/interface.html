@@ -232,7 +232,6 @@ form {
 				localStorage.setItem("currentZenChoice", currentZenChoice);
 				if(currentZenChoice==0){
 					currentZenHandout=Math.floor((Math.random() * maxHandout));
-					var answers=JSON.parse(localStorage.getItem("answers"));
 					var maxSize=answers[currentZenHandout].length;
 					currentZenHandoutQ=Math.floor((Math.random() * maxSize));
 
@@ -253,7 +252,6 @@ form {
 					   continue;
 					}
 					
-					var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
 					currentZenTestQ=Math.floor((Math.random() * 25));
 
 					var code = testCode[currentZenTest];
