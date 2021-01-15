@@ -227,7 +227,9 @@ form {
 		  document.getElementById("ans").value="";
 		  
 		  if(correct){
+			  
 			while(true){
+				break;
 			  	var currentZenChoice=Math.floor((Math.random() * 2));
 				localStorage.setItem("currentZenChoice", currentZenChoice);
 				
