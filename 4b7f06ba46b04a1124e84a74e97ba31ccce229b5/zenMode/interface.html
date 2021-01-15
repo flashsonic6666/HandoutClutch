@@ -76,6 +76,7 @@ form {
 	<!--"Clicks"-->		
 	<script type="text/javascript">
 	var handoutCode=JSON.parse(localStorage.getItem("handoutCode"));
+	var testCode=JSON.parse(localStorage.getItem("testCode"));
 	var folderName=JSON.parse(localStorage.getItem("folderName"));
 	var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
 	
@@ -120,9 +121,6 @@ form {
 		var code=testCode[parseInt(localStorage.getItem("currentZenTest"))];	
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code + "Problem" + currentZenTestQ + ".PNG";
 	}
-		
-	document.getElementById("result").innerHTML = "You have a total of " + haha[parseInt(localStorage.getItem(code))][0]
-			   + " incorrect tries on this problem smh my head";
 		
 	resetTable();
 		
@@ -201,36 +199,73 @@ form {
 		  var answer = document.getElementById("ans").value;
 		  
 		  var answers=JSON.parse(localStorage.getItem("answers"));
+		  var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
 		  
-		  if(answer==answers[parseInt(localStorage.getItem(code))][index-1]){
-			document.getElementById("result").innerHTML = "Question " + index + " completed!";
-			  var x=JSON.parse(localStorage.getItem("correctness"));
-			  var res = x[parseInt(localStorage.getItem(code))];
-			  var start = res.substring(0, index-1);
-			  var end = res.substring(index);
-			  x[parseInt(localStorage.getItem(code))]=start+"1"+end;
-			localStorage.setItem("correctness", JSON.stringify(x));
+		  var correct=false;
+		  
+		  if(currentZenChoice==0){
+			  if(answer==answers[parseInt(localStorage.getItem(currentZenHandout))][currentZenHandoutQ-1]){
+				document.getElementById("result").innerHTML = "Correct, good job!";
+				correct=true;
+			  }
+			  else{
+				document.getElementById("result").innerHTML = "Incorrect, smh my head.";
+			  }
 		  }
 		  else{
-			var x=JSON.parse(localStorage.getItem("clicks"));
-			x[parseInt(localStorage.getItem(code))][parseInt(index-1)]++;
-			document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
-			   + " incorrect tries on this problem smh my head";
-			localStorage.setItem("clicks", JSON.stringify(x)); 
+			 if(answer==testAnswers[parseInt(localStorage.getItem(currentZenTest))][currentZenTestQ-1]){
+				document.getElementById("result").innerHTML = "Correct, good job!";
+				correct=true;
+			  }
+			  else{
+				document.getElementById("result").innerHTML = "Incorrect, smh my head.";
+			  } 
 		  }
+		  
 		  resetTable();
+		  
 		  document.getElementById("ans").value="";
 		  
-		  if(choice==0){
-			var handoutChoice=Math.floor((Math.random() * maxHandout));
-			code=handoutCode[parseInt(localStorage.getItem("handoutChoice"))];	
-			tempImage.src = "../problems/" + folderName[localStorage.getItem(code)] + "/" + code+"Problem1.JPG";
-		}
-		else{
-			var testChoice=Math.floor((Math.random() * maxTest));
-		}
-		  var maxSize = haha[parseInt(localStorage.getItem(code))].length;
-		  		var handoutChoice=Math.floor((Math.random() * maxHandout));
+		  if(correct){
+			while(true){
+			  	currentZenChoice=Math.floor((Math.random() * 2));
+				localStorage.setItem("currentZenChoice", currentZenChoice);
+				if(currentZenChoice==0){
+					currentZenHandout=Math.floor((Math.random() * maxHandout));
+					var answers=JSON.parse(localStorage.getItem("answers"));
+					var maxSize=answers[currentZenHandout].length;
+					currentZenHandoutQ=Math.floor((Math.random() * maxSize));
+
+					var code = handoutCode[currentZenHandout];
+
+					var image1 = document.getElementById("problem");
+					image1.src = "../problems/" + folderName[localStorage.getItem(code)] + "/" + code+"Problem" +currentZenHandoutQ+".JPG";	
+
+					localStorage.setItem("currentZenHandout", currentZenHandout);
+					localStorage.setItem("currentZenHandoutQ", currentZenHandoutQ);
+					break;
+				}
+				else{
+					currentZenTest=Math.floor((Math.random() * maxTest));
+					var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+					
+					if(parseInt(testStatus[currentZenTest])!=2){
+					   continue;
+					}
+					
+					var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
+					currentZenTestQ=Math.floor((Math.random() * 25));
+
+					var code = testCode[currentZenTest];
+
+					var image1 = document.getElementById("problem");
+					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +currentZenHandoutQ+".PNG";	
+
+					localStorage.setItem("currentZenTest", currentZenTest);
+					localStorage.setItem("currentZenTestQ", currentZenTestQ);
+				}
+		  	}
+		  }
           }
 	 function picr(){
 		 var x=JSON.parse(localStorage.getItem("clicks"));
