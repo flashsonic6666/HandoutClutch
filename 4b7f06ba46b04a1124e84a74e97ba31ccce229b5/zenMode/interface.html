@@ -77,6 +77,7 @@ form {
 	<script type="text/javascript">
 	var handoutCode=JSON.parse(localStorage.getItem("handoutCode"));
 	var folderName=JSON.parse(localStorage.getItem("folderName"));
+	var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
 	var code=handoutCode[parseInt(localStorage.getItem("currentUnit"))];	
 	var tempImage = document.getElementById("problem");
 	tempImage.src = folderName[localStorage.getItem(code)] + "/" + code+"Problem1.JPG";
@@ -86,6 +87,9 @@ form {
 	var index = 1;
 	var maxSize = haha[parseInt(localStorage.getItem(code))].length;
 		
+	var maxHandout=haha[parseInt(localStorage.getItem(folderName))].length;
+	var maxTest=haha[parseInt(localStorage.getItem(code))].length;
+	
 	document.getElementById("result").innerHTML = "You have a total of " + haha[parseInt(localStorage.getItem(code))][0]
 			   + " incorrect tries on this problem smh my head";
 		
