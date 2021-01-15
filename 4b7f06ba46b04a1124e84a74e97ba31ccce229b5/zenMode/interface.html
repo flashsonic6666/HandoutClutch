@@ -115,11 +115,11 @@ form {
 		
 	if(currentZenChoice==0){
 		var code=handoutCode[parseInt(localStorage.getItem("currentZenHandout"))];	
-		image1.src = "../../problems/" + folderName[currentZenHandout] + "/" + handoutCode[currentZenHandout]+"Problem" +currentZenHandoutQ+".JPG";	
+		tempImage.src = "../problems/" + folderName[currentZenHandout] + "/" + handoutCode[currentZenHandout]+"Problem" +currentZenHandoutQ+".JPG";	
 	}
 	else{
 		var code=testCode[parseInt(localStorage.getItem("currentZenTest"))];	
-		tempImage.src = "../../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + currentZenTestQ + ".PNG";
+		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + currentZenTestQ + ".PNG";
 	}
 		
 	resetTable();
@@ -239,7 +239,7 @@ form {
 					var code = handoutCode[currentZenHandout];
 
 					var image1 = document.getElementById("problem");
-					image1.src = "../../problems/" + folderName[localStorage.getItem(code)] + "/" + code+"Problem" +currentZenHandoutQ+".JPG";	
+					image1.src = "../problems/" + folderName[localStorage.getItem(code)] + "/" + code+"Problem" +currentZenHandoutQ+".JPG";	
 
 					localStorage.setItem("currentZenHandout", currentZenHandout);
 					localStorage.setItem("currentZenHandoutQ", currentZenHandoutQ);
@@ -259,7 +259,7 @@ form {
 					var code = testCode[currentZenTest];
 
 					var image1 = document.getElementById("problem");
-					image1.src = "../../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +currentZenHandoutQ+".PNG";	
+					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +currentZenHandoutQ+".PNG";	
 
 					localStorage.setItem("currentZenTest", currentZenTest);
 					localStorage.setItem("currentZenTestQ", currentZenTestQ);
