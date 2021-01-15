@@ -87,8 +87,8 @@ form {
 	var index = 1;
 	var maxSize = haha[parseInt(localStorage.getItem(code))].length;
 		
-	var maxHandout=haha[parseInt(localStorage.getItem(folderName))].length;
-	var maxTest=haha[parseInt(localStorage.getItem(code))].length;
+	var maxHandout=parseInt(localStorage.getItem(folderName));
+	var maxTest=parseInt(localStorage.getItem(testFolderName));
 	
 	document.getElementById("result").innerHTML = "You have a total of " + haha[parseInt(localStorage.getItem(code))][0]
 			   + " incorrect tries on this problem smh my head";
