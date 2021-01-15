@@ -89,7 +89,7 @@ form {
 	}
 		
 	if(localStorage.getItem("currentZenHandoutQ")===null){
-		localStorage.setItem("currentZenHandoutQ", 1);
+		localStorage.setItem("currentZenHandoutQ", 0);
 	}
 		
 	if(localStorage.getItem("currentZenTest")===null){
@@ -97,7 +97,7 @@ form {
 	}	
 	
 	if(localStorage.getItem("currentZenTestQ")===null){
-		localStorage.setItem("currentZenTestQ", 1);
+		localStorage.setItem("currentZenTestQ", 0);
 	}	
 	
 	var currentZenChoice=JSON.parse(localStorage.getItem("currentZenChoice"));
@@ -115,11 +115,11 @@ form {
 		
 	if(currentZenChoice==0){
 		var code=handoutCode[parseInt(localStorage.getItem("currentZenHandout"))];	
-		tempImage.src = "../problems/" + folderName[localStorage.getItem(code)] + "/" + code + "Problem" + currentZenHandoutQ + ".JPG";
+		image1.src = "../problems/" + folderName[currentZenHandout] + "/" + handoutCode[currentZenHandout]+"Problem" +currentZenHandoutQ+".JPG";	
 	}
 	else{
 		var code=testCode[parseInt(localStorage.getItem("currentZenTest"))];	
-		tempImage.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code + "Problem" + currentZenTestQ + ".PNG";
+		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + currentZenTestQ + ".PNG";
 	}
 		
 	resetTable();
