@@ -78,18 +78,49 @@ form {
 	var handoutCode=JSON.parse(localStorage.getItem("handoutCode"));
 	var folderName=JSON.parse(localStorage.getItem("folderName"));
 	var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
-	var code=handoutCode[parseInt(localStorage.getItem("currentUnit"))];	
-	var tempImage = document.getElementById("problem");
-	tempImage.src = folderName[localStorage.getItem(code)] + "/" + code+"Problem1.JPG";
+	
+	if(localStorage.getItem("currentZenChoice")===null){
+		localStorage.setItem("currentZenChoice",0);
+	}
+	
+	if(localStorage.getItem("currentZenHandout")===null){
+		localStorage.setItem("currentZenHandout", 0);
+	}
 		
-	var haha=JSON.parse(localStorage.getItem("clicks"));	
+	if(localStorage.getItem("currentZenHandoutQ")===null){
+		localStorage.setItem("currentZenHandoutQ", 1);
+	}
 		
-	var index = 1;
-	var maxSize = haha[parseInt(localStorage.getItem(code))].length;
+	if(localStorage.getItem("currentZenTest")===null){
+		localStorage.setItem("currentZenTest", 0);
+	}	
+	
+	if(localStorage.getItem("currentZenTestQ")===null){
+		localStorage.setItem("currentZenTestQ", 1);
+	}	
+	
+	var currentZenChoice=JSON.parse(localStorage.getItem("currentZenChoice"));
+	var currentZenHandout=JSON.parse(localStorage.getItem("currentZenHandout"));
+	var currentZenTest=JSON.parse(localStorage.getItem("currentZenTest"));
+	var currentZenHandoutQ=JSON.parse(localStorage.getItem("currentZenHandoutQ"));
+	var currentZenTestQ=JSON.parse(localStorage.getItem("currentZenTestQ"));
 		
 	var maxHandout=parseInt(localStorage.getItem(folderName));
 	var maxTest=parseInt(localStorage.getItem(testFolderName));
 	
+	//0 for Handout, 1 for AMC
+	var choice= Math.floor((Math.random() * 2));
+	var tempImage = document.getElementById("problem");
+		
+	if(currentZenChoice==0){
+		var code=handoutCode[parseInt(localStorage.getItem("currentZenHandout"))];	
+		tempImage.src = "../problems/" + folderName[localStorage.getItem(code)] + "/" + code + "Problem" + currentZenHandoutQ + ".JPG";
+	}
+	else{
+		var code=testCode[parseInt(localStorage.getItem("currentZenTest"))];	
+		tempImage.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code + "Problem" + currentZenTestQ + ".PNG";
+	}
+		
 	document.getElementById("result").innerHTML = "You have a total of " + haha[parseInt(localStorage.getItem(code))][0]
 			   + " incorrect tries on this problem smh my head";
 		
@@ -189,6 +220,17 @@ form {
 		  }
 		  resetTable();
 		  document.getElementById("ans").value="";
+		  
+		  if(choice==0){
+			var handoutChoice=Math.floor((Math.random() * maxHandout));
+			code=handoutCode[parseInt(localStorage.getItem("handoutChoice"))];	
+			tempImage.src = "../problems/" + folderName[localStorage.getItem(code)] + "/" + code+"Problem1.JPG";
+		}
+		else{
+			var testChoice=Math.floor((Math.random() * maxTest));
+		}
+		  var maxSize = haha[parseInt(localStorage.getItem(code))].length;
+		  		var handoutChoice=Math.floor((Math.random() * maxHandout));
           }
 	 function picr(){
 		 var x=JSON.parse(localStorage.getItem("clicks"));
