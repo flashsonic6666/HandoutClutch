@@ -229,8 +229,8 @@ form {
 		  if(correct){
 			  
 			while(true){
-			  	currentZenChoice=Math.floor((Math.random() * 2));
-				localStorage.setItem("currentZenChoice", 1);
+			  	currentZenChoice=Math.floor(Math.random() * 2);
+				localStorage.setItem("currentZenChoice", currentZenChoice);
 				
 				if(currentZenChoice==0){
 					currentZenHandout=Math.floor((Math.random() * maxHandout));
