@@ -105,9 +105,11 @@ form {
 	var currentZenTest=parseInt(localStorage.getItem("currentZenTest"));
 	var currentZenHandoutQ=parseInt(localStorage.getItem("currentZenHandoutQ"));
 	var currentZenTestQ=parseInt(localStorage.getItem("currentZenTestQ"));
+	
 		
-	var maxHandout=parseInt(localStorage.getItem(folderName));
-	var maxTest=parseInt(localStorage.getItem(testFolderName));
+	
+	var maxHandout=parseInt(folderName.length);
+	var maxTest=parseInt(testFolderName.length);
 	
 	//0 for Handout, 1 for AMC
 	var choice= Math.floor((Math.random() * 2));
