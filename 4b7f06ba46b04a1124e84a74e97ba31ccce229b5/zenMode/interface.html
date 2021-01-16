@@ -100,11 +100,11 @@ form {
 		localStorage.setItem("currentZenTestQ", 0);
 	}	
 	
-	var currentZenChoice=JSON.parse(localStorage.getItem("currentZenChoice"));
-	var currentZenHandout=JSON.parse(localStorage.getItem("currentZenHandout"));
-	var currentZenTest=JSON.parse(localStorage.getItem("currentZenTest"));
-	var currentZenHandoutQ=JSON.parse(localStorage.getItem("currentZenHandoutQ"));
-	var currentZenTestQ=JSON.parse(localStorage.getItem("currentZenTestQ"));
+	var currentZenChoice=parseInt(localStorage.getItem("currentZenChoice"));
+	var currentZenHandout=parseInt(localStorage.getItem("currentZenHandout"));
+	var currentZenTest=parseInt(localStorage.getItem("currentZenTest"));
+	var currentZenHandoutQ=parseInt(localStorage.getItem("currentZenHandoutQ"));
+	var currentZenTestQ=parseInt(localStorage.getItem("currentZenTestQ"));
 		
 	var maxHandout=parseInt(localStorage.getItem(folderName));
 	var maxTest=parseInt(localStorage.getItem(testFolderName));
