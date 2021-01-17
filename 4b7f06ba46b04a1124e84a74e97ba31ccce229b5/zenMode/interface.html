@@ -27,7 +27,7 @@ div.a {
 .centerfix {
   position:fixed;
     bottom:0px;
-    left:50%;
+    left:48%;
 }
 #ptable{
     position:absolute;
@@ -47,10 +47,7 @@ form {
 <body>
 	<!--Go To Problem-->
 	<form action="" onSubmit="return false;">
-	  <label for="prob">Go To Problem:</label>
-	  <input type="text" id="prob" name="prob"><br><br>
-	  <input type="button" value="Submit" onClick="goPic();">
-	  <input type="submit" style="display: none" onClick="goPic();">
+	  <input type="button" value="Skip" onClick="goPic(false);">
 	</form>
 	
 	<!--Next Problem/Go back a problem-->
@@ -66,7 +63,7 @@ form {
 	  <label for="lname">Answer:        </label>
 	  <input type="text" id="ans" name="ans"><br><br>
 	  <input type="button" value="Submit" onClick="result();">
-	  <input type="submit" style="display: none" onClick="result();" >
+	  <input type="submit" style="display: none" onClick="result(true);" >
 	  Result: <span id="result"></span>	  
 	</form>
 	
@@ -279,46 +276,48 @@ form {
 		$("#ptable").append(tableBody);
 	}
 		
-          function result() {
-		  var answer = document.getElementById("ans").value;
-		  
-		  var correct=false;
-		  
-		  if(currentZenChoice==0){
-			  zenHandoutTries[currentZenHandout][currentZenHandoutQ]++;
-			  
-			  if(answer==answers[currentZenHandout][currentZenHandoutQ]){
-				document.getElementById("result").innerHTML = "Correct, good job!";
-				correct=true;
-				  
-				
-				zenHandoutTimesDone[currentZenHandout][currentZenHandoutQ]++;  
+          function result(check) {
+		if(check==true)
+			  var answer = document.getElementById("ans").value;
+
+			  var correct=false;
+
+			  if(currentZenChoice==0){
+				  zenHandoutTries[currentZenHandout][currentZenHandoutQ]++;
+
+				  if(answer==answers[currentZenHandout][currentZenHandoutQ]){
+					document.getElementById("result").innerHTML = "Correct, good job!";
+					correct=true;
+
+
+					zenHandoutTimesDone[currentZenHandout][currentZenHandoutQ]++;  
+				  }
+				  else{
+					document.getElementById("result").innerHTML = "Incorrect, smh my head.";
+				  }
 			  }
 			  else{
-				document.getElementById("result").innerHTML = "Incorrect, smh my head.";
+				 zenTestTries[currentZenHandout][currentZenHandoutQ]++;
+
+				 if(answer==testAnswers[currentZenTest][currentZenTestQ]){
+					document.getElementById("result").innerHTML = "Correct, good job!";
+					correct=true;
+
+					zenTestTimesDone[currentZenHandout][currentZenHandoutQ]++; 
+				  }
+				  else{
+					document.getElementById("result").innerHTML = "Incorrect, smh my head.";
+				  } 
 			  }
-		  }
-		  else{
-			 zenTestTries[currentZenHandout][currentZenHandoutQ]++;
-			  
-			 if(answer==testAnswers[currentZenTest][currentZenTestQ]){
-				document.getElementById("result").innerHTML = "Correct, good job!";
-				correct=true;
-				 
-				zenTestTimesDone[currentZenHandout][currentZenHandoutQ]++; 
-			  }
-			  else{
-				document.getElementById("result").innerHTML = "Incorrect, smh my head.";
-			  } 
-		  }
-		  
-		  localStorage.setItem("zenHandoutTries", JSON.stringify(zenHandoutTries));
-		  localStorage.setItem("zenHandoutTimesDone", JSON.stringify(zenHandoutTimesDone));
-		  localStorage.setItem("zenTestTries", JSON.stringify(zenTestTries));
-		  localStorage.setItem("zenTestTimesDone", JSON.stringify(zenTestTimesDone));
-		  
-		  //resetTable();
-		  
+
+			  localStorage.setItem("zenHandoutTries", JSON.stringify(zenHandoutTries));
+			  localStorage.setItem("zenHandoutTimesDone", JSON.stringify(zenHandoutTimesDone));
+			  localStorage.setItem("zenTestTries", JSON.stringify(zenTestTries));
+			  localStorage.setItem("zenTestTimesDone", JSON.stringify(zenTestTimesDone));
+
+			  //resetTable();
+	  	}
+		
 		  document.getElementById("ans").value="";
 		  
 		  if(correct){
