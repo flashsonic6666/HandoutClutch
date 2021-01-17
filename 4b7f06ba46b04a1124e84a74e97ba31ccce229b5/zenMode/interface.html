@@ -47,7 +47,7 @@ form {
 <body>
 	<!--Go To Problem-->
 	<form action="" onSubmit="return false;">
-	  <input type="button" value="Skip" onClick="result(false);">
+	  <input type="button" value="Skip" onClick="result(0);">
 	</form>
 	
 	<!--Next Problem/Go back a problem-->
@@ -63,7 +63,7 @@ form {
 	  <label for="lname">Answer:        </label>
 	  <input type="text" id="ans" name="ans"><br><br>
 	  <input type="button" value="Submit" onClick="result();">
-	  <input type="submit" style="display: none" onClick="result(true);" >
+	  <input type="submit" style="display: none" onClick="result(1);" >
 	  Result: <span id="result"></span>	  
 	</form>
 	
@@ -281,7 +281,7 @@ form {
 		var answer = document.getElementById("ans").value;
 		var correct=false;
 		  
-		if(check){
+		if(check==1){
 			  if(currentZenChoice==0){
 				  zenHandoutTries[currentZenHandout][currentZenHandoutQ]++;
 
