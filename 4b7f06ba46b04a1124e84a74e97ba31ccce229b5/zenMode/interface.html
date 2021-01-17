@@ -36,7 +36,16 @@ form {
 	width:250px;
 	text-align: center;
 }
+.nyan {
+    position: relative;
+    width: 120px;
+}
 
+.nyan img {
+    position: absolute;
+    bottom: 0;
+}
+	
 </style>
 
 <body>
@@ -53,7 +62,9 @@ form {
 	<input type="button" value=">" onClick="picr();">
 	
 	<!--Displaying Image-->
-	<img id="problem" src="expProblem1.JPG" style="width:1000px" class="center">
+	<div class="nyan">
+		<img id="problem" src="expProblem1.JPG" style="width:1000px" class="center">
+	</div>
 	
 	<!--Submission Form-->
 	<form action="" onSubmit="return false;">
@@ -67,6 +78,8 @@ form {
 	
 	
 	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
+	
+	<img id="problem" src="NyanCat.png" style="width:100px" class="center">
 	
 	<!--Table!-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
