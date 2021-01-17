@@ -47,7 +47,7 @@ form {
 <body>
 	<!--Go To Problem-->
 	<form action="" onSubmit="return false;">
-	  <input type="button" value="Skip" onClick="goPic(false);">
+	  <input type="button" value="Skip" onClick="result(false);">
 	</form>
 	
 	<!--Next Problem/Go back a problem-->
@@ -277,11 +277,11 @@ form {
 	}
 		
           function result(check) {
-		if(check==true){
-			  var answer = document.getElementById("ans").value;
-
-			  var correct=false;
-
+		  
+		var answer = document.getElementById("ans").value;
+		var correct=false;
+		  
+		if(check){
 			  if(currentZenChoice==0){
 				  zenHandoutTries[currentZenHandout][currentZenHandoutQ]++;
 
@@ -317,11 +317,13 @@ form {
 
 			  //resetTable();
 	  	}
-		
+		else{
+		    correct=true;	
+		}
+		  
 		  document.getElementById("ans").value="";
 		  
 		  if(correct){
-			  
 			while(true){
 			  	currentZenChoice=Math.floor(Math.random() * 2);
 				localStorage.setItem("currentZenChoice", currentZenChoice);
