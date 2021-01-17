@@ -68,7 +68,7 @@ form {
 	
 	
 	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
-	<img id="problem" src="Beta.jpg" style="width:100px; vertical-align: bottom" class="center">
+	<img id="problem" src="Beta.JPG" style="width:100px; vertical-align: bottom" class="center">
 	
 	<!--Table!-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -280,23 +280,37 @@ form {
 		  var correct=false;
 		  
 		  if(currentZenChoice==0){
+			  zenHandoutTries[currentZenHandout][currentZenHandoutQ]++;
+			  
 			  if(answer==answers[currentZenHandout][currentZenHandoutQ]){
 				document.getElementById("result").innerHTML = "Correct, good job!";
 				correct=true;
+				  
+				
+				zenHandoutTimesDone[currentZenHandout][currentZenHandoutQ]++;  
 			  }
 			  else{
 				document.getElementById("result").innerHTML = "Incorrect, smh my head.";
 			  }
 		  }
 		  else{
+			 zenTestTries[currentZenHandout][currentZenHandoutQ]++;
+			  
 			 if(answer==testAnswers[currentZenTest][currentZenTestQ]){
 				document.getElementById("result").innerHTML = "Correct, good job!";
 				correct=true;
+				 
+				zenTestTimesDone[currentZenHandout][currentZenHandoutQ]++; 
 			  }
 			  else{
 				document.getElementById("result").innerHTML = "Incorrect, smh my head.";
 			  } 
 		  }
+		  
+		  localStorage.setItem("zenHandoutTries", JSON.stringify(zenHandoutTries));
+		  localStorage.setItem("zenHandoutTimesDone", JSON.stringify(zenHandoutTimesDone));
+		  localStorage.setItem("zenTestTries", JSON.stringify(zenTestTries));
+		  localStorage.setItem("zenTestTimesDone", JSON.stringify(zenTestTimesDone));
 		  
 		  //resetTable();
 		  
