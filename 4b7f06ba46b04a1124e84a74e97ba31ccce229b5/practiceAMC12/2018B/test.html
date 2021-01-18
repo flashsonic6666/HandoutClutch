@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+</head>
+
+<style>
+
+body {
+
+	background-image: url('../starBackgroundBlackVeryVeryTransparent.png');
+	background-attachment: fixed;
+	color: #333;
+}
+div.a {
+  font-size: 20px;
+}
+.left {
+  display: block;
+}
+form { 
+	margin: 0 auto; 
+	width=50%;
+	text-align: left;
+}
+#demo{
+	position: sticky;
+	top: 0px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+	
+</style>
+
+<body>
+	<p style="text-align:right" id="demo"></p>
+	
+	<!--Submission Form-->
+	<form action="" onSubmit="return false;">
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 1.  </label> 
+    <input type = "text" id = "ans1" name = "ans1"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Kate bakes 20-inch by 18-inch pan of cornbread. The cornbread is cut into pieces that measure 2 inches by 2 inches. How many pieces of cornbread does the pan contain? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 90 \qquad \textbf{(B) } 100 \qquad \textbf{(C) } 180 \qquad \textbf{(D) } 200 \qquad \textbf{(E) } 360\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 2.  </label> 
+    <input type = "text" id = "ans2" name = "ans2"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Sam drove 96 miles in 90 minutes. His average speed during the first 30 minutes was 60 mph (miles per hour), and his average speed during the second 30 minutes was 65 mph. What was his average speed, in mph, during the last 30 minutes? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 64 \qquad \textbf{(B) } 65 \qquad \textbf{(C) } 66 \qquad \textbf{(D) } 67 \qquad \textbf{(E) } 68\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 3.  </label> 
+    <input type = "text" id = "ans3" name = "ans3"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">A line with slope 2 intersects a line with slope 6 at the point \((40,30)\). What is the distance between the \(x\)-intercepts of these two lines?  </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 5 \qquad \textbf{(B) } 10 \qquad \textbf{(C) } 20 \qquad \textbf{(D) } 25 \qquad \textbf{(E) } 50\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 4.  </label> 
+    <input type = "text" id = "ans4" name = "ans4"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">A circle has a chord of length \(10\), and the distance from the center of the circle to the chord is \(5\). What is the area of the circle? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\textbf{(A) }25\pi \qquad </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\textbf{(B) }50\pi \qquad </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\textbf{(C) }75\pi \qquad </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\textbf{(D) }100\pi \qquad </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\textbf{(E) }125\pi \qquad </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 5.  </label> 
+    <input type = "text" id = "ans5" name = "ans5"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">How many subsets of \(\{2,3,4,5,6,7,8,9\}\) contain at least one prime number? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)} \text{ 128} \qquad \textbf{(B)} \text{ 192} \qquad \textbf{(C)} \text{ 224} \qquad \textbf{(D)} \text{ 240} \qquad \textbf{(E)} \text{ 256}\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 6.  </label> 
+    <input type = "text" id = "ans6" name = "ans6"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Suppose \(S\) cans of soda can be purchased from a vending machine for \(Q\) quarters. Which of the following expressions describes the number of cans of soda that can be purchased for \(D\) dollars, where 1 dollar is worth 4 quarters? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)} \frac{4DQ}{S} \qquad \textbf{(B)} \frac{4DS}{Q} \qquad \textbf{(C)} \frac{4Q}{DS} \qquad \textbf{(D)} \frac{DQ}{4S} \qquad \textbf{(E)} \frac{DS}{4Q}\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 7.  </label> 
+    <input type = "text" id = "ans7" name = "ans7"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">What is the value of </p> </label>
+    <label for="lname"><p style="text-align:center; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \log_37\cdot\log_59\cdot\log_711\cdot\log_913\cdots\log_{21}25\cdot\log_{23}27? \) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 3 \qquad \textbf{(B) } 3\log_{7}23 \qquad \textbf{(C) } 6 \qquad \textbf{(D) } 9 \qquad \textbf{(E) } 10 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 8.  </label> 
+    <input type = "text" id = "ans8" name = "ans8"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Line segment \(\overline{AB}\) is a diameter of a circle with \(AB = 24\). Point \(C\), not equal to \(A\) or \(B\), lies on the circle. As point \(C\) moves around the circle, the centroid (center of mass) of \(\triangle ABC\) traces out a closed curve missing two points. To the nearest positive integer, what is the area of the region bounded by this curve? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 25 \qquad \textbf{(B) } 38  \qquad \textbf{(C) } 50  \qquad \textbf{(D) } 63 \qquad \textbf{(E) } 75  \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 9.  </label> 
+    <input type = "text" id = "ans9" name = "ans9"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">What is </p> </label>
+    <label for="lname"><p style="text-align:center; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \sum^{100}_{i=1} \sum^{100}_{j=1} (i+j) ? \) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A) }100,100 \qquad\textbf{(B) }500,500\qquad\textbf{(C) }505,000 \qquad\textbf{(D) }1,001,000 \qquad\textbf{(E) }1,010,000 \qquad \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 10.  </label> 
+    <input type = "text" id = "ans10" name = "ans10"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">A list of \(2018\) positive integers has a unique mode, which occurs exactly \(10\) times. What is the least number of distinct values that can occur in the list? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\( \textbf{(A) }202 \qquad\textbf{(B) }223 \qquad\textbf{(C) }224 \qquad\textbf{(D) }225 \qquad\textbf{(E) }234 \qquad \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 11.  </label> 
+    <input type = "text" id = "ans11" name = "ans11"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">A closed box with a square base is to be wrapped with a square sheet of wrapping paper. The box is centered on the wrapping paper with the vertices of the base lying on the midlines of the square sheet of paper, as shown in the figure on the left. The four corners of the wrapping paper are to be folded up over the sides and brought together to meet at the center of the top of the box, point \(A\) in the figure on the right. The box has base length \(w\) and height \(h\). What is the area of the sheet of wrapping paper? </p> </label>
+    <img src="2018BP11.png" alt="Problem 11 Diagram" class="center" style="width: 250px;">
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 2(w+h)^2 \qquad \textbf{(B) } \frac{(w+h)^2}2 \qquad \textbf{(C) } 2w^2+4wh \qquad \textbf{(D) } 2w^2 \qquad \textbf{(E) } w^2h \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 12.  </label> 
+    <input type = "text" id = "ans12" name = "ans12"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Side \(\overline{AB}\) of \(\triangle ABC\) has length \(10\). The bisector of angle \(A\) meets \(\overline{BC}\) at \(D\), and \(CD = 3\). The set of all possible values of \(AC\) is an open interval \((m,n)\). What is \(m+n\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) }16 \qquad\textbf{(B) }17 \qquad\textbf{(C) }18 \qquad\textbf{(D) }19 \qquad\textbf{(E) }20 \qquad\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 13.  </label> 
+    <input type = "text" id = "ans13" name = "ans13"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Square \(ABCD\) has side length \(30\). Point \(P\) lies inside the square so that \(AP = 12\) and \(BP = 26\). The centroids of \(\triangle{ABP}\), \(\triangle{BCP}\), \(\triangle{CDP}\), and \(\triangle{DAP}\) are the vertices of a convex quadrilateral. What is the area of that quadrilateral?  </p> </label>
+    <img src="2018BP13.png" alt="Problem 13 Diagram" class="center" style="width: 250px;">
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) }100\sqrt{2}\qquad\textbf{(B) }100\sqrt{3}\qquad\textbf{(C) }200\qquad\textbf{(D) }200\sqrt{2}\qquad\textbf{(E) }200\sqrt{3}\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 14.  </label> 
+    <input type = "text" id = "ans14" name = "ans14"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Joey, Chloe, and their daughter Zoe all have the same birthday. Joey is 1 year older than Chloe, and Zoe is exactly 1 year old today. Today is the first of the 9 birthdays on which Chloe's age will be an integral multiple of Zoe's age. What will be the sum of the two digits of Joey's age the next time his age is a multiple of Zoe's age? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 7 \qquad \textbf{(B) } 8 \qquad \textbf{(C) } 9 \qquad \textbf{(D) } 10 \qquad \textbf{(E) } 11 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 15.  </label> 
+    <input type = "text" id = "ans15" name = "ans15"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">How many odd positive 3-digit integers are divisible by 3 but do not contain the digit 3? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 96 \qquad \textbf{(B) } 97 \qquad \textbf{(C) } 98 \qquad \textbf{(D) } 102 \qquad \textbf{(E) } 120 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 16.  </label> 
+    <input type = "text" id = "ans16" name = "ans16"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">The solutions to the equation \((z+6)^8=81\) are connected in the complex plane to form a convex regular polygon, three of whose vertices are labeled \(A,B,\) and \(C\). What is the least possible area of \(\triangle ABC?\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } \frac{1}{6}\sqrt{6} \qquad \textbf{(B) } \frac{3}{2}\sqrt{2}-\frac{3}{2} \qquad \textbf{(C) } 2\sqrt3-3\sqrt2 \qquad \textbf{(D) } \frac{1}{2}\sqrt{2} \qquad \textbf{(E) } \sqrt 3-1\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 17.  </label> 
+    <input type = "text" id = "ans17" name = "ans17"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Let \(p\) and \(q\) be positive integers such that  </p> </label>
+    <label for="lname"><p style="text-align:center; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\frac{5}{9} &lt \frac{p}{q} &lt \frac{4}{7}\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">and \(q\) is as small as possible. What is \(q-p\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 7 \qquad \textbf{(B) } 11 \qquad \textbf{(C) } 13 \qquad \textbf{(D) } 17 \qquad \textbf{(E) } 19 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 18.  </label> 
+    <input type = "text" id = "ans18" name = "ans18"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">A function \(f\) is defined recursively by \(f(1)=f(2)=1\) and \(f(n)=f(n-1)-f(n-2)+n\) for all integers \(n \geq 3\). What is \(f(2018)\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)} \text{ 2016} \qquad \textbf{(B)} \text{ 2017} \qquad \textbf{(C)} \text{ 2018} \qquad \textbf{(D)} \text{ 2019} \qquad \textbf{(E)} \text{ 2020}\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 19.  </label> 
+    <input type = "text" id = "ans19" name = "ans19"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Mary chose an even \(4\)-digit number \(n\). She wrote down all the divisors of \(n\) in increasing order from left to right: \(1,2,...,\dfrac{n}{2},n\). At some moment Mary wrote \(323\) as a divisor of \(n\). What is the smallest possible value of the next divisor written to the right of \(323\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 324 \qquad \textbf{(B) } 330 \qquad \textbf{(C) } 340 \qquad \textbf{(D) } 361 \qquad \textbf{(E) } 646\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 20.  </label> 
+    <input type = "text" id = "ans20" name = "ans20"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Let \(ABCDEF\) be a regular hexagon with side length \(1\). Denote by \(X\), \(Y\), and \(Z\) the midpoints of sides \(\overline {AB}\), \(\overline{CD}\), and \(\overline{EF}\), respectively. What is the area of the convex hexagon whose interior is the intersection of the interiors of \(\triangle ACE\) and \(\triangle XYZ\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)} \frac {3}{8}\sqrt{3} \qquad \textbf{(B)} \frac {7}{16}\sqrt{3} \qquad \textbf{(C)} \frac {15}{32}\sqrt{3} \qquad  \textbf{(D)} \frac {1}{2}\sqrt{3} \qquad \textbf{(E)} \frac {9}{16}\sqrt{3} \qquad  \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 21.  </label> 
+    <input type = "text" id = "ans21" name = "ans21"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">In \(\triangle{ABC}\) with side lengths \(AB = 13\), \(AC = 12\), and \(BC = 5\), let \(O\) and \(I\) denote the circumcenter and incenter, respectively. A circle with center \(M\) is tangent to the legs \(AC\) and \(BC\) and to the circumcircle of \(\triangle{ABC}\). What is the area of \(\triangle{MOI}\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 5/2\qquad\textbf{(B)}\ 11/4\qquad\textbf{(C)}\ 3\qquad\textbf{(D)}\ 13/4\qquad\textbf{(E)}\ 7/2\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 22.  </label> 
+    <input type = "text" id = "ans22" name = "ans22"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Consider polynomials \(P(x)\) of degree at most \(3\), each of whose coefficients is an element of \(\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}\). How many such polynomials satisfy \(P(-1) = -9\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 110 \qquad \textbf{(B) } 143 \qquad \textbf{(C) } 165 \qquad \textbf{(D) } 220 \qquad \textbf{(E) } 286 \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 23.  </label> 
+    <input type = "text" id = "ans23" name = "ans23"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Ajay is standing at point \(A\) near Pontianak, Indonesia, \(0^\circ\) latitude and \(110^\circ \text{ E}\) longitude. Billy is standing at point \(B\) near Big Baldy Mountain, Idaho, USA, \(45^\circ \text{ N}\) latitude and \(115^\circ \text{ W}\) longitude. Assume that Earth is a perfect sphere with center \(C\). What is the degree measure of \(\angle ACB\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) }105 \qquad\textbf{(B) }112\frac{1}{2} \qquad\textbf{(C) }120 \qquad\textbf{(D) }135 \qquad\textbf{(E) }150 \qquad\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 24.  </label> 
+    <input type = "text" id = "ans24" name = "ans24"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Let \(\lfloor x \rfloor\) denote the greatest integer less than or equal to \(x\). How many real numbers \(x\) satisfy the equation \(x^2 + 10,000\lfloor x \rfloor = 10,000x\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 197 \qquad \textbf{(B) } 198 \qquad \textbf{(C) } 199 \qquad \textbf{(D) } 200 \qquad \textbf{(E) } 201\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 25.  </label> 
+    <input type = "text" id = "ans25" name = "ans25"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Circles \(\omega_1\), \(\omega_2\), and \(\omega_3\) each have radius \(4\) and are placed in the plane so that each circle is externally tangent to the other two.  Points \(P_1\), \(P_2\), and \(P_3\) lie on \(\omega_1\), \(\omega_2\), and \(\omega_3\) respectively such that \(P_1P_2=P_2P_3=P_3P_1\) and line \(P_iP_{i+1}\) is tangent to \(\omega_i\) for each \(i=1,2,3\), where \(P_4 = P_1\).  See the figure below.  The area of \(\triangle P_1P_2P_3\) can be written in the form \(\sqrt{a}+\sqrt{b}\) for positive integers \(a\) and \(b\).  What is \(a+b\)? </p> </label>
+    <img src="2018BP25.png" alt="Problem 25 Diagram" class="center" style="width: 250px;">
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) }546\qquad\textbf{(B) }548\qquad\textbf{(C) }550\qquad\textbf{(D) }552\qquad\textbf{(E) }554\) </p> </label>
+    <hr> 
+	  <input type="button" value="Submit" onClick="submit1();">
+	</form>
+
+
+	
+	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
+	
+	<!--"Clicks"-->		
+	<script type="text/javascript">
+	
+	var ct=localStorage.getItem("currentTest");
+	var ts=JSON.parse(localStorage.getItem("testStatus"));
+	var tt=JSON.parse(localStorage.getItem("testTime"));
+		
+	if(parseInt(ts[parseInt(ct)])==0){
+	   ts[parseInt(ct)]=1;
+	   localStorage.setItem("testStatus", JSON.stringify(ts));
+	}
+	else if(parseInt(ts[parseInt(ct)])==2){
+		tt[parseInt(ct)]="Time Remaining: EXPIRED";
+		localStorage.setItem("testTime", JSON.stringify(tt));
+		window.location.href = "https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/practiceAMC12/testSubmitted";
+	}
+		
+	
+	//Timer	
+	// Update the count down every 1 second		
+	var x = setInterval(function() {
+	
+	var distance = tt[parseInt(ct)];
+		
+	  // Get today's date and time
+	  var now = new Date().getTime();
+
+	  // Find the distance between now and the count down date
+	  
+
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	  // Display the result in the element with id="demo"
+	  document.getElementById("demo").innerHTML = "Time Remaining: " + hours + "h "
+	  + minutes + "m " + seconds + "s ";
+
+	  // If the count down is finished, write some text
+	  if (distance < 0) {
+	    clearInterval(x);
+	    document.getElementById("demo").innerHTML = "Time Remaining: EXPIRED";
+	    submit1();
+	  }
+		
+	  tt[parseInt(ct)]-=1000;
+	  localStorage.setItem("testTime", JSON.stringify(tt));
+	}, 1000);
+					    
+	function submit1() {
+		
+		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+		var currentTest=localStorage.getItem("currentTest");
+		
+		if(testStatus[parseInt(currentTest)]!=2){
+
+			var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
+			var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
+			
+			var testUserAnswers=JSON.parse(localStorage.getItem("testUserAnswers"));
+
+			for(var i=0; i< testCorrectness[parseInt(currentTest)].length; i++){
+				var answer = document.getElementById("ans" + (i+1)).value;
+				if(testAnswers[parseInt(currentTest)][i]==answer.toUpperCase()){
+				  var res = testCorrectness[parseInt(currentTest)];
+				  var start = res.substring(0, i);
+				  var end = res.substring(i+1);
+				  testCorrectness[parseInt(currentTest)]=start+"2"+end;
+				}
+				else if(answer.length==0){
+				  var res = testCorrectness[parseInt(currentTest)];
+				  var start = res.substring(0, i);
+				  var end = res.substring(i+1);
+				  testCorrectness[parseInt(currentTest)]=start+"1"+end;
+				}
+				testUserAnswers[parseInt(currentTest)].push(answer);
+			}
+
+			testStatus[parseInt(currentTest)]="2";
+
+			localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
+			localStorage.setItem("testStatus", JSON.stringify(testStatus));
+			localStorage.setItem("testUserAnswers", JSON.stringify(testUserAnswers));
+		}
+		
+		window.location.href = "https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/practiceAMC12/testSubmitted";
+          }
+		
+        </script>
+</body>
+</html>
