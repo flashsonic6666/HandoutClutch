@@ -115,7 +115,7 @@ th {
 	function create(){
 		//Absolute new
 		localStorage.setItem("testCode", JSON.stringify(["10A","10B","11A","11B","12A","12B","13A","13B","14A","14B","15A","15B","16A","16B","17A","17B","18A",
-								"18B"]));
+								"18B","19A"]));
 		localStorage.setItem("testAnswers", JSON.stringify([["C","A","E","D","C","E","C","C","A","A","C","D","C","B","D","B","E","D","A","C","A","A","A","B","C"],
 								   ["C","A","E","B","D","D","C","B","E","B","E","D","C","B","D","E","D","C","E","E","B","D","A","C","D"],
 								   ["D","E","E","C","C","A","B","C","B","B","C","D","B","E","A","C","D","D","C","C","A","C","C","C","D"],
@@ -133,10 +133,11 @@ th {
 								   ["D","C","B","A","B","B","B","D","E","C","D","B","B","C","D","B","D","D","D","E","D","E","C","A","E"],
 								   ["E","E","D","C","B","D","B","C","A","D","B","D","D","E","E","B","D","D","C","D","E","B","D","D","D"],
 								   ["D","C","E","D","E","B","E","E","E","C","D","C","D","D","B","E","D","D","C","D","B","A","E","B","D"],
-								   ["A","D","B","B","D","B","C","C","E","D","A","C","C","E","A","B","A","B","C","C","E","D","C","C","D"]]));
+								   ["A","D","B","B","D","B","C","C","E","D","A","C","C","E","A","B","A","B","C","C","E","D","C","C","D"],
+								   ["E","D","B","D","C","C","E","D","E","A","D","B","E","E","D","B","D","D","A","B","C","E","D","D","E"]]));
 		localStorage.setItem("testName", JSON.stringify(["2010 AMC12A","2010 AMC12B","2011 AMC12A","2011 AMC12B","2012 AMC12A","2012 AMC12B","2013 AMC12A",
 								"2013 AMC12B","2014 AMC12A","2014 AMC12B","2015 AMC12A","2015 AMC12B","2016 AMC12A","2016 AMC12B",
-								"2017 AMC12A","2017 AMC12B","2018 AMC12A","2018 AMC12B"]));
+								"2017 AMC12A","2017 AMC12B","2018 AMC12A","2018 AMC12B","2019 AMC12A"]));
 		localStorage.setItem("10A", 0);
 		localStorage.setItem("10B", 1);
 		localStorage.setItem("11A", 2);
@@ -155,10 +156,11 @@ th {
 		localStorage.setItem("17B", 15);
 		localStorage.setItem("18A", 16);
 		localStorage.setItem("18B", 17);
+		localStorage.setItem("19A", 18);
 		localStorage.setItem("testFolderName", JSON.stringify(["2010A","2010B","2011A","2011B","2012A","2012B","2013A","2013B","2014A","2014B","2015A","2015B","2016A",
-								      "2016B","2017A","2017B","2018A","2018B"]));
+								      "2016B","2017A","2017B","2018A","2018B","2019A"]));
 		localStorage.setItem("aimeCutoff", JSON.stringify(["88.5","88.5","93","97.5","94.5","99","88.5","93","93","100.5","99","100.5","93","100.5","96","100.5","93",
-								  "99"]));
+								  "99","84"]));
 		
 		if(localStorage.getItem("testCorrectness")===null){
 			localStorage.setItem("testCorrectness", JSON.stringify(["0000000000000000000000000"]));
