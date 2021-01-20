@@ -84,7 +84,7 @@ form {
 	var folderName=JSON.parse(localStorage.getItem("folderName"));
 	var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
 	var answers=JSON.parse(localStorage.getItem("answers"));
-	var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
+	var amc10Answers=JSON.parse(localStorage.getItem("amc10Answers"));
 		
 	var currentZenChoice=parseInt(localStorage.getItem("currentZenChoice"));
 	var currentZenHandout=parseInt(localStorage.getItem("currentZenHandout"));
@@ -140,7 +140,7 @@ form {
 		var zenTestTimesDone=[];
 		for(var i=0; i<testFolderName.length; i++){
 			zenTestTimesDone.push([]);
-			for(var j=0; j<testAnswers[i].length; j++){
+			for(var j=0; j<amc10Answers[i].length; j++){
 				zenTestTimesDone[i].push(0);
 			}
 		}
@@ -152,7 +152,7 @@ form {
 		var zenTestTries=[];
 		for(var i=0; i<testFolderName.length; i++){
 			zenTestTries.push([]);
-			for(var j=0; j<testAnswers[i].length; j++){
+			for(var j=0; j<amc10Answers[i].length; j++){
 				zenTestTries[i].push(0);
 			}
 		}
@@ -181,7 +181,7 @@ form {
 	   for(var i=zenTestTries.length; i<testFolderName.length; i++){
 		 zenTestTries.push([]);
 		 zenTestTimesDone.push([]);
-		 for(var j=0; j<testAnswers[i].length; j++){
+		 for(var j=0; j<amc10Answers[i].length; j++){
 			zenTestTries[i].push(0);
 			zenTestTimesDone[i].push(0);
 		 }
@@ -299,7 +299,7 @@ form {
 			  else{
 				 zenTestTries[currentZenHandout][currentZenHandoutQ]++;
 
-				 if(answer==testAnswers[currentZenTest][currentZenTestQ]){
+				 if(answer==amc10Answers[currentZenTest][currentZenTestQ]){
 					document.getElementById("result").innerHTML = "Correct, good job guessing it right!";
 					correct=true;
 
