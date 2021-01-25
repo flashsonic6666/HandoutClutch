@@ -267,13 +267,13 @@ form {
 				  }
 			  }
 			  else{
-				 zenTestTries[currentZenHandout][currentZenHandoutQ]++;
+				 zenTestTries[currentZenTest][currentZenTestQ]++;
 
 				 if(answer==amc10Answers[currentZenTest][currentZenTestQ]){
 					document.getElementById("result").innerHTML = "Correct, good job guessing it right!";
 					correct=true;
 
-					zenTestTimesDone[currentZenHandout][currentZenHandoutQ]++; 
+					zenTestTimesDone[currentZenTest][currentZenTestQ]++; 
 				  }
 				  else{
 					document.getElementById("result").innerHTML = "Incorrect, smh my head.";
