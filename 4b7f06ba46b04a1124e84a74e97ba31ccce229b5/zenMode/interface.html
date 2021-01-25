@@ -230,14 +230,14 @@ form {
 		
 		var tempEXP=totalEXP;
 		
-		while(tempEXP>=Math.min(500,toNext)){
-		      tempEXP-=Math.min(500,toNext);
+		while(tempEXP>=Math.min(200,toNext)){
+		      tempEXP-=Math.min(200,toNext);
 		      level++;
-		      toNext+=50;
+		      toNext+=25;
 		}
 		
 		tableBody = tableBody + "<tr>";
-		 tableBody = tableBody + "<th>" + tempEXP + "</th>" + "<th>" + Math.min(500,toNext) + "</th>" + "<th>" + level + "</th>";
+		 tableBody = tableBody + "<th>" + tempEXP + "</th>" + "<th>" + Math.min(200,toNext) + "</th>" + "<th>" + level + "</th>";
 		 tableBody = tableBody + "</tr>";  
 		
 		
