@@ -203,7 +203,7 @@ form {
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + (currentZenTestQ+1) + ".PNG";
 	}
 		
-	//resetTable();
+	resetTable();
 		
 	function resetTable(){
 		$("#ptable tr").remove(); 
@@ -213,65 +213,39 @@ form {
 		tableBody = tableBody + "<tr>";
 		 tableBody = tableBody + "<th>" + "Current EXP" + "</th>" + "<th>" + "Needed for Next Level" + "</th>" + "<th>" + "Current Level" + "</th>";
 		 tableBody = tableBody + "</tr>";  
-
-		var k=0;
 		
-		// iterate localStorage
-		for (var i = 1; i <= maxSize; i++) {
-
-		  // use key name to retrieve the corresponding value
-		var x=JSON.parse(localStorage.getItem("correctness"));
-		var res = x[parseInt(localStorage.getItem(code))];
-		  
-		var value="?";
-			
-		if(parseInt(res.charAt(i-1))==0){
-			value= "X";
-		}
-		else{
-			value="O";
-		}
-				
-		  // console.log the iteration key and value
-		
-		var requiredProblems=JSON.parse(localStorage.getItem("requiredProblems"));
-		
-		  tableBody = tableBody + "<tr>";
-		if(k<requiredProblems[localStorage.getItem(code)].length && i==requiredProblems[localStorage.getItem(code)][k]){
-		  tableBody = tableBody + "<th style=\"color:#FF00FF\">Q" + i + "</th>" + "<th style=\"color:#FF00FF\">" + value + "</th>";
-		  k++;
-		}
-		else{
-		  tableBody = tableBody + "<th>Q" + i + "</th>" + "<th>" + value + "</th>";
-		}
-		  tableBody = tableBody + "</tr>";  
-
-		}
-		
-		//Appending Points
 		var points=JSON.parse(localStorage.getItem("points"));
-	      var pointsNeeded=JSON.parse(localStorage.getItem("pointsNeeded"));
-		var score=0;
-		var total=0;
 		
-	      for(var i=0; i<points[parseInt(localStorage.getItem(code))].length; i++){
-		score+=parseInt(points[parseInt(localStorage.getItem(code))][i])*parseInt(x[parseInt(localStorage.getItem(code))].charAt(i));
-		total+=parseInt(points[parseInt(localStorage.getItem(code))][i]);
-	      }
+		var totalEXP=0;
+		var level=1;
+		var toNext=50;
 		
-		total=Math.floor(6*total/10);
+		for(var i=0; i<zenHandoutTimesDone.length; i++){
+			for(var j=0; j<zenHandoutTimesDone[i].length; j++){
+				totalEXP+=zenHandoutTimesDone[i][j]*points[i][j]*3;
+			}
+		}
+		
+		for(var i=0; i<zenTestTimesDone.length; i++){
+			for(var j=0; j<zenTestTimesDone[i].length; j++){
+				totalEXP+=zenTestTimesDone[i][j]*(j+1);
+			}
+		}
+		
+		var tempEXP=totalEXP;
+		
+		while(tempEXP>=Math.min(500,toNext)){
+		      tempEXP-=Math.min(500,toNext);
+		      level++;
+		      toNext+=50;
+		}
 		
 		tableBody = tableBody + "<tr>";
-		tableBody = tableBody +"<th>" + " " + "</th>" + "<th>" + " " + "</th>";
-		tableBody = tableBody + "</tr>";
-		
-		tableBody = tableBody + "<tr>";
-		 tableBody = tableBody + "<th>" + "Points Obtained" + "</th>" + "<th>" + "Total Needed" + "</th>";
+		 tableBody = tableBody + "<th>" + tempEXP + "</th>" + "<th>" + Math.min(500,toNext) + "</th>" + "<th>" + level + "</th>";
 		 tableBody = tableBody + "</tr>";  
 		
-		tableBody = tableBody + "<tr>";
-		tableBody = tableBody + "<th>" + score + "</th>" + "<th>" + total + "</th>";
-		tableBody = tableBody + "</tr>"; 
+		
+		
 		
 		$("#ptable").append(tableBody);
 	}
@@ -315,7 +289,7 @@ form {
 			  localStorage.setItem("zenTestTries", JSON.stringify(zenTestTries));
 			  localStorage.setItem("zenTestTimesDone", JSON.stringify(zenTestTimesDone));
 
-			  //resetTable();
+			  resetTable();
 	  	}
 		else{
 		    correct=true;	
