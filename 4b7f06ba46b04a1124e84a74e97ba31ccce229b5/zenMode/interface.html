@@ -247,7 +247,10 @@ tr.special th{
 	if(localStorage.getItem("currentZenTestQ")===null){
 		localStorage.setItem("currentZenTestQ", 0);
 	}	
-	
+	if(localStorage.getItem("currentZenLevel")===null){		
+		localStorage.setItem("currentZenLevel", 1);
+	}
+		
 	var currentZenChoice=parseInt(localStorage.getItem("currentZenChoice"));
 	var currentZenHandout=parseInt(localStorage.getItem("currentZenHandout"));
 	var currentZenTest=parseInt(localStorage.getItem("currentZenTest"));
@@ -403,13 +406,7 @@ tr.special th{
 		}
 		
 		if(gainXP){
-			if(changeLevel){
-			   doIt((100.0*tempEXP)/toNext,true);
-			}
-			else{
-			   doIt((100.0*tempEXP)/toNext,false);	
-			}
-			
+			   doIt((100.0*tempEXP)/toNext,changeLevel);			
 		}
 		
 		
@@ -570,10 +567,14 @@ tr.special th{
 	  $("#xp-increase-fx").css("display","inline-block");
 	  $("#xp-bar-fill").css("box-shadow",/*"0px 0px 15px #06f,*/ "-5px 0px 10px #fff inset");
 	  setTimeout(function(){$("#xp-bar-fill").css("-webkit-transition","all 2s ease");
-	  $("#xp-bar-fill").css("width",""+percent+"%");},100);
-	  setTimeout(function(){$("#xp-increase-fx").fadeOut(500);$("#xp-bar-fill").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});},2000);
 	  if(changeLevel){
+	     $("#xp-bar-fill").css("width","100%");},100);	  
+	     setTimeout(function(){$("#xp-increase-fx").fadeOut(500);$("#xp-bar-fill").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});},2000);
 	     setTimeout(function(){$("#xp-bar-fill").css({"width":"0.1%"});},3000);
+	  }
+	  else{
+	     $("#xp-bar-fill").css("width",""+percent+"%");},100);
+	     setTimeout(function(){$("#xp-increase-fx").fadeOut(500);$("#xp-bar-fill").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});},2000);
 	  }
 	}
 	
