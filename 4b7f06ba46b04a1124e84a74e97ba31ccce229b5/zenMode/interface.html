@@ -384,7 +384,7 @@ tr.special th{
 		 tableBody = tableBody + "<th>" + tempEXP + "</th>" + "<th>" + Math.min(200,toNext) + "</th>" + "<th>" + level + "</th>";
 		 tableBody = tableBody + "</tr>";  
 		
-		doIt(tempEXP/300.0);
+		doIt((100.0*tempEXP)/toNext);
 		
 		
 		$("#ptable").append(tableBody);
