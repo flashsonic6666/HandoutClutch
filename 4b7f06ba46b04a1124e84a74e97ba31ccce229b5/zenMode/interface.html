@@ -343,9 +343,9 @@ tr.special th{
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + (currentZenTestQ+1) + ".PNG";
 	}
 		
-	resetTable();
+	resetTable(true);
 		
-	function resetTable(){
+	function resetTable(gainXP){
 		$("#ptable tr").remove(); 
 		
 		var tableBody= "";
@@ -384,7 +384,8 @@ tr.special th{
 		 tableBody = tableBody + "<th>" + tempEXP + "</th>" + "<th>" + Math.min(200,toNext) + "</th>" + "<th>" + level + "</th>";
 		 tableBody = tableBody + "</tr>";  
 		
-		doIt((100.0*tempEXP)/toNext);
+		if(gainXP)
+			doIt((100.0*tempEXP)/toNext);
 		
 		
 		$("#ptable").append(tableBody);
@@ -405,6 +406,7 @@ tr.special th{
 
 
 					zenHandoutTimesDone[currentZenHandout][currentZenHandoutQ]++;  
+					  resetTable(true);
 				  }
 				  else{
 					document.getElementById("result").innerHTML = "Incorrect, smh my head.";
@@ -418,6 +420,8 @@ tr.special th{
 					correct=true;
 
 					zenTestTimesDone[currentZenTest][currentZenTestQ]++; 
+					 
+					 resetTable(true);
 				  }
 				  else{
 					document.getElementById("result").innerHTML = "Incorrect, smh my head.";
@@ -429,7 +433,7 @@ tr.special th{
 			  localStorage.setItem("zenTestTries", JSON.stringify(zenTestTries));
 			  localStorage.setItem("zenTestTimesDone", JSON.stringify(zenTestTimesDone));
 
-			  resetTable();
+			  
 	  	}
 		else{
 		    correct=true;	
