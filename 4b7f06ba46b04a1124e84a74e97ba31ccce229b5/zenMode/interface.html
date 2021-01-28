@@ -226,11 +226,7 @@ tr.special th{
 	var answers=JSON.parse(localStorage.getItem("answers"));
 	var amc10Answers=JSON.parse(localStorage.getItem("amc10Answers"));
 		
-	var currentZenChoice=parseInt(localStorage.getItem("currentZenChoice"));
-	var currentZenHandout=parseInt(localStorage.getItem("currentZenHandout"));
-	var currentZenTest=parseInt(localStorage.getItem("currentZenTest"));
-	var currentZenHandoutQ=parseInt(localStorage.getItem("currentZenHandoutQ"));
-	var currentZenTestQ=parseInt(localStorage.getItem("currentZenTestQ"));	
+	
 	
 	if(localStorage.getItem("currentZenChoice")===null){
 		localStorage.setItem("currentZenChoice",0);
@@ -252,6 +248,12 @@ tr.special th{
 		localStorage.setItem("currentZenTestQ", 0);
 	}	
 	
+	var currentZenChoice=parseInt(localStorage.getItem("currentZenChoice"));
+	var currentZenHandout=parseInt(localStorage.getItem("currentZenHandout"));
+	var currentZenTest=parseInt(localStorage.getItem("currentZenTest"));
+	var currentZenHandoutQ=parseInt(localStorage.getItem("currentZenHandoutQ"));
+	var currentZenTestQ=parseInt(localStorage.getItem("currentZenTestQ"));	
+		
 	if(localStorage.getItem("zenHandoutTimesDone")===null){
 		var zenHandoutTimesDone=[];
 		for(var i=0; i<folderName.length; i++){
