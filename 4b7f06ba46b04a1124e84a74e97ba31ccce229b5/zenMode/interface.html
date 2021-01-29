@@ -595,11 +595,9 @@ tr.special th{
 	  setTimeout(function(){$("#xp-increase-fx").fadeOut(500);$("#xp-bar-fill").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});},2000);
 	}
 	function block() {
-		  
 		var upTo = parseInt(document.getElementById("blocker").value);
-		var correct=false;
 		localStorage.setItem("zenBlockQuestionsUpTo", upTo);
-		
+		document.getElementById("blocker").value="";
           }
         </script>
 </body>
