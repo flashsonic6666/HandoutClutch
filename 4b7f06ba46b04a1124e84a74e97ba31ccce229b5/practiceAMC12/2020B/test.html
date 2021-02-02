@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+</head>
+
+<style>
+
+body {
+
+	background-image: url('../starBackgroundBlackVeryVeryTransparent.png');
+	background-attachment: fixed;
+	color: #333;
+}
+div.a {
+  font-size: 20px;
+}
+.left {
+  display: block;
+}
+form { 
+	margin: 0 auto; 
+	width=50%;
+	text-align: left;
+}
+#demo{
+	position: sticky;
+	top: 0px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+	
+</style>
+
+<body>
+	<p style="text-align:right" id="demo"></p>
+	
+	<!--Submission Form-->
+	<form action="" onSubmit="return false;">
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 1.  </label> 
+    <input type = "text" id = "ans1" name = "ans1"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">What is the value of \(1 - (-2) - 3 - (-4) - 5 - (-6)?\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ -20 \qquad\textbf{(B)}\ -3 \qquad\textbf{(C)}\ 3 \qquad\textbf{(D)}\ 5 \qquad\textbf{(E)}\ 21\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 2.  </label> 
+    <input type = "text" id = "ans2" name = "ans2"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Carl has \(5\) cubes each having side length \(1\), and Kate has \(5\) cubes each having side length \(2\). What is the total volume of these \(10\) cubes? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 24 \qquad\textbf{(B)}\ 25 \qquad\textbf{(C)}\ 28 \qquad\textbf{(D)}\ 40 \qquad\textbf{(E)}\ 45\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 3.  </label> 
+    <input type = "text" id = "ans3" name = "ans3"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">The ratio of \(w\) to \(x\) is \(4:3\), the ratio of \(y\) to \(z\) is \(3:2\), and the ratio of \(z\) to \(x\) is \(1:6\). What is the ratio of \(w\) to \(y?\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 4:3 \qquad\textbf{(B)}\ 3:2 \qquad\textbf{(C)}\  8:3 \qquad\textbf{(D)}\ 4:1 \qquad\textbf{(E)}\ 16:3\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 4.  </label> 
+    <input type = "text" id = "ans4" name = "ans4"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">The acute angles of a right triangle are \(a^{\circ}\) and \(b^{\circ}\), where \(a&gtb\) and both \(a\) and \(b\) are prime numbers. What is the least possible value of \(b\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 2 \qquad\textbf{(B)}\ 3 \qquad\textbf{(C)}\  5 \qquad\textbf{(D)}\ 7 \qquad\textbf{(E)}\ 11\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 5.  </label> 
+    <input type = "text" id = "ans5" name = "ans5"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">How many distinguishable arrangements are there of 1 brown tile, 1 purple tile, 2 green tiles, and 3 yellow tiles in a row from left to right? (Tiles of the same color are indistinguishable.) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 210 \qquad\textbf{(B)}\ 420 \qquad\textbf{(C)}\  630 \qquad\textbf{(D)}\ 840 \qquad\textbf{(E)}\ 1050\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 6.  </label> 
+    <input type = "text" id = "ans6" name = "ans6"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Driving along a highway, Megan noticed that her odometer showed \(15951\) (miles). This number is a palindrome-it reads the same forward and backward. Then \(2\) hours later, the odometer displayed the next higher palindrome. What was her average speed, in miles per hour, during this \(2\)-hour period? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 50 \qquad\textbf{(B)}\ 55 \qquad\textbf{(C)}\ 60 \qquad\textbf{(D)}\ 65 \qquad\textbf{(E)}\ 70\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 7.  </label> 
+    <input type = "text" id = "ans7" name = "ans7"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">How many positive even multiples of \(3\) less than \(2020\) are perfect squares? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 7 \qquad\textbf{(B)}\ 8 \qquad\textbf{(C)}\  9 \qquad\textbf{(D)}\ 10 \qquad\textbf{(E)}\ 12\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 8.  </label> 
+    <input type = "text" id = "ans8" name = "ans8"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Points \(P\) and \(Q\) lie in a plane with \(PQ=8\). How many locations for point \(R\) in this plane are there such that the triangle with vertices \(P\), \(Q\), and \(R\) is a right triangle with area \(12\) square units? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 2 \qquad\textbf{(B)}\ 4 \qquad\textbf{(C)}\  6 \qquad\textbf{(D)}\ 8 \qquad\textbf{(E)}\ 12\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 9.  </label> 
+    <input type = "text" id = "ans9" name = "ans9"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">For how many ordered pairs of integers \((x,y)\) satisfy the equation  </p> </label>
+    <label for="lname"><p style="text-align:center; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(x^{2020} + y^2 = 2y?\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 1 \qquad\textbf{(B)}\ 2 \qquad\textbf{(C)}\  3 \qquad\textbf{(D)}\ 4 \qquad\textbf{(E)}\ \text{infinitely many}\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 10.  </label> 
+    <input type = "text" id = "ans10" name = "ans10"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">A three-quarter sector of a circle of radius \(4\) inches along with its interior is the 2-D net that forms the lateral surface area of a right circular cone by taping together along the two radii shown. What is the volume of the cone in cubic inches? </p> </label>
+    <img src="2020BP10.png" alt="Problem 10 Diagram" class="center" style="width: 250px;">
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 3\pi \sqrt5 \qquad\textbf{(B)}\ 4\pi \sqrt3 \qquad\textbf{(C)}\ 3 \pi \sqrt7 \qquad\textbf{(D)}\ 6\pi \sqrt3 \qquad\textbf{(E)}\ 6\pi \sqrt7\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 11.  </label> 
+    <input type = "text" id = "ans11" name = "ans11"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Ms. Carr asks her students to select 5 of the 10 books to read on her classroom reading list. Harold randomly selects 5 books from this list, and Betty does the same. What is the probability that there are exactly 2 books that they both select? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ \frac{1}{8} \qquad\textbf{(B)}\ \frac{5}{36} \qquad\textbf{(C)}\  \frac{14}{45} \qquad\textbf{(D)}\ \frac{25}{63} \qquad\textbf{(E)}\ \frac{1}{2}\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 12.  </label> 
+    <input type = "text" id = "ans12" name = "ans12"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">The decimal representation of  </p> </label>
+    <label for="lname"><p style="text-align:center; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\frac{1}{20^{20}}\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">consists of a string of zeros after the decimal point, followed by a \(9\) and then several more digits. How many zeros are in that initial string of zeros after the decimal point? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 23 \qquad\textbf{(B)}\ 24 \qquad\textbf{(C)}\  25 \qquad\textbf{(D)}\ 26 \qquad\textbf{(E)}\ 27\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 13.  </label> 
+    <input type = "text" id = "ans13" name = "ans13"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Andy the Ant lives on a coordinate plane and is currently at \((-20, 20)\) facing east (that is, in the positive \(x\)-direction). Andy moves \(1\) unit and then turns \(90^{\circ}\) left. From there, Andy moves \(2\) units (north) and then turns \(90^{\circ}\) left. He then moves \(3\) units (west) and again turns \(90^{\circ}\) left. Andy continues his progress, increasing his distance each time by \(1\) unit and always turning left. What is the location of the point at which Andy makes the \(2020\)th left turn? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ (-1030, -994)\qquad\textbf{(B)}\ (-1030, -990)\qquad\textbf{(C)}\ (-1026, -994)\qquad\textbf{(D)}\ (-1026, -990)\qquad\textbf{(E)}\ (-1022, -994)\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 14.  </label> 
+    <input type = "text" id = "ans14" name = "ans14"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">As shown in the figure below, six semicircles lie in the interior of a regular hexagon with side length 2 so that the diameters of the semicircles coincide with the sides of the hexagon. What is the area of the shaded region — inside the hexagon but outside all of the semicircles? </p> </label>
+    <img src="2020BP14.png" alt="Problem 14 Diagram" class="center" style="width: 250px;">
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf {(A) } 6\sqrt{3}-3\pi \qquad \textbf {(B) } \frac{9\sqrt{3}}{2} - 2\pi\ \qquad \textbf {(C) } \frac{3\sqrt{3}}{2} - \frac{\pi}{3} \qquad \textbf {(D) } 3\sqrt{3} - \pi \qquad \textbf {(E) } \frac{9\sqrt{3}}{2} - \pi \) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 15.  </label> 
+    <input type = "text" id = "ans15" name = "ans15"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Steve wrote the digits \(1\), \(2\), \(3\), \(4\), and \(5\) in order repeatedly from left to right, forming a list of \(10,000\) digits, beginning \(123451234512\ldots.\) He then erased every third digit from his list (that is, the \(3\)rd, \(6\)th, \(9\)th, \(\ldots\) digits from the left), then erased every fourth digit from the resulting list (that is, the \(4\)th, \(8\)th, \(12\)th, \(\ldots\) digits from the left in what remained), and then erased every fifth digit from what remained at that point. What is the sum of the three digits that were then in the positions \(2019, 2020, 2021\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)} \text{ 7} \qquad \textbf{(B)} \text{ 9} \qquad \textbf{(C)} \text{ 10} \qquad \textbf{(D)} \text{ 11} \qquad \textbf{(E)} \text{ 12}\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 16.  </label> 
+    <input type = "text" id = "ans16" name = "ans16"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Bela and Jenn play the following game on the closed interval \([0, n]\) of the real number line, where \(n\) is a fixed integer greater than \(4\). They take turns playing, with Bela going first. At his first turn, Bela chooses any real number in the interval \([0, n]\). Thereafter, the player whose turn it is chooses a real number that is more than one unit away from all numbers previously chosen by either player. A player unable to choose such a number loses. Using optimal strategy, which player will win the game? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)} \text{ Bela will always win.} \qquad \textbf{(B)} \text{ Jenn will always win.} \qquad \textbf{(C)} \text{ Bela will win if and only if }n \text{ is odd.}\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(D)} \text{ Jenn will win if and only if }n \text{ is odd.} \qquad \textbf{(E)} \text { Jenn will win if and only if } n&gt8.\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 17.  </label> 
+    <input type = "text" id = "ans17" name = "ans17"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">There are \(10\) people standing equally spaced around a circle. Each person knows exactly \(3\) of the other \(9\) people: the \(2\) people standing next to her or him, as well as the person directly across the circle. How many ways are there for the \(10\) people to split up into \(5\) pairs so that the members of each pair know each other? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 11 \qquad\textbf{(B)}\ 12 \qquad\textbf{(C)}\  13 \qquad\textbf{(D)}\ 14 \qquad\textbf{(E)}\ 15\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 18.  </label> 
+    <input type = "text" id = "ans18" name = "ans18"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">An urn contains one red ball and one blue ball. A box of extra red and blue balls lie nearby. George performs the following operation four times: he draws a ball from the urn at random and then takes a ball of the same color from the box and returns those two matching balls to the urn. After the four iterations the urn contains six balls. What is the probability that the urn contains three balls of each color? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } \frac16 \qquad \textbf{(B) }\frac15 \qquad \textbf{(C) } \frac14 \qquad \textbf{(D) } \frac13 \qquad \textbf{(E) } \frac12\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 19.  </label> 
+    <input type = "text" id = "ans19" name = "ans19"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">In a certain card game, a player is dealt a hand of \(10\) cards from a deck of \(52\) distinct cards. The number of distinct (unordered) hands that can be dealt to the player can be written as \(158A00A4AA0\). What is the digit \(A\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 2 \qquad\textbf{(B) } 3 \qquad\textbf{(C) } 4 \qquad\textbf{(D) } 6 \qquad\textbf{(E) } 7\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 20.  </label> 
+    <input type = "text" id = "ans20" name = "ans20"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Let \(B\) be a right rectangular prism (box) with edges lengths \(1,\) \(3,\) and \(4\), together with its interior. For real \(r\geq0\), let \(S(r)\) be the set of points in \(3\)-dimensional space that lie within a distance \(r\) of some point in \(B\). The volume of \(S(r)\) can be expressed as \(ar^{3} + br^{2} + cr +d\), where \(a,\) \(b,\) \(c,\) and \(d\) are positive real numbers. What is \(\frac{bc}{ad}?\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 6 \qquad\textbf{(B) } 19 \qquad\textbf{(C) } 24 \qquad\textbf{(D) } 26 \qquad\textbf{(E) } 38\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 21.  </label> 
+    <input type = "text" id = "ans21" name = "ans21"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">In square \(ABCD\), points \(E\) and \(H\) lie on \(\overline{AB}\) and \(\overline{DA}\), respectively, so that \(AE=AH.\) Points \(F\) and \(G\) lie on \(\overline{BC}\) and \(\overline{CD}\), respectively, and points \(I\) and \(J\) lie on \(\overline{EH}\) so that \(\overline{FI} \perp \overline{EH}\) and \(\overline{GJ} \perp \overline{EH}\). See the figure below. Triangle \(AEH\), quadrilateral \(BFIE\), quadrilateral \(DHJG\), and pentagon \(FCGJI\) each has area \(1.\) What is \(FI^2\)? </p> </label>
+    <img src="2020BP21.png" alt="Problem 21 Diagram" class="center" style="width: 250px;">
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } \frac{7}{3} \qquad \textbf{(B) } 8-4\sqrt2 \qquad \textbf{(C) } 1+\sqrt2 \qquad \textbf{(D) } \frac{7}{4}\sqrt2 \qquad \textbf{(E) } 2\sqrt2\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 22.  </label> 
+    <input type = "text" id = "ans22" name = "ans22"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">What is the remainder when \(2^{202} +202\) is divided by \(2^{101}+2^{51}+1\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 100 \qquad\textbf{(B) } 101 \qquad\textbf{(C) } 200 \qquad\textbf{(D) } 201 \qquad\textbf{(E) } 202\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 23.  </label> 
+    <input type = "text" id = "ans23" name = "ans23"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Square \(ABCD\) in the coordinate plane has vertices at the points \(A(1,1), B(-1,1), C(-1,-1),\) and \(D(1,-1).\) Consider the following four transformations: </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(L,\) a rotation of \(90^{\circ}\) counterclockwise around the origin; </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(R,\) a rotation of \(90^{\circ}\) clockwise around the origin; </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(H,\) a reflection across the \(x\)-axis; and </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(V,\) a reflection across the \(y\)-axis. </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Each of these transformations maps the squares onto itself, but the positions of the labeled vertices will change. For example, applying \(R\) and then \(V\) would send the vertex \(A\) at \((1,1)\) to \((-1,-1)\) and would send the vertex \(B\) at \((-1,1)\) to itself. How many sequences of \(20\) transformations chosen from \(\{L, R, H, V\}\) will send all of the labeled vertices back to their original positions? (For example, \(R, R, V, H\) is one sequence of \(4\) transformations that will send the vertices back to their original positions.) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A)}\ 2^{37} \qquad\textbf{(B)}\ 3\cdot 2^{36} \qquad\textbf{(C)}\  2^{38} \qquad\textbf{(D)}\ 3\cdot 2^{37} \qquad\textbf{(E)}\ 2^{39}\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 24.  </label> 
+    <input type = "text" id = "ans24" name = "ans24"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">How many positive integers \(n\) satisfy </p> </label>
+    <label for="lname"><p style="text-align:center; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\dfrac{n+1000}{70} = \lfloor \sqrt{n} \rfloor?\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">(Recall that \(\lfloor x\rfloor\) is the greatest integer not exceeding \(x\).) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 2 \qquad\textbf{(B) } 4 \qquad\textbf{(C) } 6 \qquad\textbf{(D) } 30 \qquad\textbf{(E) } 32\) </p> </label>
+    <hr> 
+    <label for="lname"><p style="margin-left: 10em; font-family: Arial;"> 25.  </label> 
+    <input type = "text" id = "ans25" name = "ans25"> <br><br> 
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">Let \(D(n)\) denote the number of ways of writing the positive integer \(n\) as a product </p> </label>
+    <label for="lname"><p style="text-align:center; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(n = f_1\cdot f_2\cdots f_k,\) </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">where \(k\ge1\), the \(f_i\) are integers strictly greater than \(1\), and the order in which the factors are listed matters (that is, two representations that differ only in the order of the factors are counted as distinct). For example, the number \(6\) can be written as \(6\), \(2\cdot 3\), and \(3\cdot2\), so \(D(6) = 3\). What is \(D(96)\)? </p> </label>
+    <label for="lname"><p style="text-align:left; margin-left: 30em; margin-right: 10em; font-family: Arial;">\(\textbf{(A) } 112 \qquad\textbf{(B) } 128 \qquad\textbf{(C) } 144 \qquad\textbf{(D) } 172 \qquad\textbf{(E) } 184\) </p> </label>
+    <hr> 
+	  <input type="button" value="Submit" onClick="submit1();">
+	</form>
+
+
+	
+	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
+	
+	<!--"Clicks"-->		
+	<script type="text/javascript">
+	
+	var ct=localStorage.getItem("currentTest");
+	var ts=JSON.parse(localStorage.getItem("testStatus"));
+	var tt=JSON.parse(localStorage.getItem("testTime"));
+		
+	if(parseInt(ts[parseInt(ct)])==0){
+	   ts[parseInt(ct)]=1;
+	   localStorage.setItem("testStatus", JSON.stringify(ts));
+	}
+	else if(parseInt(ts[parseInt(ct)])==2){
+		tt[parseInt(ct)]="Time Remaining: EXPIRED";
+		localStorage.setItem("testTime", JSON.stringify(tt));
+		window.location.href = "https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/practiceAMC12/testSubmitted";
+	}
+		
+	
+	//Timer	
+	// Update the count down every 1 second		
+	var x = setInterval(function() {
+	
+	var distance = tt[parseInt(ct)];
+		
+	  // Get today's date and time
+	  var now = new Date().getTime();
+
+	  // Find the distance between now and the count down date
+	  
+
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	  // Display the result in the element with id="demo"
+	  document.getElementById("demo").innerHTML = "Time Remaining: " + hours + "h "
+	  + minutes + "m " + seconds + "s ";
+
+	  // If the count down is finished, write some text
+	  if (distance < 0) {
+	    clearInterval(x);
+	    document.getElementById("demo").innerHTML = "Time Remaining: EXPIRED";
+	    submit1();
+	  }
+		
+	  tt[parseInt(ct)]-=1000;
+	  localStorage.setItem("testTime", JSON.stringify(tt));
+	}, 1000);
+					    
+	function submit1() {
+		
+		var testStatus=JSON.parse(localStorage.getItem("testStatus"));
+		var currentTest=localStorage.getItem("currentTest");
+		
+		if(testStatus[parseInt(currentTest)]!=2){
+
+			var testAnswers=JSON.parse(localStorage.getItem("testAnswers"));
+			var testCorrectness=JSON.parse(localStorage.getItem("testCorrectness"));
+			
+			var testUserAnswers=JSON.parse(localStorage.getItem("testUserAnswers"));
+
+			for(var i=0; i< testCorrectness[parseInt(currentTest)].length; i++){
+				var answer = document.getElementById("ans" + (i+1)).value;
+				if(testAnswers[parseInt(currentTest)][i]==answer.toUpperCase()){
+				  var res = testCorrectness[parseInt(currentTest)];
+				  var start = res.substring(0, i);
+				  var end = res.substring(i+1);
+				  testCorrectness[parseInt(currentTest)]=start+"2"+end;
+				}
+				else if(answer.length==0){
+				  var res = testCorrectness[parseInt(currentTest)];
+				  var start = res.substring(0, i);
+				  var end = res.substring(i+1);
+				  testCorrectness[parseInt(currentTest)]=start+"1"+end;
+				}
+				testUserAnswers[parseInt(currentTest)].push(answer);
+			}
+
+			testStatus[parseInt(currentTest)]="2";
+
+			localStorage.setItem("testCorrectness", JSON.stringify(testCorrectness));
+			localStorage.setItem("testStatus", JSON.stringify(testStatus));
+			localStorage.setItem("testUserAnswers", JSON.stringify(testUserAnswers));
+		}
+		
+		window.location.href = "https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5/practiceAMC12/testSubmitted";
+          }
+		
+        </script>
+</body>
+</html>
