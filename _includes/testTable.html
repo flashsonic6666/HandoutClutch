@@ -181,7 +181,7 @@ th {
 		}
 		
 		if(localStorage.getItem("testTime")===null){
-			localStorage.setItem("testTime", JSON.stringify([75*60*1000]));
+			localStorage.setItem("testTime", JSON.stringify([60*60*1000]));
 		}
 		
 		if(localStorage.getItem("testUserAnswers")===null){
@@ -227,7 +227,7 @@ th {
 			}
 			testCorrectness.push(temp);
 			testStatus.push("0");
-			testTime.push(60*60*1000);
+			testTime.push(75*60*1000);
 		}
 		
 		while(testUserAnswers.length<testName.length){
