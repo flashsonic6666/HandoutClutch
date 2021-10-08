@@ -2,7 +2,7 @@
 ![Logo](/logo.JPG)
 ## Welcome to the Land of Wonder
 
-The website might look like literal poop right now but I'll try my best to clean it up!
+That one was a doozy. You can say that again. That one was a doozy.
 
 ## Current Progress
 
