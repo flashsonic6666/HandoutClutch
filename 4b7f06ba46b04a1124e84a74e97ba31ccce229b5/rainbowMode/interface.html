@@ -266,7 +266,7 @@ tr.special th{
 	if(localStorage.getItem("currentRainbowSolved")===null){		
 		localStorage.setItem("currentRainbowSolved", 2);
 	}
-	localStorage.setItem("test100", 2);	
+	localStorage.setItem("test99", 2);	
 	var currentRainbowChoice=parseInt(localStorage.getItem("currentRainbowChoice"));
 	var currentRainbowAMC=parseInt(localStorage.getItem("currentRainbowAMC"));
 	var currentRainbowAIME=parseInt(localStorage.getItem("currentRainbowAIME"));
@@ -296,7 +296,7 @@ tr.special th{
 		
 		localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
 	}
-	localStorage.setItem("test4", "etst");
+		
 	//Updates
 	var rainbowAMCTries=JSON.parse(localStorage.getItem("rainbowAMCTries"));
 	var rainbowAMCTimesDone=JSON.parse(localStorage.getItem("rainbowAMCTimesDone"));
@@ -311,13 +311,11 @@ tr.special th{
 		 }
 	   }
 	}
-	localStorage.setItem("test3", 2);
+
 	var maxAMC=parseInt(testFolderName.length);
 	
 	//0 for, 1 for AMC
 	var tempImage = document.getElementById("problem");
-	
-	localStorage.setItem("test2", "etst");
 		
 	if(currentRainbowChoice==0){
 		var code=handoutCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
@@ -328,7 +326,9 @@ tr.special th{
 		var code=handoutCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + (currentZenTestQ+1) + ".PNG";
 	}
-
+	
+	localStorage.setItem("test2", "etst");
+		
 	resetTable(true);
 		
 	function resetTable(gainXP){
@@ -341,7 +341,7 @@ tr.special th{
 		 tableBody = tableBody + "<th>" + "Current EXP" + "</th>" + "<th>" + "Needed for Next Level" + "</th>" + "<th>" + "Current Level" + "</th>";
 		 tableBody = tableBody + "</tr>";  
 		
-		
+		localStorage.setItem("test", "etst");
 		
 		$("#ptable").append(tableBody);
 	}
