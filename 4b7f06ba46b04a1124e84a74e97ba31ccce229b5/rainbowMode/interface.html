@@ -320,8 +320,8 @@ tr.special th{
 		
 	}
 	else{ //fix this to AIME later
-		var code=testCode[parseInt(localStorage.getItem("currentRainbowAIME"))];	
-		tempImage.src = "../problems/" + folderName[currentZenHandout] + "/" + handoutCode[currentZenHandout]+"Problem" +(currentZenHandoutQ+1)+".JPG";	
+		var code=handoutCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
+		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + (currentZenTestQ+1) + ".PNG";
 	}
 		
 	resetTable(true);
@@ -395,41 +395,29 @@ tr.special th{
 		var correct=false;
 		  
 		if(parseInt(check)==1){
-			  if(currentZenChoice==0){
-				  zenHandoutTries[currentZenHandout][currentZenHandoutQ]++;
+			  if(currentRainbowChoice==0){
+				  rainbowAMCTries[currentRainbowAMC][currentRainbowAMCQ]++;
 
-				  if(answer==answers[currentZenHandout][currentZenHandoutQ]){
-					document.getElementById("result").innerHTML = "Correct, good job guessing it right!";
+				 if(answer==amc10Answers[currentRainbowAMC][currentRainbowAMCQ]){
+					document.getElementById("result").innerHTML = "Color brought back!";
 					correct=true;
 
-
-					zenHandoutTimesDone[currentZenHandout][currentZenHandoutQ]++;  
-					  resetTable(true);
-				  }
-				  else{
-					document.getElementById("result").innerHTML = "Incorrect, smh my head.";
-				  }
-			  }
-			  else{
-				 zenTestTries[currentZenTest][currentZenTestQ]++;
-
-				 if(answer==amc10Answers[currentZenTest][currentZenTestQ]){
-					document.getElementById("result").innerHTML = "Correct, good job guessing it right!";
-					correct=true;
-
-					zenTestTimesDone[currentZenTest][currentZenTestQ]++; 
+					rainbowAMCTimesDone[currentZenTest][currentZenTestQ]++; 
 					 
 					 resetTable(true);
 				  }
 				  else{
-					document.getElementById("result").innerHTML = "Incorrect, smh my head.";
+					document.getElementById("result").innerHTML = "Color lost...";
 				  } 
 			  }
+			  else{
+				 resetTable(true);
+			  }
 
-			  localStorage.setItem("zenHandoutTries", JSON.stringify(zenHandoutTries));
-			  localStorage.setItem("zenHandoutTimesDone", JSON.stringify(zenHandoutTimesDone));
-			  localStorage.setItem("zenTestTries", JSON.stringify(zenTestTries));
-			  localStorage.setItem("zenTestTimesDone", JSON.stringify(zenTestTimesDone));
+			  localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
+			  localStorage.setItem("rainbowAMCTimesDone", JSON.stringify(rainbowAMCTimesDone));
+			  localStorage.setItem("rainbowAIMETries", JSON.stringify(rainbowAIMETries));
+			  localStorage.setItem("rainbowAIMETimesDone", JSON.stringify(rainbowAIMETimesDone));
 
 			  
 	  	}
@@ -442,95 +430,40 @@ tr.special th{
 		  if(correct){
 			
 			//while(true){
-			  	currentZenChoice=Math.floor(Math.random() * 2);
-				localStorage.setItem("currentZenChoice", currentZenChoice);
+			  	currentRainbowChoice=Math.floor(Math.random() * 2);
+				localStorage.setItem("currentRainbowChoice", currentRainbowChoice);
 				//localStorage.setItem("test1", 30);
 				
-				if(currentZenChoice==0){
-					currentZenHandout=Math.floor((Math.random() * maxHandout));
-					var maxSize=answers[currentZenHandout].length;
-					
-					//localStorage.setItem("test6", 30);
-					
-					currentZenHandoutQ=Math.floor((Math.random() * maxSize));
-					//localStorage.setItem("test2", 30);
-					var code = handoutCode[currentZenHandout];
-
-					var image1 = document.getElementById("problem");
-					image1.src = "../problems/" + folderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentZenHandoutQ+1)+".JPG";	
-					
-					//localStorage.setItem("test3", 30);
-					
-					localStorage.setItem("currentZenHandout", currentZenHandout);
-					localStorage.setItem("currentZenHandoutQ", currentZenHandoutQ);
-					//break;
-				}
-				else{
-					//localStorage.setItem("test4", 30);
-					var zenBlockQuestionsUpTo=parseInt(localStorage.getItem("zenBlockQuestionsUpTo"));
+				if(currentRainbowChoice==0){
 					currentZenTest=Math.floor((Math.random() * maxTest));
-					var testStatus=JSON.parse(localStorage.getItem("testStatus"));
 					
-					//if(parseInt(testStatus[currentZenTest])!=2){
-					   //continue;
-					//}
-					
-					//localStorage.setItem("test5", 30);
-					
-					currentZenTestQ=Math.floor((Math.random() * (24-zenBlockQuestionsUpTo)))+(zenBlockQuestionsUpTo);
+					currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
 
 					var code = testCode[currentZenTest];
 
 					var image1 = document.getElementById("problem");
 					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentZenTestQ+1)+".PNG";	
 
-					localStorage.setItem("currentZenTest", currentZenTest);
-					localStorage.setItem("currentZenTestQ", currentZenTestQ);
-					//break;
+					localStorage.setItem("currentRainbowAMC", currentRainbowAMC);
+					localStorage.setItem("currentRainbowAMCQ", currentRainbowAMCQ);
+				}
+				else{
+					//FIX LATER
+					currentZenTest=Math.floor((Math.random() * maxTest));
+					
+					currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
+
+					var code = testCode[currentZenTest];
+
+					var image1 = document.getElementById("problem");
+					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentZenTestQ+1)+".PNG";	
+
+					localStorage.setItem("currentRainbowAMC", currentRainbowAMC);
+					localStorage.setItem("currentRainbowAMCQ", currentRainbowAMCQ);
 				}
 		  	//}
 		  }
           }
-	 function picr(){
-		 var x=JSON.parse(localStorage.getItem("clicks"));
-		 
-		  index = index + 1;
-		  if (index == 
-		      Size+1) {
-		     index = 1;
-		  }
-		  var image1 = document.getElementById("problem");
-		  image1.src = folderName[localStorage.getItem(code)] + "/" + code+"Problem" +index+".JPG";		 
-		 
-		 document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
-			   + " incorrect tries on this problem smh my head";
-	 }
-	function picl(){
-		var x=JSON.parse(localStorage.getItem("clicks"));
-		
-		  index = index - 1;
-		  if (index == 0) {
-		     index = maxSize;
-		  }
-		  var image1 = document.getElementById("problem");
-		  image1.src = folderName[localStorage.getItem(code)] + "/" + code+"Problem" +index+".JPG";		
-		
-		document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
-			   + " incorrect tries on this problem smh my head";
-	 }
-	function goPic(){
-		var x=JSON.parse(localStorage.getItem("clicks"));
-		
-		var prob = document.getElementById("prob").value;
-		  index = parseInt(prob);
-		  var image1 = document.getElementById("problem");
-		  image1.src = folderName[localStorage.getItem(code)] + "/" + code+"Problem" +index+".JPG";	 
-		
-		document.getElementById("result").innerHTML = "You have a total of " + x[parseInt(localStorage.getItem(code))][parseInt(index-1)]
-			   + " incorrect tries on this problem smh my head";
-		
-		document.getElementById("prob").value="";
-	 }
 	function flicker(){
 	  $("#xp-increase-fx-flicker").css("opacity", "1");
 	  $("#xp-increase-fx-flicker").animate({"opacity":Math.random()}, 100, flicker);
