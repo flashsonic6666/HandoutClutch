@@ -202,16 +202,6 @@ tr.special th{
 	<br> </br>
 	<br> </br>
 
-	<!--Question Blocking Form-->
-	<form action="" onSubmit="return false;">
-	  <label for="lname">Block Future AMC12 Questions Up To:     </label>
-	  <input type="text" id="blocker" name="blocker"><br><br>
-	  <input type="button" value="Confirm" onClick="block();">
-	  <input type="submit" style="display: none" onClick="block();" >  
-	</form>
-	
-	
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<div id='account-bar-wrapper'>
 	  <div id='account-bar'>
@@ -265,7 +255,7 @@ tr.special th{
 	if(localStorage.getItem("currentRainbowSolved")===null){		
 		localStorage.setItem("currentRainbowSolved", 2);
 	}
-	localStorage.setItem("test99", 2);	
+	localStorage.setItem("test98", 2);	
 	var currentRainbowChoice=parseInt(localStorage.getItem("currentRainbowChoice"));
 	var currentRainbowAMC=parseInt(localStorage.getItem("currentRainbowAMC"));
 	var currentRainbowAIME=parseInt(localStorage.getItem("currentRainbowAIME"));
@@ -325,13 +315,10 @@ tr.special th{
 		var code=testCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentRainbowAMC] + "/" + testCode[currentRainbowAMC] + "Problem" + (currentRainbowAMCQ+1) + ".PNG";
 	}
-	
-	localStorage.setItem("test2", "etst");
 		
 	resetTable(true);
 		
 	function resetTable(gainXP){
-		localStorage.setItem("test1", "etst");
 		$("#ptable tr").remove(); 
 		
 		var tableBody= "";
@@ -339,8 +326,6 @@ tr.special th{
 		tableBody = tableBody + "<tr class=\"special\">";
 		 tableBody = tableBody + "<th>" + "Current EXP" + "</th>" + "<th>" + "Needed for Next Level" + "</th>" + "<th>" + "Current Level" + "</th>";
 		 tableBody = tableBody + "</tr>";  
-		
-		localStorage.setItem("test", "etst");
 		
 		$("#ptable").append(tableBody);
 	}
@@ -358,7 +343,7 @@ tr.special th{
 					document.getElementById("result").innerHTML = "Color brought back!";
 					correct=true;
 
-					rainbowAMCTimesDone[currentZenTest][currentZenTestQ]++; 
+					rainbowAMCTimesDone[currentRainbowAMC][currentRainbowAMCQ]++; 
 					currentRainbowSolved++; 
 					 
 					 resetTable(true);
@@ -392,28 +377,28 @@ tr.special th{
 				localStorage.setItem("currentRainbowChoice", currentRainbowChoice);
 				
 				if(currentRainbowChoice==0){
-					currentZenTest=Math.floor((Math.random() * maxTest));
+					currentRainbowAMC=Math.floor((Math.random() * maxTest));
 					
 					currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
 
-					var code = testCode[currentZenTest];
+					var code = testCode[currentRainbowAMC];
 
 					var image1 = document.getElementById("problem");
-					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentZenTestQ+1)+".PNG";	
+					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentRainbowAMCQ+1)+".PNG";	
 
 					localStorage.setItem("currentRainbowAMC", currentRainbowAMC);
 					localStorage.setItem("currentRainbowAMCQ", currentRainbowAMCQ);
 				}
 				else{
 					//FIX LATER
-					currentZenTest=Math.floor((Math.random() * maxTest));
+					currentRainbowAMC=Math.floor((Math.random() * maxTest));
 					
 					currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
 
-					var code = testCode[currentZenTest];
+					var code = testCode[currentRainbowAMC];
 
 					var image1 = document.getElementById("problem");
-					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentZenTestQ+1)+".PNG";	
+					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentRainbowAMCQ+1)+".PNG";	
 
 					localStorage.setItem("currentRainbowAMC", currentRainbowAMC);
 					localStorage.setItem("currentRainbowAMCQ", currentRainbowAMCQ);
@@ -443,11 +428,7 @@ tr.special th{
 	  $("#xp-bar-fill").css("width",""+percent+"%");},100);
 	  setTimeout(function(){$("#xp-increase-fx").fadeOut(500);$("#xp-bar-fill").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});},2000);
 	}
-	function block() {
-		var upTo = parseInt(document.getElementById("blocker").value);
-		localStorage.setItem("zenBlockQuestionsUpTo", upTo);
-		document.getElementById("blocker").value="";
-          }
+
         </script>
 </body>
 </html>
