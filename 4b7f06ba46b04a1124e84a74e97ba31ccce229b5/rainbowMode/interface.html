@@ -209,6 +209,8 @@ tr.special th{
 	  <input type="submit" style="display: none" onClick="block();" >  
 	</form>
 	
+	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<div id='account-bar-wrapper'>
 	  <div id='account-bar'>
@@ -324,7 +326,7 @@ tr.special th{
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + (currentZenTestQ+1) + ".PNG";
 	}
 		
-	//resetTable(true);
+	resetTable(true);
 		
 	function resetTable(gainXP){
 		$("#ptable tr").remove(); 
@@ -334,57 +336,6 @@ tr.special th{
 		tableBody = tableBody + "<tr class=\"special\">";
 		 tableBody = tableBody + "<th>" + "Current EXP" + "</th>" + "<th>" + "Needed for Next Level" + "</th>" + "<th>" + "Current Level" + "</th>";
 		 tableBody = tableBody + "</tr>";  
-		
-		var points=JSON.parse(localStorage.getItem("points"));
-		
-		var totalEXP=0;
-		var level=1;
-		var toNext=50;
-		
-		for(var i=0; i<zenHandoutTimesDone.length; i++){
-			for(var j=0; j<zenHandoutTimesDone[i].length; j++){
-				totalEXP+=zenHandoutTimesDone[i][j]*points[i][j]*3;
-			}
-		}
-		
-		for(var i=0; i<zenTestTimesDone.length; i++){
-			for(var j=0; j<zenTestTimesDone[i].length; j++){
-				totalEXP+=zenTestTimesDone[i][j]*(j+1);
-			}
-		}
-		
-		var tempEXP=totalEXP;
-		
-		while(tempEXP>=Math.min(300,toNext)){
-		      tempEXP-=Math.min(300,toNext);
-		      level++;
-		      toNext+=25;
-		}
-		
-		tableBody = tableBody + "<tr class=\"special\">";
-		 tableBody = tableBody + "<th>" + tempEXP + "</th>" + "<th>" + Math.min(300,toNext) + "</th>" + "<th>" + level + "</th>";
-		 tableBody = tableBody + "</tr>";  
-		
-		document.getElementById('account-bar-level').innerHTML = "Level " + level;
-		document.getElementById('account-bar-next-level').innerHTML = ""+(level+1);
-		
-		var changeLevel=false;
-		
-		if(localStorage.getItem("currentZenLevel")===null){		
-			localStorage.setItem("currentZenLevel", level);
-		}
-		else{
-			var currentZenLevel=localStorage.getItem("currentZenLevel");
-			if(level!=currentZenLevel){
-			    changeLevel=true;
-			}
-			localStorage.setItem("currentZenLevel", level);
-		}
-		
-		if(gainXP){
-			   doIt((100.0*tempEXP)/toNext,changeLevel);			
-		}
-		
 		
 		$("#ptable").append(tableBody);
 	}
@@ -403,15 +354,17 @@ tr.special th{
 					correct=true;
 
 					rainbowAMCTimesDone[currentZenTest][currentZenTestQ]++; 
+					currentRainbowSolved++; 
 					 
-					 //resetTable(true);
+					 resetTable(true);
 				  }
 				  else{
 					document.getElementById("result").innerHTML = "Color lost...";
+					currentRainbowSolved--; 
 				  } 
 			  }
 			  else{
-				 //resetTable(true);
+				 resetTable(true);
 			  }
 
 			  localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
@@ -432,7 +385,6 @@ tr.special th{
 			//while(true){
 			  	currentRainbowChoice=Math.floor(Math.random() * 2);
 				localStorage.setItem("currentRainbowChoice", currentRainbowChoice);
-				//localStorage.setItem("test1", 30);
 				
 				if(currentRainbowChoice==0){
 					currentZenTest=Math.floor((Math.random() * maxTest));
