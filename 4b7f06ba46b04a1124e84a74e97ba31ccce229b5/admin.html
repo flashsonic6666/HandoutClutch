@@ -134,9 +134,11 @@ body {
 		  var value = localStorage.getItem(key);
 
 		  // console.log the iteration key and value
-		  tableBody = tableBody + "<tr>";
-		  tableBody = tableBody + "<th>" + key + "</th>" + "<th>" + value + "</th>";
-		  tableBody = tableBody + "</tr>";  
+		  if(value.length<100){
+			  tableBody = tableBody + "<tr>";
+			  tableBody = tableBody + "<th>" + key + "</th>" + "<th>" + value + "</th>";
+			  tableBody = tableBody + "</tr>";  
+		  }
 
 		}
 
