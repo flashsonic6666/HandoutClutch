@@ -256,7 +256,7 @@ tr.special th{
 		localStorage.setItem("currentRainbowSolved", 2);
 	}
 		
-	localStorage.setItem("test98", 2);	
+	localStorage.setItem("test99", 2);	
 		
 	var currentRainbowChoice=parseInt(localStorage.getItem("currentRainbowChoice"));
 	var currentRainbowAMC=parseInt(localStorage.getItem("currentRainbowAMC"));
@@ -375,10 +375,7 @@ tr.special th{
 		  
 		  document.getElementById("ans").value="";
 		  
-		  localStorage.setItem("test1",2);
-		  
 		  if(correct){
-			localStorage.setItem("test2",2);
 			//while(true){
 			  	currentRainbowChoice=Math.floor(Math.random() * 2);
 				localStorage.setItem("currentRainbowChoice", currentRainbowChoice);
@@ -387,14 +384,14 @@ tr.special th{
 					currentRainbowAMC=Math.floor((Math.random() * maxTest));
 					
 					currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
-
+					localStorage.setItem("test2",2);
 					var code = testCode[currentRainbowAMC];
 
 					var image1 = document.getElementById("problem");
 					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentRainbowAMCQ+1)+".PNG";	
-
-					localStorage.setItem("currentRainbowAMC", currentRainbowAMC);
-					localStorage.setItem("currentRainbowAMCQ", currentRainbowAMCQ);
+					localStorage.setItem("test1",2);
+					localStorage.setItem("currentRainbowAMC", JSON.stringify(currentRainbowAMC));
+					localStorage.setItem("currentRainbowAMCQ", JSON.stringify(currentRainbowAMCQ));
 					localStorage.setItem("test3",2);
 				}
 				else{
@@ -402,14 +399,15 @@ tr.special th{
 					currentRainbowAMC=Math.floor((Math.random() * maxTest));
 					
 					currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
-
+					localStorage.setItem("test2",2);
 					var code = testCode[currentRainbowAMC];
 
 					var image1 = document.getElementById("problem");
 					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentRainbowAMCQ+1)+".PNG";	
-
-					localStorage.setItem("currentRainbowAMC", currentRainbowAMC);
-					localStorage.setItem("currentRainbowAMCQ", currentRainbowAMCQ);
+					localStorage.setItem("test1",2);
+					localStorage.setItem("currentRainbowAMC", JSON.stringify(currentRainbowAMC));
+					localStorage.setItem("currentRainbowAMCQ", JSON.stringify(currentRainbowAMCQ));
+					localStorage.setItem("test3",2);
 				}
 		  	//}
 		  }
