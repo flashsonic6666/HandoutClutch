@@ -239,63 +239,59 @@ tr.special th{
 	var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
 	var answers=JSON.parse(localStorage.getItem("answers"));
 	var amc10Answers=JSON.parse(localStorage.getItem("amc10Answers"));
-		
 	
-	
-	if(localStorage.getItem("currentZenChoice")===null){
-		localStorage.setItem("currentZenChoice",0);
-	}
-	
-	if(localStorage.getItem("currentZenHandout")===null){
-		localStorage.setItem("currentZenHandout", 0);
+	if(localStorage.getItem("currentRainbowChoice")===null){
+		localStorage.setItem("currentRainbowChoice",0);
 	}
 		
-	if(localStorage.getItem("currentZenHandoutQ")===null){
-		localStorage.setItem("currentZenHandoutQ", 0);
-	}
-		
-	if(localStorage.getItem("currentZenTest")===null){
-		localStorage.setItem("currentZenTest", 0);
+	if(localStorage.getItem("currentRainbowAMC")===null){
+		localStorage.setItem("currentRainbowAMC", 0);
 	}	
 	
-	if(localStorage.getItem("currentZenTestQ")===null){
-		localStorage.setItem("currentZenTestQ", 0);
+	if(localStorage.getItem("currentRainbowAMCQ")===null){
+		localStorage.setItem("currentRainbowAMCQ", 0);
+	}
+		
+	if(localStorage.getItem("currentRainbowAIME")===null){
+		localStorage.setItem("currentRainbowAIME", 0);
 	}	
-	if(localStorage.getItem("currentZenLevel")===null){		
-		localStorage.setItem("currentZenLevel", 1);
-	}
-	if(localStorage.getItem("zenBlockQuestionsUpTo")===null){		
-		localStorage.setItem("zenBlockQuestionsUpTo", 0);
+	
+	if(localStorage.getItem("currentRainbowAIMEQ")===null){
+		localStorage.setItem("currentRainbowAIMEQ", 0);
 	}
 		
-	var currentZenChoice=parseInt(localStorage.getItem("currentZenChoice"));
-	var currentZenHandout=parseInt(localStorage.getItem("currentZenHandout"));
-	var currentZenTest=parseInt(localStorage.getItem("currentZenTest"));
-	var currentZenHandoutQ=parseInt(localStorage.getItem("currentZenHandoutQ"));
-	var currentZenTestQ=parseInt(localStorage.getItem("currentZenTestQ"));	
+	if(localStorage.getItem("currentRainbowSolved")===null){		
+		localStorage.setItem("currentRainbowSolved", 2);
+	}
 		
-	if(localStorage.getItem("zenHandoutTimesDone")===null){
-		var zenHandoutTimesDone=[];
-		for(var i=0; i<folderName.length; i++){
-			zenHandoutTimesDone.push([]);
-			for(var j=0; j<answers[i].length; j++){
-				zenHandoutTimesDone[i].push(0);
+	var currentRainbowChoice=parseInt(localStorage.getItem("currentRainbowChoice"));
+	var currentRainbowHandout=parseInt(localStorage.getItem("currentRainbowHandout"));
+	var currentRainbowTest=parseInt(localStorage.getItem("currentRainbowTest"));
+	var currentRainbowHandoutQ=parseInt(localStorage.getItem("currentRainbowHandoutQ"));
+	var currentRainbowTestQ=parseInt(localStorage.getItem("currentRainbowTestQ"));	
+		
+	if(localStorage.getItem("rainbowAMCTimesDone")===null){
+		var rainbowAMCTimesDone=[];
+		for(var i=0; i<testFolderName.length; i++){
+			rainbowAMCTimesDone.push([]);
+			for(var j=0; j<25; j++){
+				rainbowAMCTimesDone[i].push(0);
 			}
 		}
 		
-		localStorage.setItem("zenHandoutTimesDone", JSON.stringify(zenHandoutTimesDone));
+		localStorage.setItem("rainbowAMCTimesDone", JSON.stringify(rainbowAMCTimesDone));
 	}
 		
-	if(localStorage.getItem("zenHandoutTries")===null){
-		var zenHandoutTries=[];
-		for(var i=0; i<folderName.length; i++){
-			zenHandoutTries.push([]);
+	if(localStorage.getItem("rainbowAMCTries")===null){
+		var rainbowAMCTries=[];
+		for(var i=0; i<testFolderName.length; i++){
+			rainbowAMCTries.push([]);
 			for(var j=0; j<answers[i].length; j++){
-				zenHandoutTries[i].push(0);
+				rainbowAMCTries[i].push(0);
 			}
 		}
 		
-		localStorage.setItem("zenHandoutTries", JSON.stringify(zenHandoutTries));
+		localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
 	}
 		
 	if(localStorage.getItem("zenTestTimesDone")===null){
@@ -353,7 +349,8 @@ tr.special th{
 	var maxHandout=parseInt(folderName.length);
 	var maxTest=parseInt(testFolderName.length);
 	
-	//0 for Handout, 1 for AMC (currentZenChoice)
+	//0 for Handout, 1 for AMC (
+		)
 	var tempImage = document.getElementById("problem");
 		
 	if(currentZenChoice==0){
