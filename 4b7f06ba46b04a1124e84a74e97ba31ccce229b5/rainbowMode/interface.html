@@ -324,7 +324,7 @@ tr.special th{
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + (currentZenTestQ+1) + ".PNG";
 	}
 		
-	resetTable(true);
+	//resetTable(true);
 		
 	function resetTable(gainXP){
 		$("#ptable tr").remove(); 
@@ -404,14 +404,14 @@ tr.special th{
 
 					rainbowAMCTimesDone[currentZenTest][currentZenTestQ]++; 
 					 
-					 resetTable(true);
+					 //resetTable(true);
 				  }
 				  else{
 					document.getElementById("result").innerHTML = "Color lost...";
 				  } 
 			  }
 			  else{
-				 resetTable(true);
+				 //resetTable(true);
 			  }
 
 			  localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
