@@ -272,7 +272,7 @@ tr.special th{
 	var currentRainbowAIME=parseInt(localStorage.getItem("currentRainbowAIME"));
 	var currentRainbowAMCQ=parseInt(localStorage.getItem("currentRainbowAMCQ"));
 	var currentRainbowAIMEQ=parseInt(localStorage.getItem("currentRainbowAIMEQ"));	
-		
+	localStorage.setItem("test5", "etst");
 	if(localStorage.getItem("rainbowAMCTimesDone")===null){
 		var rainbowAMCTimesDone=[];
 		for(var i=0; i<testFolderName.length; i++){
@@ -296,7 +296,7 @@ tr.special th{
 		
 		localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
 	}
-	
+	localStorage.setItem("test4", "etst");
 	//Updates
 	var rainbowAMCTries=JSON.parse(localStorage.getItem("rainbowAMCTries"));
 	var rainbowAMCTimesDone=JSON.parse(localStorage.getItem("rainbowAMCTimesDone"));
@@ -311,7 +311,7 @@ tr.special th{
 		 }
 	   }
 	}
-
+	localStorage.setItem("test3", "etst");
 	var maxAMC=parseInt(testFolderName.length);
 	
 	//0 for, 1 for AMC
@@ -328,8 +328,7 @@ tr.special th{
 		var code=handoutCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + (currentZenTestQ+1) + ".PNG";
 	}
-		
-	localStorage.setItem("test2", "etst");
+
 	resetTable(true);
 		
 	function resetTable(gainXP){
