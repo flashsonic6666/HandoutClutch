@@ -359,7 +359,21 @@ tr.special th{
 				  } 
 			  }
 			  else{
-				 resetTable(true);
+				 rainbowAMCTries[currentRainbowAMC][currentRainbowAMCQ]++;
+
+				 if(answer==amc10Answers[currentRainbowAMC][currentRainbowAMCQ]){
+					document.getElementById("result").innerHTML = "Color brought back!";
+					correct=true;
+
+					rainbowAMCTimesDone[currentRainbowAMC][currentRainbowAMCQ]++; 
+					currentRainbowSolved++; 
+					 
+					 resetTable(true);
+				  }
+				  else{
+					document.getElementById("result").innerHTML = "Color lost...";
+					currentRainbowSolved--; 
+				  } 
 			  }
 			
 			  localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
