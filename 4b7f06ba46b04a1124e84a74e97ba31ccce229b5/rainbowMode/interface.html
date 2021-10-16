@@ -330,6 +330,7 @@ tr.special th{
 	resetTable(true);
 		
 	function resetTable(gainXP){
+		localStorage.setItem("test1", "etst");
 		$("#ptable tr").remove(); 
 		
 		var tableBody= "";
@@ -338,7 +339,7 @@ tr.special th{
 		 tableBody = tableBody + "<th>" + "Current EXP" + "</th>" + "<th>" + "Needed for Next Level" + "</th>" + "<th>" + "Current Level" + "</th>";
 		 tableBody = tableBody + "</tr>";  
 		
-		localStorage.setItem("test1", "etst");
+		
 		
 		$("#ptable").append(tableBody);
 	}
