@@ -265,10 +265,10 @@ tr.special th{
 	}
 		
 	var currentRainbowChoice=parseInt(localStorage.getItem("currentRainbowChoice"));
-	var currentRainbowHandout=parseInt(localStorage.getItem("currentRainbowHandout"));
-	var currentRainbowTest=parseInt(localStorage.getItem("currentRainbowTest"));
-	var currentRainbowHandoutQ=parseInt(localStorage.getItem("currentRainbowHandoutQ"));
-	var currentRainbowTestQ=parseInt(localStorage.getItem("currentRainbowTestQ"));	
+	var currentRainbowAMC=parseInt(localStorage.getItem("currentRainbowAMC"));
+	var currentRainbowAIME=parseInt(localStorage.getItem("currentRainbowAIME"));
+	var currentRainbowAMCQ=parseInt(localStorage.getItem("currentRainbowAMCQ"));
+	var currentRainbowAIMEQ=parseInt(localStorage.getItem("currentRainbowAIMEQ"));	
 		
 	if(localStorage.getItem("rainbowAMCTimesDone")===null){
 		var rainbowAMCTimesDone=[];
@@ -293,73 +293,35 @@ tr.special th{
 		
 		localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
 	}
-		
-	if(localStorage.getItem("zenTestTimesDone")===null){
-		var zenTestTimesDone=[];
-		for(var i=0; i<testFolderName.length; i++){
-			zenTestTimesDone.push([]);
-			for(var j=0; j<amc10Answers[i].length; j++){
-				zenTestTimesDone[i].push(0);
-			}
-		}
-		
-		localStorage.setItem("zenTestTimesDone", JSON.stringify(zenTestTimesDone));
-	}	
-	
-	if(localStorage.getItem("zenTestTries")===null){
-		var zenTestTries=[];
-		for(var i=0; i<testFolderName.length; i++){
-			zenTestTries.push([]);
-			for(var j=0; j<amc10Answers[i].length; j++){
-				zenTestTries[i].push(0);
-			}
-		}
-		
-		localStorage.setItem("zenTestTries", JSON.stringify(zenTestTries));
-	}	
 	
 	//Updates
-	var zenHandoutTries=JSON.parse(localStorage.getItem("zenHandoutTries"));
-	var zenTestTries=JSON.parse(localStorage.getItem("zenTestTries"));
-	var zenHandoutTimesDone=JSON.parse(localStorage.getItem("zenHandoutTimesDone"));
-	var zenTestTimesDone=JSON.parse(localStorage.getItem("zenTestTimesDone"));
+	var rainbowAMCTries=JSON.parse(localStorage.getItem("rainbowAMCTries"));
+	var rainbowAMCTimesDone=JSON.parse(localStorage.getItem("rainbowAMCTimesDone"));
 	
-	if(zenHandoutTries.length<folderName.length){
-	   for(var i=zenHandoutTries.length; i<folderName.length; i++){
-		 zenHandoutTries.push([]);
-		 zenHandoutTimesDone.push([]);
-		 for(var j=0; j<answers[i].length; j++){
+	if(rainbowAMCTries.length<testFolderName.length){
+	   for(var i=rainbowAMCTries.length; i<testFolderName.length; i++){
+		 rainbowAMCTries.push([]);
+		 rainbowAMCTimesDone.push([]);
+		 for(var j=0; j<25; j++){
 			zenHandoutTries[i].push(0);
 			zenHandoutTimesDone[i].push(0);
 		 }
 	   }
 	}
-		
-	if(zenTestTries.length<testFolderName.length){
-	   for(var i=zenTestTries.length; i<testFolderName.length; i++){
-		 zenTestTries.push([]);
-		 zenTestTimesDone.push([]);
-		 for(var j=0; j<amc10Answers[i].length; j++){
-			zenTestTries[i].push(0);
-			zenTestTimesDone[i].push(0);
-		 }
-	   }
-	}
-		
-	var maxHandout=parseInt(folderName.length);
-	var maxTest=parseInt(testFolderName.length);
+
+	var maxAMC=parseInt(testFolderName.length);
 	
-	//0 for Handout, 1 for AMC (
-		)
+	//0 for, 1 for AMC
 	var tempImage = document.getElementById("problem");
 		
-	if(currentZenChoice==0){
-		var code=handoutCode[parseInt(localStorage.getItem("currentZenHandout"))];	
-		tempImage.src = "../problems/" + folderName[currentZenHandout] + "/" + handoutCode[currentZenHandout]+"Problem" +(currentZenHandoutQ+1)+".JPG";	
-	}
-	else{
-		var code=testCode[parseInt(localStorage.getItem("currentZenTest"))];	
+	if(currentRainbowChoice==0){
+		var code=handoutCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + (currentZenTestQ+1) + ".PNG";
+		
+	}
+	else{ //fix this to AIME later
+		var code=testCode[parseInt(localStorage.getItem("currentRainbowAIME"))];	
+		tempImage.src = "../problems/" + folderName[currentZenHandout] + "/" + handoutCode[currentZenHandout]+"Problem" +(currentZenHandoutQ+1)+".JPG";	
 	}
 		
 	resetTable(true);
