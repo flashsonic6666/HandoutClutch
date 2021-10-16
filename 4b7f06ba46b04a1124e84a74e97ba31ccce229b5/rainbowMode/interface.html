@@ -256,7 +256,7 @@ tr.special th{
 		localStorage.setItem("currentRainbowSolved", 2);
 	}
 		
-	localStorage.setItem("test99", 2);	
+	localStorage.setItem("test98", 2);	
 		
 	var currentRainbowChoice=parseInt(localStorage.getItem("currentRainbowChoice"));
 	var currentRainbowAMC=parseInt(localStorage.getItem("currentRainbowAMC"));
@@ -346,9 +346,11 @@ tr.special th{
 					correct=true;
 
 					rainbowAMCTimesDone[currentRainbowAMC][currentRainbowAMCQ]++; 
+					 localStorage.setItem("test3",2);
 					currentRainbowSolved++; 
 					 
 					 resetTable(true);
+					 localStorage.setItem("test4",2);
 				  }
 				  else{
 					document.getElementById("result").innerHTML = "Color lost...";
@@ -358,11 +360,14 @@ tr.special th{
 			  else{
 				 resetTable(true);
 			  }
-
+				
+			 localStorage.setItem("test5",2);
+			
 			  localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
 			  localStorage.setItem("rainbowAMCTimesDone", JSON.stringify(rainbowAMCTimesDone));
 			  localStorage.setItem("rainbowAIMETries", JSON.stringify(rainbowAIMETries));
 			  localStorage.setItem("rainbowAIMETimesDone", JSON.stringify(rainbowAIMETimesDone));
+			  localStorage.setItem("currentRainbowSolved", JSON.stringify(currentRainbowSolved));
 
 			  
 	  	}
