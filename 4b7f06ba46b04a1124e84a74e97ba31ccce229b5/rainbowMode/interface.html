@@ -255,7 +255,9 @@ tr.special th{
 	if(localStorage.getItem("currentRainbowSolved")===null){		
 		localStorage.setItem("currentRainbowSolved", 2);
 	}
-	localStorage.setItem("test98", 2);	
+		
+	localStorage.setItem("test99", 2);	
+		
 	var currentRainbowChoice=parseInt(localStorage.getItem("currentRainbowChoice"));
 	var currentRainbowAMC=parseInt(localStorage.getItem("currentRainbowAMC"));
 	var currentRainbowAIME=parseInt(localStorage.getItem("currentRainbowAIME"));
@@ -370,8 +372,10 @@ tr.special th{
 		  
 		  document.getElementById("ans").value="";
 		  
+		  localStorage.setItem("test1",2);
+		  
 		  if(correct){
-			
+			localStorage.setItem("test2",2);
 			//while(true){
 			  	currentRainbowChoice=Math.floor(Math.random() * 2);
 				localStorage.setItem("currentRainbowChoice", currentRainbowChoice);
@@ -388,6 +392,7 @@ tr.special th{
 
 					localStorage.setItem("currentRainbowAMC", currentRainbowAMC);
 					localStorage.setItem("currentRainbowAMCQ", currentRainbowAMCQ);
+					localStorage.setItem("test3",2);
 				}
 				else{
 					//FIX LATER
