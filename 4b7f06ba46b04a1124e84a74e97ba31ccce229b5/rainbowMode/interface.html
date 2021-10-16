@@ -236,7 +236,6 @@ tr.special th{
 	
 	<!--"Clicks"-->		
 	<script type="text/javascript">
-	var handoutCode=JSON.parse(localStorage.getItem("handoutCode"));
 	var testCode=JSON.parse(localStorage.getItem("testCode"));
 	var folderName=JSON.parse(localStorage.getItem("folderName"));
 	var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
@@ -266,13 +265,13 @@ tr.special th{
 	if(localStorage.getItem("currentRainbowSolved")===null){		
 		localStorage.setItem("currentRainbowSolved", 2);
 	}
-	localStorage.setItem("test99", 2);	
+	localStorage.setItem("test98", 2);	
 	var currentRainbowChoice=parseInt(localStorage.getItem("currentRainbowChoice"));
 	var currentRainbowAMC=parseInt(localStorage.getItem("currentRainbowAMC"));
 	var currentRainbowAIME=parseInt(localStorage.getItem("currentRainbowAIME"));
 	var currentRainbowAMCQ=parseInt(localStorage.getItem("currentRainbowAMCQ"));
 	var currentRainbowAIMEQ=parseInt(localStorage.getItem("currentRainbowAIMEQ"));	
-	localStorage.setItem("test5", "etst");
+		
 	if(localStorage.getItem("rainbowAMCTimesDone")===null){
 		var rainbowAMCTimesDone=[];
 		for(var i=0; i<testFolderName.length; i++){
@@ -318,12 +317,12 @@ tr.special th{
 	var tempImage = document.getElementById("problem");
 		
 	if(currentRainbowChoice==0){
-		var code=handoutCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
+		var code=testCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + (currentZenTestQ+1) + ".PNG";
 		
 	}
 	else{ //fix this to AIME later
-		var code=handoutCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
+		var code=testCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
 		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentZenTest] + "/" + testCode[currentZenTest] + "Problem" + (currentZenTestQ+1) + ".PNG";
 	}
 	
