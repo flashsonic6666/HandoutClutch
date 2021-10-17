@@ -211,19 +211,31 @@ tr.special th{
 	
 	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
 	<img id="Line 0", src="blackBackground.PNG">
-	<img id="Line 1" src="Red Line.png", class="center">
-	<img id="Line 2" src="Orange Line.png", class="center">
-	<img id="Line 3" src="Yellow Line.png", class="center">
-	<img id="Line 4" src="Green Line.png", class="center">
-	<img id="Line 5" src="Blue Line.png", class="center">
-	<img id="Line 6" src="Indigo Line.png", class="center">
-	<img id="Line 7" src="Violet Line.png", class="center">
+	<img id="Line 1", src="Red Line.png", class="center">
+	<img id="Line 2", src="Orange Line.png", class="center">
+	<img id="Line 3", src="Yellow Line.png", class="center">
+	<img id="Line 4", src="Green Line.png", class="center">
+	<img id="Line 5", src="Blue Line.png", class="center">
+	<img id="Line 6", src="Indigo Line.png", class="center">
+	<img id="Line 7", src="Violet Line.png", class="center">
 	
 	<!--Table!-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<table id="ptable">
 	</table>
-	
+
+	<!--Audio-->
+	<audio>
+ 	<source id="sound1", src="/sounds/default/1.mp3" type="audio/mpeg">
+  	<source id="sound2", src="/sounds/default/2.mp3" type="audio/mpeg">
+	<source id="sound3",src="/sounds/default/3.mp3" type="audio/mpeg">
+  	<source id="sound4", src="/sounds/default/4.mp3" type="audio/mpeg">
+	<source id="sound5",src="/sounds/default/5.mp3" type="audio/mpeg">
+  	<source id="sound6",src="/sounds/default/6.mp3" type="audio/mpeg">
+	<source id="sound7",src="/sounds/default/7.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+
 	<!--"Clicks"-->		
 	<script type="text/javascript">
 	var testCode=JSON.parse(localStorage.getItem("testCode"));
@@ -348,7 +360,8 @@ tr.special th{
 
 					rainbowAMCTimesDone[currentRainbowAMC][currentRainbowAMCQ]++; 
 					currentRainbowSolved++; 
-					 
+					 var x = document.getElementById("sound"+currentRainbowSolved);
+					 x.play();
 					 resetTable(true);
 				  }
 				  else{
