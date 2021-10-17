@@ -220,6 +220,10 @@ tr.special th{
 	<img id="Line 7" src="Violet Line.png" class="center">
 	
 	<!--Audio-->
+	<audio id="sound0" src="sound/default/0.mp3">
+	Your browser does not support the audio element.
+	</audio>
+
 	<audio id="sound1" src="sound/default/1.mp3">
 	Your browser does not support the audio element.
 	</audio>
@@ -376,14 +380,20 @@ tr.special th{
 					correct=true;
 
 					rainbowAMCTimesDone[currentRainbowAMC][currentRainbowAMCQ]++; 
-					currentRainbowSolved++; 
+					 if(currentRainbowSolved<=6){
+						currentRainbowSolved++; 
+					 }
 					 var x = document.getElementById("sound"+(currentRainbowSolved.toString()));
 					 x.play();
 					 resetTable(true);
 				  }
 				  else{
 					document.getElementById("result").innerHTML = "Color lost...";
-					currentRainbowSolved--; 
+					if(currentRainbowSolved>=1){
+						currentRainbowSolved--; 
+					 }
+					 var x = document.getElementById("sound0");
+					 x.play();
 				  } 
 			  }
 			  else{
@@ -394,14 +404,20 @@ tr.special th{
 					correct=true;
 
 					rainbowAMCTimesDone[currentRainbowAMC][currentRainbowAMCQ]++; 
-					currentRainbowSolved++; 
+					 if(currentRainbowSolved<=6){
+						currentRainbowSolved++; 
+					 }
 					 var x = document.getElementById("sound"+(currentRainbowSolved.toString()));
 					 x.play();
 					 resetTable(true);
 				  }
 				  else{
 					document.getElementById("result").innerHTML = "Color lost...";
-					currentRainbowSolved--; 
+					if(currentRainbowSolved>=1){
+						currentRainbowSolved--; 
+					 }
+					 var x = document.getElementById("sound0");
+					 x.play();
 				  } 
 			  }
 			
