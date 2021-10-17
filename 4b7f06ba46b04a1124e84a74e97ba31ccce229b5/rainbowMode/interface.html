@@ -210,14 +210,14 @@ tr.special th{
 	</div>
 	
 	<a href="https://flashsonic6666.github.io/HandoutClutch/4b7f06ba46b04a1124e84a74e97ba31ccce229b5">Back to main site</a>
-	<img id="Line 0" src="blackBackground.PNG">
-	<img id="Line 1" src="Red Line.png" class="center">
-	<img id="Line 2" src="Orange Line.png" class="center">
-	<img id="Line 3" src="Yellow Line.png" class="center">
-	<img id="Line 4" src="Green Line.png" class="center">
-	<img id="Line 5" src="Blue Line.png" class="center">
-	<img id="Line 6" src="Indigo Line.png" class="center">
-	<img id="Line 7" src="Violet Line.png" class="center">
+	<img id="line0" src="blackBackground.PNG">
+	<img id="line1" src="Red Line.png" class="center">
+	<img id="line2 src="Orange Line.png" class="center">
+	<img id="line3 src="Yellow Line.png" class="center">
+	<img id="line4" src="Green Line.png" class="center">
+	<img id="line5" src="Blue Line.png" class="center">
+	<img id="line6" src="Indigo Line.png" class="center">
+	<img id="line7" src="Violet Line.png" class="center">
 	
 	<!--Audio-->
 	<audio id="sound0" src="sound/default/0.mp3">
@@ -354,7 +354,7 @@ tr.special th{
 		
 	resetTable(true);
 		
-	function resetTable(gainXP){
+	function resetTable(change){
 		$("#ptable tr").remove(); 
 		
 		var tableBody= "";
@@ -366,12 +366,12 @@ tr.special th{
 		$("#ptable").append(tableBody);
 		
 		for(var i=1; i<=currentRainbowSolved; i++){
-			var x = document.getElementById("Line " + (i.toString()));
-			x.style.display="block";
+			var x = document.getElementById("line" + (i.toString()));
+			x.style.visibility="visible";
 		}
 		for(var i=currentRainbowSolved+1; i<=7 i++){
-			var x = document.getElementById("Line " + (i.toString()));
-			x.style.display="none";
+			var x = document.getElementById("line" + (i.toString()));
+			x.style.visibility="hidden";
 		}
 	}
 		
