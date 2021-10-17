@@ -346,8 +346,8 @@ tr.special th{
 	//Updates
 	var rainbowAMCTries=JSON.parse(localStorage.getItem("rainbowAMCTries"));
 	var rainbowAMCTimesDone=JSON.parse(localStorage.getItem("rainbowAMCTimesDone"));
-	var rainbowAIMETries=JSON.parse(localStorage.getItem("rainbowAIMETries"));
-	var rainbowAIMETimesDone=JSON.parse(localStorage.getItem("rainbowAIMETimesDone"));
+	//var rainbowAIMETries=JSON.parse(localStorage.getItem("rainbowAIMETries"));
+	//var rainbowAIMETimesDone=JSON.parse(localStorage.getItem("rainbowAIMETimesDone"));
 	
 	if(rainbowAMCTries.length<testFolderName.length){
 	   for(var i=rainbowAMCTries.length; i<testFolderName.length; i++){
@@ -469,8 +469,8 @@ tr.special th{
 			
 			  localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
 			  localStorage.setItem("rainbowAMCTimesDone", JSON.stringify(rainbowAMCTimesDone));
-			  localStorage.setItem("rainbowAIMETries", JSON.stringify(rainbowAIMETries));
-			  localStorage.setItem("rainbowAIMETimesDone", JSON.stringify(rainbowAIMETimesDone));
+			  //localStorage.setItem("rainbowAIMETries", JSON.stringify(rainbowAIMETries));
+			  //localStorage.setItem("rainbowAIMETimesDone", JSON.stringify(rainbowAIMETimesDone));
 			  localStorage.setItem("currentRainbowSolved", currentRainbowSolved);
 			  
 	  	}
