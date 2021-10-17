@@ -377,9 +377,7 @@ tr.special th{
 
 					rainbowAMCTimesDone[currentRainbowAMC][currentRainbowAMCQ]++; 
 					currentRainbowSolved++; 
-					 var y="sound"+currentRainbowSolved;
-					 localStorage.setElement("test",y);
-					 var x = document.getElementById(y);
+					 var x = document.getElementById("sound"+(currentRainbowSolved.toString()));
 					 x.play();
 					 resetTable(true);
 				  }
@@ -397,9 +395,7 @@ tr.special th{
 
 					rainbowAMCTimesDone[currentRainbowAMC][currentRainbowAMCQ]++; 
 					currentRainbowSolved++; 
-					 var y="sound"+currentRainbowSolved;
-					 localStorage.setElement("test",y);
-					 var x = document.getElementById(y);
+					 var x = document.getElementById("sound"+(currentRainbowSolved.toString()));
 					 x.play();
 					 resetTable(true);
 				  }
