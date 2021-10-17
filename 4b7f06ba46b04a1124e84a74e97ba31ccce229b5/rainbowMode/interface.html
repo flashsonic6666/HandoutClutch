@@ -388,42 +388,40 @@ tr.special th{
 		}
 		  
 		  document.getElementById("ans").value="";
-		  localStorage.setItem("test111",11);
+		  localStorage.setItem("test111",correct);
 		  if(correct){
-			//while(true){
-			  	currentRainbowChoice=Math.floor(Math.random() * 2);
-				localStorage.setItem("currentRainbowChoice", currentRainbowChoice);
-				localStorage.setItem("test20",currentRainbowChoice);
-				if(currentRainbowChoice==0){
-					currentRainbowAMC=Math.floor((Math.random() * maxTest));
-					localStorage.setItem("test21",currentRainbowAMC);
-					currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
-					localStorage.setItem("test22",currentRainbowAMCQ);
-					var code = testCode[currentRainbowAMC];
+			currentRainbowChoice=Math.floor(Math.random() * 2);
+			localStorage.setItem("currentRainbowChoice", currentRainbowChoice);
+			localStorage.setItem("test20",currentRainbowChoice);
+			if(currentRainbowChoice==0){
+				currentRainbowAMC=Math.floor((Math.random() * maxAMC));
+				localStorage.setItem("test21",currentRainbowAMC);
+				currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
+				localStorage.setItem("test22",currentRainbowAMCQ);
+				var code = testCode[currentRainbowAMC];
 
-					var image1 = document.getElementById("problem");
-					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentRainbowAMCQ+1)+".PNG";	
-					localStorage.setItem("test1",2);
-					localStorage.setItem("currentRainbowAMC", JSON.stringify(currentRainbowAMC));
-					localStorage.setItem("currentRainbowAMCQ", JSON.stringify(currentRainbowAMCQ));
-					localStorage.setItem("test3",2);
-				}
-				else{
-					//FIX LATER
-					currentRainbowAMC=Math.floor((Math.random() * maxTest));
-					localStorage.setItem("test21",currentRainbowAMC);
-					currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
-					localStorage.setItem("test22",currentRainbowAMCQ);
-					var code = testCode[currentRainbowAMC];
-
-					var image1 = document.getElementById("problem");
-					image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentRainbowAMCQ+1)+".PNG";	
-					localStorage.setItem("test1",2);
-					localStorage.setItem("currentRainbowAMC", JSON.stringify(currentRainbowAMC));
-					localStorage.setItem("currentRainbowAMCQ", JSON.stringify(currentRainbowAMCQ));
-					localStorage.setItem("test3",2);
-				}
-		  	//}
+				var image1 = document.getElementById("problem");
+				image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentRainbowAMCQ+1)+".PNG";	
+				localStorage.setItem("test1",2);
+				localStorage.setItem("currentRainbowAMC", JSON.stringify(currentRainbowAMC));
+				localStorage.setItem("currentRainbowAMCQ", JSON.stringify(currentRainbowAMCQ));
+				localStorage.setItem("test3",2);
+			}
+			else{
+				//FIX LATER
+				currentRainbowAMC=Math.floor((Math.random() * maxAMC));
+				localStorage.setItem("test21",currentRainbowAMC);
+				currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
+				localStorage.setItem("test22",currentRainbowAMCQ);
+				var code = testCode[currentRainbowAMC];
+				
+				var image1 = document.getElementById("problem");
+				image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentRainbowAMCQ+1)+".PNG";	
+				localStorage.setItem("test1",2);
+				localStorage.setItem("currentRainbowAMC", JSON.stringify(currentRainbowAMC));
+				localStorage.setItem("currentRainbowAMCQ", JSON.stringify(currentRainbowAMCQ));
+				localStorage.setItem("test3",2);
+			}
 		  }
           }
 	function flicker(){
