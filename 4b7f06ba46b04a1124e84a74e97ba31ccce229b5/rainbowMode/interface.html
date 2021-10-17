@@ -289,12 +289,35 @@ tr.special th{
 		localStorage.setItem("currentRainbowSolved", 0);
 	}
 		
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+
+	today = mm + '/' + dd + '/' + yyyy;	
+	
+	if(localStorage.getItem("rainbowStats")===null){	
+		var rainbowStats=[];
+		rainbowStats.push(0);
+		
+		localStorage.setItem("rainbowStats", JSON.stringify(rainbowStats));
+	}
+		
+	if(localStorage.getItem("rainbowDates")===null){	
+		var rainbowDates=[];
+		rainbowDates.push(today);
+		
+		localStorage.setItem("rainbowDates", JSON.stringify(rainbowDates));
+	}
+	
 	var currentRainbowChoice=parseInt(localStorage.getItem("currentRainbowChoice"));
 	var currentRainbowAMC=parseInt(localStorage.getItem("currentRainbowAMC"));
 	var currentRainbowAIME=parseInt(localStorage.getItem("currentRainbowAIME"));
 	var currentRainbowAMCQ=parseInt(localStorage.getItem("currentRainbowAMCQ"));
 	var currentRainbowAIMEQ=parseInt(localStorage.getItem("currentRainbowAIMEQ"));
 	var currentRainbowSolved=parseInt(localStorage.getItem("currentRainbowSolved"));
+	var rainbowStats=parseInt(localStorage.getItem("rainbowStats"));
+	var rainbowDates=parseInt(localStorage.getItem("rainbowDates"));
 		
 	if(localStorage.getItem("rainbowAMCTimesDone")===null){
 		var rainbowAMCTimesDone=[];
@@ -336,7 +359,20 @@ tr.special th{
 		 }
 	   }
 	}
-
+		
+	//Lmao this won't work past november but whatever
+	while(rainbowStats.length<parseInt(dd)-17+1){
+		rainbowStats.push(0);
+	}
+	localStorage.setItem("rainbowStats", JSON.stringify(rainbowStats));
+		
+	//Lmao this won't work past november but whatever
+	while(rainbowDates.length<parseInt(dd)-17+1){
+		var today1 = mm + '/' + ((17+rainbowDates.length).toString()) + '/' + yyyy;	
+		rainbowStats.push(today1);
+	}
+	localStorage.setItem("rainbowDates", JSON.stringify(rainbowDates));
+		
 	var maxAMC=parseInt(testFolderName.length);
 	
 	//0 for, 1 for AMC
