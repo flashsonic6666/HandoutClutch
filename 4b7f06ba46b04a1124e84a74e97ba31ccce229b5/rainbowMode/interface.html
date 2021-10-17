@@ -388,17 +388,17 @@ tr.special th{
 		}
 		  
 		  document.getElementById("ans").value="";
-		  
+		  localStorage.setItem("test111",11);
 		  if(correct){
 			//while(true){
 			  	currentRainbowChoice=Math.floor(Math.random() * 2);
 				localStorage.setItem("currentRainbowChoice", currentRainbowChoice);
-				
+				localStorage.setItem("test20",currentRainbowChoice);
 				if(currentRainbowChoice==0){
 					currentRainbowAMC=Math.floor((Math.random() * maxTest));
-					
+					localStorage.setItem("test21",currentRainbowAMC);
 					currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
-					localStorage.setItem("test2",2);
+					localStorage.setItem("test22",currentRainbowAMCQ);
 					var code = testCode[currentRainbowAMC];
 
 					var image1 = document.getElementById("problem");
@@ -411,9 +411,9 @@ tr.special th{
 				else{
 					//FIX LATER
 					currentRainbowAMC=Math.floor((Math.random() * maxTest));
-					
+					localStorage.setItem("test21",currentRainbowAMC);
 					currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
-					localStorage.setItem("test2",2);
+					localStorage.setItem("test22",currentRainbowAMCQ);
 					var code = testCode[currentRainbowAMC];
 
 					var image1 = document.getElementById("problem");
