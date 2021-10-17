@@ -286,7 +286,7 @@ tr.special th{
 	}
 		
 	if(localStorage.getItem("currentRainbowSolved")===null){		
-		localStorage.setItem("currentRainbowSolved", 2);
+		localStorage.setItem("currentRainbowSolved", 0);
 	}
 		
 	var currentRainbowChoice=parseInt(localStorage.getItem("currentRainbowChoice"));
@@ -364,6 +364,15 @@ tr.special th{
 		 tableBody = tableBody + "</tr>";  
 		
 		$("#ptable").append(tableBody);
+		
+		for(var i=1; i<=currentRainbowSolved; i++){
+			var x = document.getElementById("Line " + (i.toString()));
+			x.style.display="block";
+		}
+		for(var i=currentRainbowSolved+1; i<=7 i++){
+			var x = document.getElementById("Line " + (i.toString()));
+			x.style.display="none";
+		}
 	}
 		
           function result(check) {
