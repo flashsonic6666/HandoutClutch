@@ -394,7 +394,6 @@ tr.special th{
 					 }
 					 var x = document.getElementById("sound"+(currentRainbowSolved.toString()));
 					 x.play();
-					 resetTable(true);
 				  }
 				  else{
 					document.getElementById("result").innerHTML = "Color lost...";
@@ -418,7 +417,6 @@ tr.special th{
 					 }
 					 var x = document.getElementById("sound"+(currentRainbowSolved.toString()));
 					 x.play();
-					 resetTable(true);
 				  }
 				  else{
 					document.getElementById("result").innerHTML = "Color lost...";
@@ -440,6 +438,8 @@ tr.special th{
 		else{
 		    correct=true;	
 		}
+		  
+		  resetTable(true);
 		  
 		  document.getElementById("ans").value="";
 		  
