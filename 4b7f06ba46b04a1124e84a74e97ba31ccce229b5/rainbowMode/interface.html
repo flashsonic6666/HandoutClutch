@@ -409,6 +409,9 @@ tr.special th{
 			var x = document.getElementById("line" + (i.toString()));
 			x.style.visibility="hidden";
 		}
+		
+		rainbowStats[rainbowStats.length-1]=currentRainbowSolved;
+		localStorage.setItem("rainbowStats", JSON.stringify(rainbowStats));
 	}
 		
           function result(check) {
