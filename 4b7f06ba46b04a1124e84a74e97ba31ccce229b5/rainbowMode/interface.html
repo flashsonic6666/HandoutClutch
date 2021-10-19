@@ -361,6 +361,8 @@ tr.special th{
 		
 	//Lmao this won't work past november but whatever
 	while(rainbowStats.length<parseInt(dd)-17+1){
+		currentRainbowSolved=0;
+		localStorage.setItem("currentRainbowSolved", currentRainbowSolved);
 		rainbowStats.push(0);
 	}
 	localStorage.setItem("rainbowStats", JSON.stringify(rainbowStats));
