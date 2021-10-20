@@ -263,6 +263,10 @@ tr.special th{
 	var testFolderName=JSON.parse(localStorage.getItem("testFolderName"));
 	var answers=JSON.parse(localStorage.getItem("answers"));
 	var amc10Answers=JSON.parse(localStorage.getItem("amc10Answers"));
+		
+	var AIMECode=JSON.parse(localStorage.getItem("AIMECode"));
+	var AIMEFolderName=JSON.parse(localStorage.getItem("AIMEFolderName"));
+	var AIMEAnswers=JSON.parse(localStorage.getItem("AIMEAnswers"));
 	
 	if(localStorage.getItem("currentRainbowChoice")===null){
 		localStorage.setItem("currentRainbowChoice",0);
@@ -281,7 +285,7 @@ tr.special th{
 	}	
 	
 	if(localStorage.getItem("currentRainbowAIMEQ")===null){
-		localStorage.setItem("currentRainbowAIMEQ", 0);
+		localStorage.setItem("currentRainbowAIMEQ", 5);
 	}
 		
 	if(localStorage.getItem("currentRainbowSolved")===null){		
@@ -342,11 +346,35 @@ tr.special th{
 		localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
 	}
 		
+	if(localStorage.getItem("rainbowAIMETimesDone")===null){
+		var rainbowAIMETimesDone=[];
+		for(var i=0; i<AIMEFolderName.length; i++){
+			rainbowAIMETimesDone.push([]);
+			for(var j=0; j<25; j++){
+				rainbowAIMETimesDone[i].push(0);
+			}
+		}
+		
+		localStorage.setItem("rainbowAIMETimesDone", JSON.stringify(rainbowAIMETimesDone));
+	}
+		
+	if(localStorage.getItem("rainbowAIMETries")===null){
+		var rainbowAIMETries=[];
+		for(var i=0; i<AIMEFolderName.length; i++){
+			rainbowAIMETries.push([]);
+			for(var j=0; j<25; j++){
+				rainbowAIMETries[i].push(0);
+			}
+		}
+		
+		localStorage.setItem("rainbowAIMETries", JSON.stringify(rainbowAIMETries));
+	}
+		
 	//Updates
 	var rainbowAMCTries=JSON.parse(localStorage.getItem("rainbowAMCTries"));
 	var rainbowAMCTimesDone=JSON.parse(localStorage.getItem("rainbowAMCTimesDone"));
-	//var rainbowAIMETries=JSON.parse(localStorage.getItem("rainbowAIMETries"));
-	//var rainbowAIMETimesDone=JSON.parse(localStorage.getItem("rainbowAIMETimesDone"));
+	var rainbowAIMETries=JSON.parse(localStorage.getItem("rainbowAIMETries"));
+	var rainbowAIMETimesDone=JSON.parse(localStorage.getItem("rainbowAIMETimesDone"));
 	
 	if(rainbowAMCTries.length<testFolderName.length){
 	   for(var i=rainbowAMCTries.length; i<testFolderName.length; i++){
@@ -357,6 +385,21 @@ tr.special th{
 			rainbowAMCTimesDone[i].push(0);
 		 }
 	   }
+		localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
+		localStorage.setItem("rainbowAMCTimesDone", JSON.stringify(rainbowAMCTimesDone));
+	}
+		
+	if(rainbowAIMETries.length<AIMEFolderName.length){
+	   for(var i=rainbowAIMETries.length; i<AIMEFolderName.length; i++){
+		 rainbowAIMETries.push([]);
+		 rainbowAIMETimesDone.push([]);
+		 for(var j=0; j<15; j++){
+			rainbowAIMETries[i].push(0);
+			rainbowAIMETimesDone[i].push(0);
+		 }
+	   }
+		localStorage.setItem("rainbowAIMETries", JSON.stringify(rainbowAIMETries));
+		localStorage.setItem("rainbowAIMETimesDone", JSON.stringify(rainbowAIMETimesDone));
 	}
 		
 	//Lmao this won't work past november but whatever
@@ -375,6 +418,7 @@ tr.special th{
 	localStorage.setItem("rainbowDates", JSON.stringify(rainbowDates));
 		
 	var maxAMC=parseInt(testFolderName.length);
+	var maxAIME=parseInt(AIMEFolderName.length);
 	
 	//0 for, 1 for AMC
 	var tempImage = document.getElementById("problem");
@@ -385,8 +429,7 @@ tr.special th{
 		
 	}
 	else{ //fix this to AIME later
-		var code=testCode[parseInt(localStorage.getItem("currentRainbowAMC"))];	
-		tempImage.src = "../practiceAMC12Pics/" + testFolderName[currentRainbowAMC] + "/" + testCode[currentRainbowAMC] + "Problem" + (currentRainbowAMCQ+1) + ".PNG";
+		tempImage.src = "../practiceAIMEPics/" + AIMEFolderName[currentRainbowAIME] + "/" + AIMECode[currentRainbowAIME] + "PROBLEM" + (currentRainbowAIMEQ+1) + ".PNG";
 	}
 		
 	resetTable(true);
@@ -445,13 +488,13 @@ tr.special th{
 				  } 
 			  }
 			  else{
-				 rainbowAMCTries[currentRainbowAMC][currentRainbowAMCQ]++;
+				 rainbowAIMETries[currentRainbowAIME][currentRainbowAIMEQ]++;
 
-				 if(answer==amc10Answers[currentRainbowAMC][currentRainbowAMCQ]){
+				 if(answer==AIMEAnswers[currentRainbowAIME][currentRainbowAIMEQ]){
 					document.getElementById("result").innerHTML = "Color brought back!";
 					correct=true;
 
-					rainbowAMCTimesDone[currentRainbowAMC][currentRainbowAMCQ]++; 
+					rainbowAIMETimesDone[currentRainbowAIME][currentRainbowAIMEQ]++; 
 					 if(currentRainbowSolved<=6){
 						currentRainbowSolved++; 
 					 }
@@ -470,8 +513,8 @@ tr.special th{
 			
 			  localStorage.setItem("rainbowAMCTries", JSON.stringify(rainbowAMCTries));
 			  localStorage.setItem("rainbowAMCTimesDone", JSON.stringify(rainbowAMCTimesDone));
-			  //localStorage.setItem("rainbowAIMETries", JSON.stringify(rainbowAIMETries));
-			  //localStorage.setItem("rainbowAIMETimesDone", JSON.stringify(rainbowAIMETimesDone));
+			  localStorage.setItem("rainbowAIMETries", JSON.stringify(rainbowAIMETries));
+			  localStorage.setItem("rainbowAIMETimesDone", JSON.stringify(rainbowAIMETimesDone));
 			  localStorage.setItem("currentRainbowSolved", currentRainbowSolved);
 			  
 	  	}
@@ -497,15 +540,13 @@ tr.special th{
 				localStorage.setItem("currentRainbowAMCQ", JSON.stringify(currentRainbowAMCQ));
 			}
 			else{
-				//FIX LATER
-				currentRainbowAMC=Math.floor((Math.random() * maxAMC));
-				currentRainbowAMCQ=Math.floor(Math.random() * 13)+(12);
-				var code = testCode[currentRainbowAMC];
-				
+				currentRainbowAIME=Math.floor((Math.random() * maxAIME));
+				currentRainbowAIMEQ=Math.floor(Math.random() * 10)+(0);		
 				var image1 = document.getElementById("problem");
-				image1.src = "../practiceAMC12Pics/" + testFolderName[localStorage.getItem(code)] + "/" + code+"Problem" +(currentRainbowAMCQ+1)+".PNG";	
-				localStorage.setItem("currentRainbowAMC", JSON.stringify(currentRainbowAMC));
-				localStorage.setItem("currentRainbowAMCQ", JSON.stringify(currentRainbowAMCQ));
+				
+				image1.src = "../practiceAIMEPics/" + AIMEFolderName[currentRainbowAIME] + "/" + AIMECode[currentRainbowAIME] + "PROBLEM" + (currentRainbowAIMEQ+1) + ".PNG";	
+				localStorage.setItem("currentRainbowAIME", JSON.stringify(currentRainbowAIME));
+				localStorage.setItem("currentRainbowAIMEQ", JSON.stringify(currentRainbowAIMEQ));
 			}
 		  }
           }
